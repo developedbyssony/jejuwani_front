@@ -1,0 +1,17 @@
+.section-main-youtube {
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+.section-main-youtube-contentsDisplayArea {
+    position: relative;
+    top:-15%;
+    float: right;
+}
+
+.youtube-avart {
+    background-image: url("./assets/sub/user-profile.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    border: 1px solid white;
+}

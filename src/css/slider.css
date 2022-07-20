@@ -1,0 +1,37 @@
+.slider-container1 {
+    vertical-align: top;
+    width: 100%;
+    height: 1000px;
+    background-image: url('./assets/main/main-banner3.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    overflow: hidden;
+}
+
+.slider-container2 {
+    width: 100%;
+    height: 1000px;
+    background-image: url('./assets/main/main-banner1.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+
+.slider-container3 {
+    width: 100%;
+    height: 1000px;
+    background-image: url('./assets/main/main-banner2.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+}
+
+.bottom-slider-container {
+    height: 588px;
+}
+
+.blog-slider-container {
+    width: 511px;
+    height: 412px;
+}

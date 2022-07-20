@@ -1,0 +1,80 @@
+
+.blog-main-frame-sub {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ddd;
+    background-color: #F5F5F5;
+    height: 193px;
+    margin-bottom: 21px;
+    border-radius: 4px;
+}
+.blog-main-frame-sub {
+    width: 100%;
+}
+
+.blog-main-img-sub {
+    height: 100%;
+    width: 200px;
+    border: 1px solid black;
+    background-color: #fff;
+}
+
+.blog-main-contents {
+    width: 100%;
+}
+
+.blog-main-contents-sub {
+    color:#3F4050;
+    padding: 30px 29px;
+}
+.blog-main-contents-sub h3 {
+    color:black;
+}
+
+
+.section-main-blog-m {
+    margin-top: -100px;
+    border: 1px solid black;
+    margin-right: 30px;
+}
+
+.section-main-blog-s {
+    margin-right: 30px;
+}
+
+.section-main-blog {
+    margin-right: 30px;
+    width: 100%;
+}
+.add {
+    background: url('assets/css_sprites_sub.png') no-repeat -801px -389px;
+	width: 14px;
+	height: 15px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 15px;
+    left:15px;
+}
+
+.section-main-blog-s  {
+    width: 100%;
+}
+
+.plus-btn-section-sub {
+    transform: scale(0.7);
+    position: absolute;    
+    right: 10px;
+}
+
+.plus-btn {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    margin-bottom: 4px;
+}
+
+.plus-btn:hover {
+    background-color: #3F4050;
+}

@@ -1,0 +1,105 @@
+/* activity - reservation modal */
+.modal-bgc {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.5);
+  overflow-y: scroll;
+}
+
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: flex;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 738px;
+  height: 523px;
+  padding: 40px;
+}
+
+.modal-header {
+  position:absolute;
+  top:89px;
+  border: none;
+}
+
+.datepickers {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+  top:150px;
+  left: 100px;
+}
+
+.date-picker-start {
+  margin-right: 50px;
+}
+
+.modal-ic-close {
+  background: url('assets/css_sprites_sub.png') no-repeat -801px -389px;
+	width: 14px;
+	height: 15px;
+  transform: scale(0.7);
+}
+
+.btn-group {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100%;
+  top:380px;
+}
+
+.btn-group button {
+  width: 88px;
+  margin: 10px;
+}
+
+/* cart-modal */
+.cart-modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding: 32px;
+  max-width:360px;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 500;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.cart-tit {
+  color:#000;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing:-0.02em; 
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.btn-group-cart {
+  width: 100%;
+}
+
+.btn-group-cart a{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-group-cart div{
+  width: 100%;
+}

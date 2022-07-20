@@ -1,0 +1,34 @@
+.collapseBtn {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+}
+#collapseBtn-tit {
+    font-weight: 500;
+    margin: 0 auto;
+}
+
+.collapseCard {
+    position: relative;
+    height: 560px;
+    margin-left: 80px;
+    margin-right: 80px;
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+    margin-bottom: 60px; 
+}
+
+#toggle {
+    background-color: white;
+    border: 1px solid white;
+}
+
+.btn-sort {
+    border-radius: 8px;
+}

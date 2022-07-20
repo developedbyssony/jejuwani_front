@@ -1,0 +1,49 @@
+.my-menu {
+  position: absolute;
+}    
+    .my-menu-content {
+      position: absolute;
+      right: -140px;
+      top:25px;
+      background-color: #fff;
+      z-index: 999;
+      border-radius: 4px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18); }
+      .my-menu-content::before, .my-menu-content::after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -24px;
+        display: block;
+        content: '';
+        height: 0;
+        width: 0;
+        border-top: 12px solid transparent;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-bottom: 12px solid #b2b3b9; }
+      .my-menu-content::after {
+        border-bottom-color: #fff;
+        top: -22px; }
+    .my-menu-list {
+      width: 200px;
+      padding: 8px;
+      background-color: #fff;
+      border-radius: 4px;
+      border: 1px solid #b2b3b9; }
+    .my-menu-item a,
+    .my-menu-item button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 44px;
+      padding: 0 8px;
+      width: 100%; }
+      .my-menu-item a:hover,
+      .my-menu-item button:hover {
+        background-color: #f7f8fa;
+        border-radius: 2px; }
+
+  #loginTooltip {
+    right:-125px;
+  }
