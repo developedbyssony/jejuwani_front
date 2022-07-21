@@ -11,6 +11,10 @@ const StyledSlider = styled(Slider)`
      position:relative;
      left:52%;
 
+    .slick-track {
+      width:0px;
+    }
+
     .slider-inner {
       display:flex;
       justify-contents:center;
