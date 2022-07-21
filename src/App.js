@@ -37,16 +37,35 @@ export default function App({ FileInput, ProfileInput, serverURL, userId, kakaoM
     };
   
   
-  const isAuthorized = localStorage.getItem("isAuthorized");
-  useEffect(() => {
-    /* 여기에서 백엔드 데이터 불러올 것 */
-  },[]);
+const isAuthorized = localStorage.getItem("isAuthorized");
+
+/*
+function dd() {
+      const response =  fetch(
+        "http://localhost:3000/dummy/ProductData.json",
+        {
+            method: "GET",
+        });
+    if(response.ok) {
+        console.log('ok');
+    } else {
+    console.log('err');
+    const errData = response.json();
+    throw errData;}
+  }
+  */
 
   const [user,setUser] = useState(null);
+  // const [ wannerFriend ,setWannerFriend ] = useState([]);
   const authenticated = user != null;
   const login = ({ id, pwd }) => setUser(signIn({ id, pwd }));
   const logout = () => setUser(null);
 
+  useEffect(() => {
+    //dd();
+    /* 여기에서 백엔드 데이터 불러올 것 */
+       
+  },[]);
 
   const [productItems, setProductItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);

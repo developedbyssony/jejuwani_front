@@ -16,15 +16,33 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
                 });
             if(response.ok) {
                 console.log('ok');
+                // const data = await response.json();
                 const data = await response.json();
-                console.log(data);
+               // console.log(data);
+                //console.log(JSON.stringify(data,null,2));
+                const jsonData = JSON.stringify(data,null,2);
+                //console.log(jsonData);
+                //console.log(JSON.parse(jsonData));
+                const initData = data.map((it) => {
+                    return {
+                        id:it.id,
+                        title:it.title,
+                        region:it.region,
+                        regdata:it.regdata,
+                        hit:it.hit,
+                        like:it.like,
+                        count:it.count,
+                        imgSrc:it.imgSrc,
+                    }
+                })
+                setCartItems(initData);
+                /*
                 for(let i = 0; i < data.length; i++) {
                     console.log(data[i]);
                 }
-                cartData = data;
                 console.log(cartData);
-                console.log(cartData[0].id);
                 return cartData;
+                */
             } else {
             console.log('err');
             const errData = await response.json();
@@ -34,9 +52,14 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
         }
     }
 
+    //.then(res => {let data = JSON.stringify(res,null,2); 
+    // setCartItems(data);});
+    // console.log(cartData);  
+
     useEffect(() => {
         getCartItems();
-    },[]);
+        console.log(cartData[0]);
+    },[cartData]);
 
     const likeCate1 = "액티비티";
     const eventKey1 = "activity";
@@ -55,18 +78,35 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
         promotion_id : 1
     }
     */
+    /*
     const totalCart = cartData.length;
     const createArray = length => [...Array(length)];
     function setCartList({ totalCart }) {
-        return createArray(totalCart).map((n,i) => (<CartList key={i} cartItem={cartData} onIncrease={onIncrease} onDecrease={onDecrease} number={number} getCartItems={getCartItems}/>));
+        return createArray(totalCart).map((n,i) => (<CartList key={i} cartItem={cartData} onIncrease={onIncrease} onDecrease={onDecrease} number={number} getCartItems={getCartItems} onRemove={onRemove} />));
     }
+    */
+    /*
+    const onRemove = (targetId) => {
+            console.log(`${targetId}가 삭제되었습니다.`);
+            const newCartList = cartData.filter((it) => it.id !== targetId);
+            console.log(newCartList);
+            setCartItems(newCartList);
+    }
+    */
+    
+    const onRemove = () => {
+        console.log('ss');
+    }
+
 
     const wholePrice = 40000;
         return (
+            <div className="section">
             <div className="container">
                 <div className="cart-top-sec">
                 <h1 className="page-tit">장바구니 🛒</h1>
-                {setCartList(totalCart)}
+                {/*setCartList(totalCart)*/}
+                <CartList cartItem={cartData} onRemove={onRemove} />
                 <h1 className="page-tit">찜 List</h1>
                 <div>
                     <Tab 
@@ -78,6 +118,7 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
                     contents2={<LikeListR />}
                     />
                 </div>
+            </div>
             </div>
             </div>
         );

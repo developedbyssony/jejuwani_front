@@ -890,24 +890,27 @@
     margin-top: 42px;
     margin-bottom: 23px;
   }
-  
+
   /* activity */
   .activity-landmark {
     position: relative;
-    width:100%;
-    height:541px;
+    width:100vw;
+    height:30vh;
     background-image: url('./assets/sub/activity_banner.png');
     background-repeat: no-repeat;
     background-size:cover;
+    background-position: center top;
     overflow: hidden;
   }
   
   .restaurant-landmark {
-    width:100%;
-    height:541px;
+    position: relative;
+    width:100vw;
+    height:30vh;
     background-image: url('./assets/sub/restaurant_banner.png');
     background-repeat: no-repeat;
     background-size:cover;
+    background-position: center top;
     overflow: hidden;
   }
 

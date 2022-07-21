@@ -115,7 +115,7 @@ export default function activity() {
                <div className="row">
                   <div className="col-12">
                   <Category />
-                  <div className="activity-landmark"></div>
+                    <div className="activity-landmark"></div>
                   <div className="section">
                   <h1 className="page-tit" id="english">Popular activities in Jeju</h1>
                     <table class="table">

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import '../../css/cart.css'
 
-function CartItem({item, idx, onIncrease, onDecrease, number}) {
+function CartItem({item, idx, onIncrease, onDecrease, number, onRemove}) {
     const [ cartState, setCartState ] = [{
         id:'',
         region:'',
@@ -17,7 +17,7 @@ function CartItem({item, idx, onIncrease, onDecrease, number}) {
     useEffect(() => {
         console.log(cartItems);
         console.log(initialCartItem);
-
+        console.log(item);
         // 현재 로컬스토리지에 저장된 장바구니 아이템을 콘솔에서 확인
     },[]);
 
@@ -51,6 +51,7 @@ function CartItem({item, idx, onIncrease, onDecrease, number}) {
             alert('장바구니에 담을 수 있는 최소 수량은 1개입니다.');
         }
     }
+    
 
     function increaseCartItem() {
         dispatch({
@@ -67,23 +68,15 @@ function CartItem({item, idx, onIncrease, onDecrease, number}) {
             alert('장바구니에 담을 수 있는 최대 수량은 10개입니다.');
         }
         */
-        
-    function deleteCartItem() {
-        console.log(cartState);
-        console.log(cartItems);
-        const newCartItem = [...cartItems];
-        console.log(newCartItem);
-        newCartItem.splice(idx, 1);
-        console.log(newCartItem);
-    }
-        /*
-        const newCartItem = [...cartItems];
-        newCartItem.splice(idx, 1);
-        setCartItems(newCartItem);
-        */
+
+    const handleRemove = ({idx}) => {
+           console.log({idx});
+           window.confirm(`${idx}를 정말 삭제하시겠습니까?`);
+           onRemove(); 
+        }   
 
     return (
-        <div>
+        item.map((i,idx) => (<div>
         <li className="cart-item" key={item.id}>
         <div className="h-24 w-24 overflow-hidden rounded-md border border-gray-200">
             <img 
@@ -95,6 +88,7 @@ function CartItem({item, idx, onIncrease, onDecrease, number}) {
         <div className="ml-4 flex flex-1 flex-col">
             <div>
                 <div className="flex justify-between text-base font-medium text-gray-900 cart-title">
+                    <p>{idx}</p>
                     <h3>{item.title}</h3>
                     <p className="ml-4">
                         {(item.price * item.count).toLocaleString()}원
@@ -123,14 +117,14 @@ function CartItem({item, idx, onIncrease, onDecrease, number}) {
                     <button
                         type="button"
                         className="btn-outlined btn-40 remove-btn"
-                        onClick={deleteCartItem}>
+                        onClick={handleRemove}>
                         삭제하기
                     </button>
                 </button>
             </div>
         </div>
     </li>
-    </div>
+    </div>))
     )}
 
 export default CartItem;

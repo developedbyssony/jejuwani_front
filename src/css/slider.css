@@ -37,12 +37,12 @@
 .arrow-next, .arrow-prev {
    cursor:pointer;
    position: absolute;
-   top:50%;
+   top:20%;
    border: 1px solid black;
    background-color: white;
    border-radius: 50%;
-   width: 80px;
-   height: 80px;
+   width: 40px;
+   height: 40px;
    z-index: 999;
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
    .main {
@@ -71,7 +71,7 @@
 
  .arrow-next {
     position: absolute;
-    right: 100px;
+    right: 10px;
  }
 
  .ic-prev {
@@ -86,9 +86,10 @@
 
  .ic-next {
     position: relative;
-    top:28%;
-    left:36%;
+    top:5%;
+    left:28%;
     background: url('assets/css_sprites_clo.png') no-repeat -211px -549px;
 	width: 21px;
 	height: 38px;
+    transform: scale(0.5);
  }
