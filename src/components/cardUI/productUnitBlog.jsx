@@ -10,21 +10,10 @@ function productUnit({item, setCart, closeCart, addToCart}) {
     },[]);
 
     return (
-        <div className="productUnit-frame">
-            <div className="productUnit-img">
+        <div className="productUnit-frame-wanner">
+            <div className="productUnit-img-wanner">
             </div>
-            <button
-                type="button" 
-                className="list-item-ic-cart" 
-                ref={cartBtn}
-                onClick={closeCart}>
-                <h1 className="ic-cart"></h1>
-            </button>
-                {
-                  setCart && <Modal modalClose={closeCart} productId={item.id} />
-                }
-
-            <div className="productUnit-contents">
+            <div className="productUnit-contents-wanner">
                 <div className="productUnit-contents-tit">
 
                     <p className="unit-tit text-style-13">{item.region} </p>

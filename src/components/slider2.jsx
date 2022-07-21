@@ -1,63 +1,58 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
+import ProductUnit from './cardUI/productUnitActivity';
 import "../css/slider.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styled from 'styled-components';
+import NextArrow from './slider/nextArrow';
 
-export default class SimpleSlider extends Component {
-  /*
-$('.center').slick({
-  centerMode: true,
-  centerPadding: '60px',
-  slidesToShow: 3,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 3
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
+
+const StyledSlider = styled(Slider)`
+  margin-bottom: 60px;
+    .slider {
+      display:flex;
+      justify-contents:center;
+      position:relative;
+      height: 30vh;
+      margin-bottom:100px;
+      margin-left:-50px;
     }
-  ]
-});
-*/
-		
-  render() {
+`;
+
+export default function SimpleSlider({data, setCart, closeCart}) {
     const settings = {
-      dots: true,
+      dots: false,
+      centerMode:true,
+      centerPadding:'60px',
       infinite: true,
       speed: 500,
-      slidesToShow: 1,
+      nextArrow: <NextArrow />,
+      slidesToShow: 5,
       slidesToScroll: 1
     };
     return (
       <div>
-        <Slider {...settings}>
-        <div className="bottom-slider-container">
-            <h3>1</h3>
-          </div>
-          <div className="bottom-slider-container">
-            <h3>2</h3>
-          </div>
-          <div className="bottom-slider-container">
-            <h3>3</h3>
-          </div>
-          <div className="bottom-slider-container">
-            <h3>4</h3>
-          </div>
-        </Slider>
+        <StyledSlider {...settings}>
+        <div className="slider">
+              <ProductUnit item={data} setCart={setCart} closeCart={closeCart}/>
+        </div>
+        <div className="slider">
+              <ProductUnit item={data} setCart={setCart} closeCart={closeCart}/>
+        </div>
+        <div className="slider">
+              <ProductUnit item={data} setCart={setCart} closeCart={closeCart}/>
+        </div>
+        <div className="slider">
+              <ProductUnit item={data} setCart={setCart} closeCart={closeCart}/>
+        </div>
+        <div className="slider">
+              <ProductUnit item={data} setCart={setCart} closeCart={closeCart}/>
+        </div>
+        <div className="slider">
+              <ProductUnit item={data} setCart={setCart} closeCart={closeCart}/>
+        </div>
+        </StyledSlider>
       </div>
     );
   }
-}

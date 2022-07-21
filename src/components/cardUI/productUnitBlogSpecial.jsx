@@ -1,30 +1,18 @@
-import { useState, useRef, useEffect } from 'react';
-import Modal from '../modals/cartModal';
+import { useEffect } from 'react';
 import '../../css/productUnit.css';
 
-function productUnit({item, setCart, closeCart, addToCart}) {
-    const cartBtn = useRef();
-
+function productUnit({item}) {
     useEffect(() => {
         console.log({item});
     },[]);
 
     return (
-        <div className="productUnit-frame">
-            <div className="productUnit-img">
+        <div className="productUnit-frame-wanner-special">
+            <div className="main-blog-img-frame">
+            <div className="productUnit-img-wanner-special">
             </div>
-            <button
-                type="button" 
-                className="list-item-ic-cart" 
-                ref={cartBtn}
-                onClick={closeCart}>
-                <h1 className="ic-cart"></h1>
-            </button>
-                {
-                  setCart && <Modal modalClose={closeCart} productId={item.id} />
-                }
-
-            <div className="productUnit-contents">
+            </div>
+            <div className="productUnit-contents-wanner-special">
                 <div className="productUnit-contents-tit">
 
                     <p className="unit-tit text-style-13">{item.region} </p>

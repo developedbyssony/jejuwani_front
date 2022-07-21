@@ -1,36 +1,48 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import "../css/slider.css";
+import MainLandMark from "./slider/mainLandMark.jsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components';
+import NextArrow from './slider/nextArrow';
+import PrevArrow from './slider/prevArrow';
 
 const StyledSlider = styled(Slider)`
-    .slider-container {
+    .slider {
       border:none,
-      outline: none; 
+      outline: none;
+      height: 30vw;
     }
 `;
 
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
+      adaptiveHeight: true,
+      arrows:true,
       dots: true,
-      infinite: false,
+      infinite: true, // 무한 반복
       centerMode: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      centerPadding: '0px',
+      speed:500, // 넘어가는 속도
+      slidesToShow: 1, // 1장씩 보이게
+      slidesToScroll: 1, // 1장씩 뒤로 넘어가게
+      centerPadding: '0px', // 0px하면 슬라이드 끝 쪽 이미지가 안 잘림
+      cssEase:"linear",
+      nextArrow: <NextArrow />,
+      prevArrow:<PrevArrow />
     };
     return (
       <div>
         <StyledSlider {...settings}>
-          <div className="slider-container1">
+          <div className="slider">
+          <MainLandMark />
           </div>
-          <div className="slider-container2">
+          <div className="slider">
+          <MainLandMark />
           </div>
-          <div className="slider-container3">
+          <div className="slider">
+          <MainLandMark />
           </div>
         </StyledSlider>
       </div>

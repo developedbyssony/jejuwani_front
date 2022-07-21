@@ -18,7 +18,12 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
                 console.log('ok');
                 const data = await response.json();
                 console.log(data);
+                for(let i = 0; i < data.length; i++) {
+                    console.log(data[i]);
+                }
                 cartData = data;
+                console.log(cartData);
+                console.log(cartData[0].id);
                 return cartData;
             } else {
             console.log('err');
@@ -37,6 +42,7 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
     const eventKey1 = "activity";
     const likeCate2 = "레스토랑";
     const eventKey2 = "restaurant";
+    /*
     const [ Product , getProductData ] = [{
         cart_id : 121152,
         product_id : 1232423,
@@ -47,56 +53,20 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
         price : 10000,
         address_id : 1,
         promotion_id : 1
-    }, {
-        cart_id : 121152,
-        product_id : 1232423,
-        category : 1,
-        count : 1,
-        item : 'item',
-        status : 1,
-        price : 10000,
-        address_id : 1,
-        promotion_id : 1
-    }, {
-        cart_id : 121152,
-        product_id : 1232423,
-        category : 1,
-        count : 1,
-        item : 'item',
-        status : 1,
-        price : 10000,
-        address_id : 1,
-        promotion_id : 1
-    }, {        
-        cart_id : 121152,
-        product_id : 1232423,
-        category : 1,
-        count : 1,
-        item : 'item',
-        status : 1,
-        price : 10000,
-        address_id : 1,
-        promotion_id : 1
+    }
+    */
+    const totalCart = cartData.length;
+    const createArray = length => [...Array(length)];
+    function setCartList({ totalCart }) {
+        return createArray(totalCart).map((n,i) => (<CartList key={i} cartItem={cartData} onIncrease={onIncrease} onDecrease={onDecrease} number={number} getCartItems={getCartItems}/>));
+    }
 
-    }, {
-        cart_id : 121152,
-        product_id : 1232423,
-        category : 1,
-        count : 1,
-        item : 'item',
-        status : 1,
-        price : 10000,
-        address_id : 1,
-        promotion_id : 1
-    }]
-    
     const wholePrice = 40000;
         return (
             <div className="container">
                 <div className="cart-top-sec">
                 <h1 className="page-tit">장바구니 🛒</h1>
-                <CartList cartItem={cartData} onIncrease={onIncrease} onDecrease={onDecrease} number={number} />
-                <CartCount wholePrice={wholePrice}/>
+                {setCartList(totalCart)}
                 <h1 className="page-tit">찜 List</h1>
                 <div>
                     <Tab 

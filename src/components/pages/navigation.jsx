@@ -99,6 +99,22 @@ export default function navigation() {
                                 </div>
                             </div>
                             </div>
+                            <div className="post-slider">
+                            <div className="post-wrapper">
+                                    <div className="post"><TransportaitonInfoUnit /></div>
+                                    <div className="post"><TransportaitonInfoUnit /></div>
+                                    <div className="post"><TransportaitonInfoUnit /></div>
+                                    <div className="post"><TransportaitonInfoUnit /></div>
+                                    <div className="post"><TransportaitonInfoUnit /></div>
+                                    <div className="post"><TransportaitonInfoUnit /></div>
+                            </div>
+                            <div id="pager">
+                                <div className="prev">
+                                </div>
+                                <div className="next">
+                                </div>
+                            </div>
+                            </div>
                             <div className="d-flex flex-column" style={{outline: 0}}>
                 <Button id="toggle">
                     <h1 className="page-tit" id="rentalCarCTA">어떤 렌트카 찾으세요?(CTA)</h1>

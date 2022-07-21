@@ -26,7 +26,7 @@ function cartModal({productId, modalClose}) {
         */
     }
             return (
-                <div className="modal-bgc">
+                //<div className="modal-bgc">
                 <aside className="cart-modal"> 
                     <h1 className="cart-tit">장바구니에 상품을 담았습니다.</h1>
                     <div className="btn-group-cart">
@@ -38,9 +38,9 @@ function cartModal({productId, modalClose}) {
                     <div className="btn-secondary btn-40" onClick={modalClose}>
                         확인
                     </div>
-                    </div>
+                   </div>
                 </aside>
-                </div>
+                //</div>
             )
             }
 

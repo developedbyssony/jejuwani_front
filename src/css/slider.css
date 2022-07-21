@@ -1,30 +1,28 @@
 .slider-container1 {
-    vertical-align: top;
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background-image: url('./assets/main/main-banner3.png');
     background-repeat: no-repeat;
     background-size:contain;
-    background-position: center;
-    overflow: hidden;
+    background-position: center top;
 }
 
 .slider-container2 {
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background-image: url('./assets/main/main-banner1.png');
     background-repeat: no-repeat;
     background-size:contain;
-    background-position: center;
+    background-position: center top;
 }
 
 .slider-container3 {
     width: 100%;
-    height: 1000px;
+    height: 100%;
     background-image: url('./assets/main/main-banner2.png');
     background-repeat: no-repeat;
     background-size:contain;
-    background-position: center;
+    background-position: center top;
 }
 
 .bottom-slider-container {
@@ -35,3 +33,62 @@
     width: 511px;
     height: 412px;
 }
+
+.arrow-next, .arrow-prev {
+   cursor:pointer;
+   position: absolute;
+   top:50%;
+   border: 1px solid black;
+   background-color: white;
+   border-radius: 50%;
+   width: 80px;
+   height: 80px;
+   z-index: 999;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+   .main {
+    background-color: gray;
+   }
+}
+
+
+#arrow-next.main, #arrow-prev.main {
+    cursor:pointer;
+    position: absolute;
+    top:50%;
+    background-color: gray;
+    border:none;
+    width: 100px;
+    height: 100px;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+ }
+ 
+
+.arrow-prev {
+    position: absolute;
+    left: 100px;
+ }
+
+ .arrow-next {
+    position: absolute;
+    right: 100px;
+ }
+
+ .ic-prev {
+    position: relative;
+    top:28%;
+    left:30%;
+    background: url('assets/css_sprites_clo.png') no-repeat -211px -549px;
+	width: 21px;
+	height: 38px;
+    transform: rotate(180deg);
+ }
+
+ .ic-next {
+    position: relative;
+    top:28%;
+    left:36%;
+    background: url('assets/css_sprites_clo.png') no-repeat -211px -549px;
+	width: 21px;
+	height: 38px;
+ }

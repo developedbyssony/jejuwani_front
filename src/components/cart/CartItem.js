@@ -1,15 +1,26 @@
 //import axios from "axios";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import '../../css/cart.css'
 
 function CartItem({item, idx, onIncrease, onDecrease, number}) {
-    /*
-    const MIN_COUNT = 1;
-    const MAX_COUNT = 10;
+    const [ cartState, setCartState ] = [{
+        id:'',
+        region:'',
+        imgSrc:'',
+        title:'',
+        price:'',
+        count:'',
+    }];
     const initialCartItem = localStorage.getItem('cartState') ? JSON.parse(localStorage.getItem('cartState')): [];
-    const [ cartItems, setCartItems] = useState(initialCartItem);
-    */
+    const [ cartItems, setCartItems ] = useState(initialCartItem);
+    useEffect(() => {
+        console.log(cartItems);
+        console.log(initialCartItem);
+
+        // 현재 로컬스토리지에 저장된 장바구니 아이템을 콘솔에서 확인
+    },[]);
+
     /* 백엔드 통신 함수 
     const getCartItems = async() => {
         axios.get(`${serverURL}/cart/`, {
@@ -56,9 +67,15 @@ function CartItem({item, idx, onIncrease, onDecrease, number}) {
             alert('장바구니에 담을 수 있는 최대 수량은 10개입니다.');
         }
         */
-        /*
+        
     function deleteCartItem() {
-
+        console.log(cartState);
+        console.log(cartItems);
+        const newCartItem = [...cartItems];
+        console.log(newCartItem);
+        newCartItem.splice(idx, 1);
+        console.log(newCartItem);
+    }
         /*
         const newCartItem = [...cartItems];
         newCartItem.splice(idx, 1);
@@ -72,7 +89,7 @@ function CartItem({item, idx, onIncrease, onDecrease, number}) {
             <img 
                 src={item.imgSrc}
                 className="cart-item-img"
-                alt={item.imgSrc}
+                alt="액티비티 이미지"
             />
         </div>
         <div className="ml-4 flex flex-1 flex-col">
@@ -106,7 +123,7 @@ function CartItem({item, idx, onIncrease, onDecrease, number}) {
                     <button
                         type="button"
                         className="btn-outlined btn-40 remove-btn"
-                        onClick={() => deleteCartItem(idx)}>
+                        onClick={deleteCartItem}>
                         삭제하기
                     </button>
                 </button>

@@ -1,14 +1,21 @@
 import { useState, useEffect } from 'react';
 import Slider1 from '../slider1';
+import Slider2 from '../slider2';
+import Slider3 from '../slider3';
+
 import ProductUnitListActivity from '../productUnitListActivity';
 import ProductUnitRestaurantMap from '../productUnitListRestaurant';
 import TransportaitonInfoUnit from '../cardUI/transportationInfoUnit';
-import BlogUnit from '../cardUI/blogUnit';
+import BlogUnit from '../cardUI/productUnitBlogSpecial';
 import '../../css/main.css';
 import YoutubeFooter from '../youtubeFooter';
 import MainBlogUnit from '../cardUI/mainBlogUnit';
 
 function main({kakaomap})  {
+    const [ modalOpen, setModalOpen] = useState();
+    const modalClose = () => {
+        setModalOpen(!modalOpen);
+      }
     let [ ProductData, setProductItems ] = useState([]); 
 
     async function getProductItems() {
@@ -87,11 +94,8 @@ return(
                     </div>
                  <div className="more">더 보기<h1 className="ic-more"></h1></div>
                 <div className="section-main-activity-contentsDisplayArea">
-                <div className="post-slider">
-                            <div className="post-wrapper">
-                                    <div className="post"><ProductUnitListActivity data={ProductData} /></div>
-                            </div>
-                        </div>
+                            <Slider2 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider2>
+                            <Slider2 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider2>
                 </div>
                 </div>
                 </div>
@@ -118,31 +122,40 @@ return(
                 <div className="more">더 보기<h1 className="ic-more"></h1></div>
 
                 <div className="section-main-activity-contentsDisplayArea">
-                <div className="post-slider">
-                            <div className="post-wrapper">
-                                    <div className="post"><ProductUnitRestaurantMap map={kakaomap}/></div>
+                            <Slider2 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider2>
+                            <Slider2 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider2>
+                </div>
+                </div>
+                </div>
+
+                <div className="section-main-search">
+                            <div className="section-main-search-input-group">
+                            <form className="input-group" id="main-search-input">
+                                <input class="form-input" type="text" placeholder="월정리 투명카약" />
+                                <button type="submit"><div class="ic-search"></div></button>
+                            </form>
+                            <div className="section-main-search-tit">
+                            <p className="text-style-13" id="main-search-tit">지금 바로 떠나보세요!</p>
                             </div>
-                        </div>
+                            </div>
+                </div>
+
+                <div className='wrapper-main'> 
+                <div className="section-main-restaurant">
+                <div className="section-main-restaurant-tit">
+                    <p className="text-style-18" id="main-sub-tit">리뷰가 인정한 제주도 최고 맛집</p>
+                    <h1 className="page-tit" id="main-tit">7월의 베스트 Wanner</h1>
+                </div>
+                <div className="more">더 보기<h1 className="ic-more"></h1></div>
+
+                <div className="section-main-activity-contentsDisplayArea">
+                            <div className="main-blog-best-wanner">
+                            <BlogUnit item={ProductData}/>
+                            </div>
+                            <Slider3 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider3>
                 </div>
                 </div>
-                {/*
-                        <div className="container-fluid">
-                        <div className="row">
-                        <div className="col-6">
-                        <MainBlogUnit />
-                        </div>
-                        <div className="col-6">
-                        <div className="section-main-blog-s">
-                        <BlogUnit />
-                        <BlogUnit />
-                        <BlogUnit />
-                        </div>
                 </div>
-                </div>
-                
-        </div>
-    </div>*/}
-    </div>
     </div>
     <YoutubeFooter />
     </>

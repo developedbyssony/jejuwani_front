@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../css/checkout-card.css';
 import '../css/order-form.css';
 import Modal from './modals/cartModal.jsx';
 import ModalD from './modals/deleteModal.jsx';
-import category from './category';
 import ProductNavBar from './productDetailNavBar';
 
 
@@ -204,7 +204,11 @@ function productShow() {
                         cartState={cartState}
                         />
                     }
-                    <button className="btn-primary btn-55" type="submit">바로구매</button>
+                    <button className="btn-primary btn-55" type="button">
+                    <Link to="/order">
+                        바로구매
+                    </Link>
+                    </button>
                 </div>
         </form>
         </div>

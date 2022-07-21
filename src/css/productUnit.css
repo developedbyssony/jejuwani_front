@@ -1,21 +1,46 @@
 
 .productUnit-frame {
-    position: relative;
-    left: -1246px;    
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width:550px !important;
-    height: 624px;
+    width: 70%;
+    height: 100%;
+    /* width:550px !important; */
+    /* height: 624px; */
     border: 1px solid darkgray;
-    margin-right: 55px;
-    margin-bottom: 40px;
     border-radius: 3px;
-    transition: 0.3s ease-in-out;
+    transition: 0.1s ease-in-out;
+}
+
+.productUnit-frame-wanner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  height: 80%;
+  /* width:550px !important; */
+  /* height: 624px; */
+  margin-bottom: 40px;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
+}
+
+.productUnit-frame-wanner-special {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 48%;
+  height: 80%;
+  margin-bottom: 40px;
+  border-radius: 3px;
+  transition: 0.3s ease-in-out;
 }
 
 .productUnit-frame:hover {
-  border: 1px solid gray;
+  border: 4px solid gray;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
 }
 
@@ -26,7 +51,45 @@
     background-image: url('assets/main/activity/main-activity-test.png');
     background-repeat: no-repeat;
     background-size: cover; 
+}
 
+.productUnit-img-wanner-special {
+  border-radius: 20px;
+  height: 100%;
+  border-bottom: 1px solid #ddd;
+  background-image: url('assets/main/activity/main-activity-test.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  margin-bottom:25px;
+}
+
+.main-blog-img-frame {
+  border-radius: 20px;
+  height: 80%;
+  overflow:hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.productUnit-img-wanner {
+  border-radius: 20px;
+  height: 480px;
+  border-bottom: 1px solid #ddd;
+  background-image: url('assets/main/activity/main-activity-test.png');
+  background-repeat: no-repeat;
+  background-size: cover; 
+  margin-bottom:25px;
+}
+
+.productUnit-img-wanner:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+}
+
+.main-blog-img-frame:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.productUnit-img-wanner-special:hover {
+  transform: scale(1.5);
 }
 
 .list-item-ic-cart {

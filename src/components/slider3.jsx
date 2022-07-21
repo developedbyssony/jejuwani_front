@@ -1,35 +1,63 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
+import ProductUnit from './cardUI/productUnitBlog';
 import "../css/slider.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styled from 'styled-components';
 
-export default class SimpleSlider extends Component {
-  render() {
+
+const StyledSlider = styled(Slider)`
+     position:relative;
+     left:52%;
+
+    .slider-inner {
+      display:flex;
+      justify-contents:center;
+      position:relative;
+      height: 30vh;
+      margin-left:11%;
+    }
+
+    .slider-outter {
+      display:flex;
+      flex-direction:colum;
+    }
+`;
+
+/*
+    .box {
+      position:absolute;
+      display:flex;
+      justify-contents:center;
+      border:1px solid black;
+      //width:100% - 160px, -160px
+      height:100%;
+    }
+  */
+
+export default function SimpleSlider({data, setCart, closeCart}) {
     const settings = {
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 1,
+      slidesToShow: 4,
       slidesToScroll: 1
     };
     return (
       <div>
-        <Slider {...settings}>
-        <div className="blog-slider-container">
-            <h3>1</h3>
-          </div>
-          <div className="blog-slider-container">
-            <h3>2</h3>
-          </div>
-          <div className="blog-slider-container">
-            <h3>3</h3>
-          </div>
-          <div className="blog-slider-container">
-            <h3>4</h3>
-          </div>
-        </Slider>
+        <StyledSlider {...settings}>
+        <div className="slider-outter">
+              <div className="slider-inner">
+              <ProductUnit item={data} setCart={setCart} closeCart={closeCart}/>
+              </div>
+        </div>
+        <div className="slider-outter">
+              <div className="slider-inner">
+              <ProductUnit item={data} setCart={setCart} closeCart={closeCart}/>
+              </div>
+        </div>
+        </StyledSlider>
       </div>
     );
   }
-}
