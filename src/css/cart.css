@@ -1,20 +1,28 @@
 .cart-item {
+    position: relative;
+    justify-content: space-between;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     border: 1px solid #5C7A89;
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
 }
 .cart-item-img {
     width: 150px;
     height: 100px;
+    margin-right: 30px;
 }
 .cart-title h3 {
     position: relative;
     right: 580%;
+}
+
+.cart-item-txt {
+    position: relative;
+    margin-left: 30px;
 }
 
 .cart-title p {
@@ -31,9 +39,9 @@
 }
 
 .cart-item-btn-sec {
+    float:right;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 .remove-btn {
     margin-top: 20px;

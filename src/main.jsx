@@ -9,6 +9,7 @@ import Detail from './components/pages/productDetailPage';
 import Detail2 from './components/pages/productDetailPage_Restaurant';
 import Blog from './components/pages/blog';
 import Order from './components/pages/orderSheet';
+import Pay from './components/pages/payment';
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -27,7 +28,7 @@ root.render(
       <Route path="detail2" element={<Detail2 />} />
       <Route path="navigation" element={<Navigation />} />
       <Route path="write" element={<Write />} />
-      <Route path="law" element={<Law />} />
+      <Route path="payment" element={<Pay />} />
       <Route path="order" element={<Order />} />
     </Routes>
   </Router>

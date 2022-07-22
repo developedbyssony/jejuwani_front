@@ -69,7 +69,6 @@
     position: relative;
     width: 100%;
     top:100px;
-    height: 2300px;
     margin-bottom: 156px;
     overflow: hidden;
 }
@@ -85,7 +84,6 @@
     align-items: center;
     height: 541px;
     margin-top: 60px;
-    margin-bottom:200px;
 }
 
 #main-search-input {

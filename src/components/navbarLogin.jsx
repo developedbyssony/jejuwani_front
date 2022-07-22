@@ -53,7 +53,7 @@ function Navbar() {
                             }
                             </div>
                             <div className="navber-menu-right-item">
-                            <button className="btn-primary btn-40" id="nav-btn-write" onClick={modalClose}>글쓰기<i className="ic-chevron" id="write-chevron"></i></button>
+                            <button className="btn-primary btn-40" id="nav-btn-write" onClick={modalClose}>글쓰기<h1 className="i-chevron"></h1></button>
                             {
                             modalOpen && <Tooltip1
                             text1={writeText1}

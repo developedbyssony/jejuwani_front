@@ -42,8 +42,12 @@ function blog({item}) {
           */
     },[]);
 
-    const eventKey1 = "following";
-    const eventKey2 = "foryou";
+    const eventKey1 = "emotionalJJ";
+    const eventKey2 = "famillyJJ";
+    const eventKey3 = "exctingJJ";
+    const eventKey4 = "healingJJ";
+    const eventKey5 = "restaurantJJ";
+    const eventKey6 = "naturalJJ";
     const likeCate1 = "감성 제주";
     const likeCate2 = "가족과 제주";
     const likeCate3 = "익사이팅 제주";
@@ -61,25 +65,14 @@ function blog({item}) {
                             <h1 className="page-tit" id="main-tit">7월의 베스트 Wanner</h1>
                             <Slider4 data={ProductData}></Slider4>
                             <Slider4 data={ProductData}></Slider4>
-                            {/*<div className="post-slider">
-                            <div className="post-wrapper">
-                                    <div className="post"><BlogUnits /></div>
-                                    <div className="post"><BlogUnits /></div>
-                                    <div className="post"><BlogUnits /></div>
-                                    <div className="post"><BlogUnits /></div>
-                                    <div className="post"><BlogUnits /></div>
-                            </div>
-                            <div id="pager">
-                                <div className="prev">
-                                </div>
-                                <div className="next">
-                                </div>
-                            </div>
-                            </div>*/}
                             <div className="following-post">
                             <Tab 
                                 eventKey1={eventKey1}
                                 eventKey2={eventKey2}
+                                eventKey3={eventKey3}
+                                eventKey4={eventKey4}
+                                eventKey5={eventKey5}
+                                eventKey6={eventKey6}
                                 tapTitle1={likeCate1}
                                 tapTitle2={likeCate2}
                                 tapTitle3={likeCate3}
@@ -88,6 +81,10 @@ function blog({item}) {
                                 tapTitle6={likeCate6}
                                 contents1={<BlogList />}
                                 contents2={<BlogList />}
+                                contents3={<BlogList />}
+                                contents4={<BlogList />}
+                                contents5={<BlogList />}
+                                contents6={<BlogList />}
                                 />
                             </div>
                         </div>

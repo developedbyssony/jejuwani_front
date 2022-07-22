@@ -1,29 +1,29 @@
 //import axios from "axios";
+import { decrease } from 'actions';
 import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector,  dispatch } from "react-redux"
 import '../../css/cart.css'
+import { increase } from '../../actions/index';
 
-function CartItem({item, idx, onIncrease, onDecrease, number, onRemove}) {
-    const [ cartState, setCartState ] = [{
-        id:'',
-        region:'',
-        imgSrc:'',
-        title:'',
-        price:'',
-        count:'',
-    }];
+function CartItem({item, idx, onIncrease, onDecrease, onRemove, store, userId, serverURL}) {
+    const initData = useSelector((state : initialState) => state.count);
     const initialCartItem = localStorage.getItem('cartState') ? JSON.parse(localStorage.getItem('cartState')): [];
-    const [ cartItems, setCartItems ] = useState(initialCartItem);
-    useEffect(() => {
-        console.log(cartItems);
-        console.log(initialCartItem);
-        console.log(item);
-        // 현재 로컬스토리지에 저장된 장바구니 아이템을 콘솔에서 확인
-    },[]);
+    const [ cartItems, setCartItems ] = useState(0);
 
-    /* 백엔드 통신 함수 
+    useEffect(() => {
+        if(initData > 10) {
+            alert("장바구니에 담을 수 있는 최대 수량은 10개입니다.");
+            store.dispatch(decrease(1));
+        }
+        else if(initData < 0) {
+            alert('장바구니에 담을 수 있는 최소 수량은 1개입니다.');
+            store.dispatch(increase(1));
+        }
+    },[initData]);
+
+    /* 백엔드 통신 함수 (한 유저의 장바구니 가져오기)
     const getCartItems = async() => {
-        axios.get(`${serverURL}/cart/`, {
+        axios.get(`${serverURL}/cart/list/`${userId}`, {
             headers: {
               'Content-Type': 'application/json',}}).then(res => {
                 console.log("카트 리스트 get");
@@ -33,80 +33,91 @@ function CartItem({item, idx, onIncrease, onDecrease, number, onRemove}) {
                 }).finally(()=>{console.log("request end")});
         }
     */
-        /*
-    function amountInputHandler(event) {
-    }
-    
-    function decreaseCartItem() {
-        dispatch({
-            type: 'minusQTY',
-            data: item.id
-          });
-        /*
-        const newCartItems = [...cartItems];
-        if (newCartItems[idx].count > MIN_COUNT) {
-            newCartItems[idx].count -= 1;
-            setCartItems(newCartItems);
-        } else {
-            alert('장바구니에 담을 수 있는 최소 수량은 1개입니다.');
-        }
-    }
-    
 
-    function increaseCartItem() {
-        dispatch({
-            type: 'plusQTY',
-            data: item.id
-          });
+    /* 백엔드 통신 함수 (장바구니 삭제)
+    const deleteCartItems = async() => {
+        axios.post(`${serverURL}/cart/`${userId}`, {
+            headers: {
+              'Content-Type': 'application/json',}}).then(res => {
+                console.log("카트 리스트 get");
+                setCartItems(res.json());
+            }).catch(ex =>{
+                console.log("requset fail");
+                }).finally(()=>{console.log("request end")});
         }
+    */
+    
+    function handleIncrement(i) {
+        console.log('증가');
+        store.dispatch(increase(1));
         /*
-        const newCartItems = [...cartItems];
-        if (newCartItems[idx].count < MAX_COUNT) {
-            newCartItems[idx].count += 1;
-            setCartItems(newCartItems);
-        } else {
-            alert('장바구니에 담을 수 있는 최대 수량은 10개입니다.');
-        }
+        const cartItems = cartState.map(item => {
+          if(item.id === i.id) {
+            return {...i, count: i.count + 1};
+          } 
+          return item;
+        })
+        setCartItems({  cartItems });
         */
+      };
+      
+    function handleDecrement(i) {
+        console.log('감소');
+        store.dispatch(decrease(1));
+        /*
+        const cartItems = cartState.map(item => {
+          if(item.id === i.id) {
+              const quanti = i.count - 1;
+              return {...i, quanti : count < 0 ? 0 : count };                
+              } 
+          return item;
+        })
+        setCartItems({  cartItems });
+        */
+      };
 
-    const handleRemove = ({idx}) => {
-           console.log({idx});
-           window.confirm(`${idx}를 정말 삭제하시겠습니까?`);
+    const handleRemove = (e) => {
+           console.log(e);
+           console.log(e.target.value);
+           window.confirm(`${e.target.value}를 정말 삭제하시겠습니까?`);
            onRemove(); 
         }   
 
     return (
         item.map((i,idx) => (<div>
-        <li className="cart-item" key={item.id}>
+        <li className="cart-item" key={i.id}>
+        <div className="flex-box">
         <div className="h-24 w-24 overflow-hidden rounded-md border border-gray-200">
             <img 
-                src={item.imgSrc}
+                src={i.imgSrc}
                 className="cart-item-img"
                 alt="액티비티 이미지"
             />
         </div>
         <div className="ml-4 flex flex-1 flex-col">
             <div>
-                <div className="flex justify-between text-base font-medium text-gray-900 cart-title">
+                <div className="cart-item-txt">
                     <p>{idx}</p>
-                    <h3>{item.title}</h3>
+                    <h3>{i.title}</h3>
                     <p className="ml-4">
-                        {(item.price * item.count).toLocaleString()}원
+                        {(item.price * initData).toLocaleString()}원
                     </p>
                 </div>
+            </div>
+            </div>
             </div>
             <div className="cart-item-btn-sec">
                 <div className="cart-item-count">
                     <button
                         className="decrease-btn"
-                        onClick={onDecrease}
+                        onClick={handleDecrement}
                     >
                         -
                     </button>
-                    <div className="mx-2 font-bold">{number}</div>
+                    <div className="mx-2 font-bold">{initData}</div>
                     <button
                         className="increase-btn"
-                        onClick={onIncrease}
+                        onClick={handleIncrement}
                     >
                         +
                     </button>
@@ -117,20 +128,14 @@ function CartItem({item, idx, onIncrease, onDecrease, number, onRemove}) {
                     <button
                         type="button"
                         className="btn-outlined btn-40 remove-btn"
+                        value={i.id}
                         onClick={handleRemove}>
                         삭제하기
                     </button>
                 </button>
             </div>
-        </div>
     </li>
     </div>))
     )}
 
 export default CartItem;
-
-function Store(state) {
-    return {
-        state : state
-    }
-}

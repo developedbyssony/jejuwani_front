@@ -5,8 +5,8 @@ import MainLandMark from "./slider/mainLandMark.jsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components';
-import NextArrow from './slider/nextArrow';
-import PrevArrow from './slider/prevArrow';
+import NextArrow from './slider/nextArrowMain';
+import PrevArrow from './slider/prevArrowMain';
 
 const StyledSlider = styled(Slider)`
     .slider {

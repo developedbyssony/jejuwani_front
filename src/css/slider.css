@@ -50,20 +50,6 @@
    }
 }
 
-
-#arrow-next.main, #arrow-prev.main {
-    cursor:pointer;
-    position: absolute;
-    top:50%;
-    background-color: gray;
-    border:none;
-    width: 100px;
-    height: 100px;
-    z-index: 999;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
- }
- 
-
 .arrow-prev {
     position: absolute;
     left: 100px;
@@ -88,6 +74,57 @@
     position: relative;
     top:5%;
     left:28%;
+    background: url('assets/css_sprites_clo.png') no-repeat -211px -549px;
+	width: 21px;
+	height: 38px;
+    transform: scale(0.5);
+ }
+
+ .arrow-prev-main, .arrow-next-main {
+    cursor:pointer;
+    position: absolute;
+    top:40%;
+    background-color: #ddd;
+    border-radius: 50%;
+    border:none;
+    width: 50px;
+    height: 50px;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .arrow-prev-main {
+    position: absolute;
+    left: 30px;
+ }
+
+ .arrow-next-main {
+    position: absolute;
+    right: 30px;
+ }
+
+ .ic-prev-main {
+    position: relative;
+    top:15%;
+    left:25%;
+    background: url('assets/css_sprites_clo.png') no-repeat -211px -549px;
+	width: 21px;
+	height: 38px;
+    transform: scale(0.5) rotate(180deg);
+ }
+
+ .arrow-prev-main:hover {
+    background-color: gray;
+ }
+
+ .arrow-next-main:hover {
+    background-color: gray;
+ }
+
+ .ic-next-main {
+    position: relative;
+    top:15%;
+    left:35%;
     background: url('assets/css_sprites_clo.png') no-repeat -211px -549px;
 	width: 21px;
 	height: 38px;

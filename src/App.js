@@ -21,10 +21,11 @@ import LayoutBlog from "./components/layoutMyBlog";
 import MyBlog from './components/pages/myblog';
 import Order from './components/pages/orderSheet';
 import Review from './components/pages/writeReview';
+import Pay from './components/pages/payment';
 import { useSelector, useDispatch } from 'react-redux';
 import { increase, decrease } from './actions/index';
 
-export default function App({ FileInput, ProfileInput, serverURL, userId, kakaoMap }) {
+export default function App({ FileInput, ProfileInput, serverURL, userId, map, store }) {
   const number = useSelector(state => state.count);
   const dispatch = useDispatch();
 
@@ -62,15 +63,13 @@ function dd() {
   const logout = () => setUser(null);
 
   useEffect(() => {
-    //dd();
     /* 여기에서 백엔드 데이터 불러올 것 */
-       
   },[]);
 
   const [productItems, setProductItems] = useState([]);
   const [cartItems, setCartItems] = useState([]);
   const dataId = useRef(0);
-  const [data, setData] = useState([]); 
+  const [ blogData, setData] = useState([]); 
   const [isLogin , setIsLogin] = useState(false);
 
   function loginCallBack(login) {
@@ -80,6 +79,7 @@ function dd() {
 
   const onCreate = (key, category, region, title, contents, fileName, fileURL) => {
     const created_date = new Date().getTime();
+    /*
     const formData = new FormData();
     formData.append('key', key);
     formData.append('category', category);
@@ -87,31 +87,65 @@ function dd() {
     formData.append('title', title);
     formData.append('contents', contents);
     formData.append('fileName',fileName);
-    formData.append('fileName',fileURL);
+    formData.append('fileURL',fileURL);
     formData.append('created_date', created_date);
+    */
+   const newPost = {
+    key,
+    category,
+    region,
+    title,
+    contents,
+    fileName,
+    fileURL,
+    created_date,
+    id:dataId.current
+   }
 
     dataId.current += 1;
-    setData([formData,...data]); // 새로운 아이템에 기존 데이터를 이어붙인 형태로 setState
+    setData([newPost,...blogData]); // 새로운 아이템에 기존 데이터를 이어붙인 형태로 setState
+    console.log(blogData);
+   
+    /*
     for (let key of formData.keys()) {
-      console.log(key, ":", formData.get(key));
+      console.log(key, ":", formData.getAll(key));
     }
-    console.log(data);
+    for(let i=0; i < blogData.length; i++ ) {
+      console.log(JSON.stringify(blogData[i]));
+    }
+    console.log(blogData);
+    var formSerializeArray = formData.serializeArray();
+    var json = JSON.stringify(formSerializeArray);
+
+    console.log(json);
+    */
+    /*
+    for (let key of blogData.keys()) {
+      console.log(key, ":", blogData.getAll(key));
+    }
+    /*
+    for (let key of blogData) {
+      console.log(key.entries().next());
+    }
+   
+    console.log(blogData);
+     */
   }
    /*  { isAuthorized ? <Redirect to="/main" /> : <Redirect to="/" /> } */
   return (
     <div className="app">
       <BrowserRouter>
         <Route exact path="/">
-          <Layout children={<Main1 isLogin={isLogin} kakaomap={kakaoMap}/>}/>
+          <Layout children={<Main1 isLogin={isLogin} map={map}/>}/>
         </Route>
         <Route path="/main">
-          <LayoutLogin children={<Main2 isLogin={isLogin} kakaomap={kakaoMap}/>}/>
+          <LayoutLogin children={<Main2 isLogin={isLogin} map={map}/>}/>
         </Route>
         <Route path="/blog">
           <LayoutBlog children={<Blog />}/>
         </Route>
         <Route path="/myblog">
-          <LayoutBlog children={<MyBlog FileInput={FileInput} ProfileInput={ProfileInput} myPostList={data} userId={userId}/>}/>
+          <LayoutBlog children={<MyBlog FileInput={FileInput} ProfileInput={ProfileInput} blogData={blogData} userId={userId}/>}/>
         </Route>
         <Route path="/my">
           <LayoutMy children={<Update FileInput={FileInput} serverURL={serverURL}/>}/>
@@ -132,13 +166,13 @@ function dd() {
           <LayoutLogin children={<Detail/>}/>
         </Route>
         <Route path="/detail2">
-          <LayoutLogin children={<Detail2/>}/>
+          <LayoutLogin children={<Detail2 map={map}/>}/>
         </Route>
         <Route path="/navigation">
           <LayoutLogin children={<Navigation/>}/>
         </Route>
         <Route path="/cart">
-          <LayoutLogin children={<Cart serverURL={serverURL} userId={userId} onIncrease={onIncrease} onDecrease={onDecrease} number={number}/>}/>
+          <LayoutLogin children={<Cart serverURL={serverURL} userId={userId} onIncrease={onIncrease} onDecrease={onDecrease} number={number} store={store} />}/>
         </Route>
         <Route path="/write">
           <LayoutLogin children={<Write FileInput={FileInput} onCreate={onCreate} />}/>
@@ -148,6 +182,9 @@ function dd() {
         </Route>
         <Route path="/order">
           <LayoutLogin children={<Order/>}/>
+        </Route>
+      <Route path="/payment">
+          <LayoutLogin children={<Pay/>}/>
         </Route>
       </BrowserRouter>
     </div>

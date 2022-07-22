@@ -1,13 +1,86 @@
 import { useState, useEffect } from 'react';
+import { isReadable } from 'stream';
 import '../../css/myBlog.css';
-import BlogPost from '../cardUI/blogPost';
+import BlogPost from '../cardUI/blogPostMy';
 
-export default function myblog({ FileInput, ProfileInput, myPostList, userId}) {
+export default function myblog({ FileInput, ProfileInput, blogData, userId}) {
+    const [ myData, setMyData ] = useState([
+    ]);
+    /*
+          {
+            key : '',
+            category : '',
+            region : '',
+            title : '',
+            contents : '',
+            fileName : '',
+            fileURL : '',
+        }
+    */
+
+    useEffect(() => {
+        for (var pair of blogData) {
+            setMyData(myData.concat(pair));
+        }
+        /*
+        const initData = blogData.map((it) => {
+            return {
+                key : it.key, 
+                category : it.category, 
+                region : it.region,
+                title : it.title,
+                contents : it.contents,
+                fileName : it.fileName,
+                created_date : it.created_date,
+            }
+        })
+        console.log(initData);
+        setMyData(initData); 
+        /*
+        setMyData({
+            key : blogData.key, 
+            category : blogData.category, 
+            region :blogData.region, 
+            title : blogData.title,
+            contents : blogData.contents,
+            fileName : blogData.fileName,
+            created_date : blogData.created_date,
+        });*/
+
+        /*
+        console.log(blogData.entries().next()); // {value: Array(2), done: false}done: falsevalue: (2) [0, FormData][[Prototype]]: Object
+
+        /*
+        for (var pair of blogData) {
+                console.log(pair.get('key'));
+                console.log(pair.keys().next()); // {done: false, value: 'key'}
+                console.log(pair.values().next()); // {done: false, value: '65cb15f-1230-fb2c-af34-ac135521e7'}
+        }
+        console.log(blogData.keys().next()); // {value: 0, done: false}
+        console.log(blogData.values().next()); // {value: 0, done: false}done
+        console.log(blogData.entries().next()); // {value: FormData, done: false}
+        
+        /*
+        while(true) {
+            let iteratorResult = blogData.values().next();
+            if ( iteratorResult.done === false ) break;
+            let v = iteratorResult.values();
+            console.log(v); // 4 5 6 이 차례대로 console에 찍힘
+          }
+        */
+        /*
+        for (var pair of myPostList.keys()) {
+                    console.log(pair);
+                    }
+                */
+    },[myData])
+
     const [ blogCover, setBlogCover ] = useState(false);
     const [ blogProfile, setBlogProfile ] = useState(false);
     const [ blogCoverImg, setBlogCoverImg ] = useState({blogCoverImgName : null, blogCoverImgURL : null});
     const [ profileImg, setProfileImg ] = useState({profileImg : null, profileImgURL : null});
-    const data = myPostList.entries();
+
+
 
     const uid = 'dkdlel';
     const nick = '넥슨컴퓨터박물관';
@@ -21,6 +94,7 @@ export default function myblog({ FileInput, ProfileInput, myPostList, userId}) {
     }
 
     const onFileChange_cover = file => {
+        console.log(myData);
         let url = file.url;
         let urlSlice = url.slice(url.lastIndexOf(".") + 1).toLowerCase();
         if(!(urlSlice == "gif" ||urlSlice == "jpg" || urlSlice == "png")) {
@@ -80,10 +154,10 @@ export default function myblog({ FileInput, ProfileInput, myPostList, userId}) {
                                         </div>
                                     </div>
                                     <div className="my-blog-posts">
-                                        <BlogPost />
-                                        <BlogPost />
-                                        <BlogPost />
-                                        <BlogPost />
+                                        <BlogPost myPost={blogData}/>
+                                        <BlogPost myPost={blogData}/>
+                                        <BlogPost myPost={blogData}/>
+                                        <BlogPost myPost={blogData}/>
                                     </div>
                                     </div>
                                 </div>

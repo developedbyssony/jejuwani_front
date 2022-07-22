@@ -34,8 +34,21 @@ function Commentwrite() {
             rating:"",
         });
         console.log(state);
-        // onCreate(state.author, state.content, state.emotion); // 1) app의 onCreate 함수로 전달
         alert('저장 성공');
+        
+        /* 백엔드 통신 함수 (추가)
+       const writeComment = async() => {
+        axios.post(`${serverURL}/pcomment`, {
+            headers: {
+              'Content-Type': 'application/json',}}).then(res => {
+                console.log("댓글 추기"); 
+                setState(res.json());
+            }).catch(ex =>{
+                console.log("requset fail");
+                }).finally(()=>{console.log("request end")});
+        }
+    */
+
     };
 
     return (

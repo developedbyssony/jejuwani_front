@@ -1,14 +1,16 @@
-import { useRef } from 'react';
+import CartCount from 'components/cart/CartCount';
+import { useState, useRef } from 'react';
 import '../../css/order.css';
 import Input from '../tinyForm/input';
 
 function orderSheet() {
+    /*
     const rbuyer_email = useRef();
     const rbuyer_name = useRef();
     const rbuyer_tel = useRef();
     const rbuyer_addr = useRef();
     const rbuyer_postcode = useRef();
-    /*
+
     const [ orderState, setOrderState ] = [{
         pg : 'html5_inicis',
         pay_method : rpay_method.current.value,
@@ -25,7 +27,7 @@ function orderSheet() {
     function payment(e) {
     e.preventDefault();   
     const { IMP } = window; 
-    IMP.init('imp23066347'); // 가맹점 번호
+    IMP.init('imp23066347'); 
     IMP.request_pay({
         pg: "html5_inicis",
         pay_method: "card",
@@ -37,7 +39,7 @@ function orderSheet() {
         buyer_tel: "010-4242-4242",
         buyer_addr: "서울특별시 강남구 신사동",
         buyer_postcode: "01181"
-    }, rsp => { // callback
+    }, rsp => { 
         if (rsp.success) {
           // jQuery로 HTTP 요청
         jQuery.ajax({
@@ -49,10 +51,10 @@ function orderSheet() {
                 merchant_uid: rsp.merchant_uid
             }
         }).done(function (data) {
-          // 가맹점 서버 결제 API 성공시 로직
+            console.log("API 연결");
         })
       } else {
-        alert("결제에 실패하였습니다. 에러 내용: " +  rsp.error_msg);
+            alert("결제에 실패하였습니다. 에러 내용: " +  rsp.error_msg);
       }
     })}
         return (
@@ -121,21 +123,76 @@ function orderSheet() {
                                 </div>
                                 </div>
                             </li>
+                            <li className="table-row">
+                                <div className="heading">
+                                <div class="cell">
+                                <p>상품 번호</p>
+                                </div>
+                                </div>
+                                <div className="heading">
+                                <div class="cell">
+                                <p>상품 이름</p>
+                                </div>
+                                </div>
+                                <div className="heading">
+                                <div class="cell">
+                                <p>1개</p>
+                                </div>
+                                </div>
+                                <div className="heading">
+                                <div class="cell">
+                                <p>5,8000원</p>
+                                </div>
+                                </div>
+                            </li>
+                            <li className="table-row">
+                                <div className="heading">
+                                <div class="cell">
+                                <p>상품 번호</p>
+                                </div>
+                                </div>
+                                <div className="heading">
+                                <div class="cell">
+                                <p>상품 이름</p>
+                                </div>
+                                </div>
+                                <div className="heading">
+                                <div class="cell">
+                                <p>1개</p>
+                                </div>
+                                </div>
+                                <div className="heading">
+                                <div class="cell">
+                                <p>5,8000원</p>
+                                </div>
+                                </div>
+                            </li>
                         </ul>
+                        <ul className="likeUnitwrapper">
+                <li className="sumcount">
+                    <div className="price-13" id="price-sum">
+                        <span className="currency">결제 예정 금액 :</span>
+                        <div className="price-sumcount">
+                        <strong className="amount"> 40000 x 3 = 120,000</strong>
+                        <span className="currency">원</span>
+                        </div>
+                    </div>
+                </li>
+                </ul>
                         <h1 className="page-tit">주문자 정보</h1>
                         <form className="blog-write-form" action="/" method="POST">
                                 <div className="write-inputs">
                                 <div className="first-inputs">
-                            <div className="email"><strong>이메일</strong> <Input type={'text'} placeholder={'n_uck@naver.com'} name={'buyer_email'} ref={rbuyer_email}/></div>
-                            <div className="name"><strong>이름</strong> <Input type={'text'} placeholder={'소윤희'} name={'buyer_name'} ref={rbuyer_name}/></div>
-                            <div className="name"><strong>전화번호</strong> <Input type={'text'} name={'buyer_phone'} ref={rbuyer_tel}/></div>
-                            <div className="addr"><strong>주소</strong> <Input type={'text'} name={'buyer_addr'} ref={rbuyer_addr}/></div>
-                            <div className="postcode"><strong>우편번호</strong> <Input type={'text'} name={'postcode'} ref={rbuyer_postcode}/></div>
+                            <div className="email"><strong>이메일</strong> <Input type={'text'} placeholder={'n_uck@naver.com'} name={'buyer_email'}/></div>
+                            <div className="name"><strong>이름</strong> <Input type={'text'} placeholder={'소윤희'} name={'buyer_name'} /></div>
+                            <div className="name"><strong>전화번호</strong> <Input type={'text'} name={'buyer_phone'} /></div>
+                            <div className="addr"><strong>주소</strong> <Input type={'text'} name={'buyer_addr'} /></div>
+                            <div className="postcode"><strong>우편번호</strong> <Input type={'text'} name={'postcode'} /></div>
                         <h1 className="page-tit">결제 수단</h1>
                         <div className="pay-method-sec">
-                        <p className="pay-method-radio"><input type="radio" name="gender" id="check-label"></input>휴대폰</p>
-                        <p className="pay-method-radio"><input type="radio" name="gender" id="check-label"></input>신용카드</p>
-                        <p className="pay-method-radio"><input type="radio" name="gender" id="check-label"></input>무통장 입금</p>
+                        <p className="pay-method-radio"><input type="radio" name="gender" id="check-label"></input><span>휴대폰</span></p>
+                        <p className="pay-method-radio"><input type="radio" name="gender" id="check-label"></input><span>신용카드</span></p>
+                        <p className="pay-method-radio"><input type="radio" name="gender" id="check-label"></input><span>무통장 입금</span></p>
                         </div>
                         <div className="order-form-message">
                         <p>주문 내용을 확인하였으며, 정보 제공 등에 동의합니다.</p>

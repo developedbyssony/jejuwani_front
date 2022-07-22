@@ -28,7 +28,7 @@ function reviewCard() {
                         </header>
                         <div>
                             <p className="review-contents">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cumque praesentium nisi. Autem quibusdam iure ad est minus quaerat debitis itaque quasi tempore, error doloribus ratione quidem reprehenderit fugiat nulla?                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cumque praesentium nisi. Autem quibusdam iure ad est minus quaerat debitis itaque quasi tempore, error doloribus ratione quidem reprehenderit fugiat nulla?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cumque praesentium nisi. Autem quibusdam iure ad est minus quaerat debitis itaque quasi tempore, error doloribus ratione quidem reprehenderit fugiat nulla?                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cumque praesentium nisi. Autem quibusdam iure ad est minus quaerat debitis itaque quasi tempore, error doloribus ratione quidem reprehenderit fugiat nulla?(450자 이상 ...처리)
                             </p>
                         </div>
                     </article>

@@ -4,7 +4,7 @@ import '../../css/productUnit.css';
 function productUnitRestaurantMap({map}) {
     return (
         <div className="productUnit-frame">
-        <div className="productUnit-map">
+            <div className="productUnit-img-map">
             {map}
             </div>
             <div className="productUnit-contents">
@@ -31,6 +31,6 @@ function productUnitRestaurantMap({map}) {
             </div>
         </div>
     )
-};
+}
 
 export default productUnitRestaurantMap;

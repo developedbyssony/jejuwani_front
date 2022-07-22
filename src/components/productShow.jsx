@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../css/checkout-card.css';
 import '../css/order-form.css';
@@ -8,6 +8,21 @@ import ProductNavBar from './productDetailNavBar';
 
 
 function productShow() {
+    useEffect(() => {
+    /* 백엔드 통신 함수 
+       const getProductInfo = async() => {
+        axios.get(`${serverURL}/product/detail/${product_id}`, {
+            headers: {
+              'Content-Type': 'application/json',}}).then(res => {
+                console.log("해당 상품 정보 보기"); 
+                setState(res.json());
+            }).catch(ex =>{
+                console.log("requset fail");
+                }).finally(()=>{console.log("request end")});
+        }
+        */
+      },[]);
+
     // localStorage를 체크 > 값이 있으면 > 그걸 초기값!
     let [ cartState, setCart ] = useState([]);
     let [ like, setlike ] = useState(0);
@@ -53,6 +68,7 @@ function productShow() {
     <div className="conatiner-fluid">
     <div className="productShow">
         <div className="product-overview">
+        <div className="section" id="product-show-sec">
         <div className="row">
             <div className="col-5">
             <section class="product-img-detail">
@@ -197,18 +213,17 @@ function productShow() {
                     </dd>
                 </dl>
                 <div className="button-group">
-                    <button className="btn-outlined btn-55" type="button" onClick={modalClose}>장바구니</button>
-                    {
-                        modalOpen && <Modal
-                        modalClose={modalClose}
-                        cartState={cartState}
-                        />
-                    }
-                    <button className="btn-primary btn-55" type="button">
-                    <Link to="/order">
-                        바로구매
-                    </Link>
+                    <Link to="/cart">
+                    <button className="btn-outlined btn-55" type="button" onClick={modalClose} id="firstBtn">
+                        장바구니
                     </button>
+                    </Link>
+                    <div className="margin-right"></div>
+                    <Link to="/order">
+                    <button className="btn-primary btn-55" type="button">
+                        바로구매
+                    </button>
+                    </Link>
                 </div>
         </form>
         </div>
@@ -216,6 +231,7 @@ function productShow() {
         </div>
     </div>
     <ProductNavBar />
+    </div>
     </div>
     );
 }

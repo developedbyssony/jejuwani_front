@@ -75,9 +75,11 @@
     justify-content: center;
     align-items: center;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     background-color: #F7F8FA;
     border-radius: 10px;
+    vertical-align: baseline;
+    line-height: 2.5;
 }
 
 .ic-chevron {
@@ -90,4 +92,11 @@
 
 .pay-method-radio {
     display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+
+.pay-method-radio span {
+    margin-left: 20px;
 }

@@ -34,7 +34,14 @@ function Navbar() {
                             <a hef="#"><Link to="/cart"><h1 className="cart"></h1></Link></a>
                             <a className="menu-right text-style-14"><Link to="/login">로그인</Link></a>
                             <a className="menu-right text-style-14"><Link to="/signup">회원가입</Link></a>
-                            <button className="btn-primary btn-40" id="nav-btn-write" onClick={modalClose}>글쓰기<i className="ic-chevron" id="write-chevron"></i></button>
+                            <button className="btn-primary btn-40" id="nav-btn-write" onClick={modalClose}>글쓰기<h1 className="i-chevron"></h1></button>
+                            {
+                            modalOpen && <Tooltip1
+                            text1={writeText1}
+                            text2={writeText2}
+                            modalClose={modalClose}
+                            />
+                            }
                         </div>                                
                     </div>
                     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 import '../../css/modal.css';
 import DatePickerComponent from '../DatePickerComponent';
 
@@ -23,7 +24,9 @@ const modal = ({ modalClose }) => {
         </div>
         <div className="btn-group">
         <button className="btn-outlined btn-40">초기화</button>
+        <Link to="/order">
         <button className="btn-primary btn-40">선택</button>
+        </Link>
         </div>
         <div className="modal-btn-cloe">
         <h1 className="modal-ic-close" onClick={modalClose}></h1>

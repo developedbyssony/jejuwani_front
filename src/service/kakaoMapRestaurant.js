@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 const { kakao } = window;
 
-function KakaoMapRestaurant({height}) {
+function KakaoMapRestaurant() {
     useEffect(() => {
         const container = document.getElementById('map');
         const options = {
@@ -9,10 +9,10 @@ function KakaoMapRestaurant({height}) {
           level: 10 // 지도의 확대 레벨
         };
         const map = new kakao.maps.Map(container, options);
-    },[]);
+    });
     return (
         <div>
-            <div id="map" style={{width:"570px", height:`${height}px`}}></div>
+            <div id="map" style={{width:"570px", height:"100px"}}></div>
         </div>
     );
 }

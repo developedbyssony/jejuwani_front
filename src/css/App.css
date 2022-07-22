@@ -2,6 +2,7 @@
     box-sizing: border-box;
     word-break:keep-all;
     word-wrap:break-word;
+    white-space: nowrap; /* 줄바꿈 x */
   }
   
   /* ic */
@@ -731,7 +732,8 @@
   
   a,
   button {
-    cursor: pointer; }
+    cursor: pointer; 
+  }
   
   ul,
   ol {
@@ -765,6 +767,14 @@
   
   
   /* GNB */
+  .i-chevron {
+    background: url('assets/css_sprites_20220720.png') no-repeat -283px -549px;
+	  width: 21px;
+	  height: 38px;
+    transform: rotate(90deg) scale(0.3);
+    margin-left: 3px;
+  }
+
   .navbar {
     display: flex;
     align-items: center;

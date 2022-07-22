@@ -8,7 +8,6 @@ import "./css/App.css";
 
 import { createStore } from 'redux'
 import { Provider } from 'react-redux';
-import rootReducer from './reducers';
 import { BrowserRouter } from 'react-router-dom';
 import ImageFileInput from './components/ImgfileInput/image_file_input';
 import ImageFileProfileInput from './components/ImgfileInput/image_profile_input';
@@ -17,9 +16,10 @@ import KakaoMapRestaurant from './service/kakaoMapRestaurant';
 
 /* 리덕스에서 관리 할 상태 정의 */
 const initialState = {
+  id:0,
   count: 0,
-  text: '',
-  list: []
+  name: '아이템',
+  list: [],
 };
 
 /* 액션 타입 정의 */
@@ -30,18 +30,16 @@ const ADD_TO_CART = 'ADD_TO_CART';
 
 /* 액션 생성함수 정의 */
 // 액션 생성함수는 주로 camelCase 로 작성합니다.
-function increase() {
-  return {
-    type: INCREASE // 액션 객체에는 type 값이 필수입니다.
-  };
-}
+const increase = () => ({
+  type: "INCREASE" 
+});
 
 const decrease = () => ({
-  type: DECREASE
+  type: "DECREASE"
 });
 
 const addToCart = item => ({
-  type: ADD_TO_CART,
+  type: "ADD_TO_CART",
   item
 });
 
@@ -51,17 +49,17 @@ const addToCart = item => ({
 // 주의: 리듀서에서는 불변성을 꼭 지켜줘야 합니다!
 function reducer(state = initialState, action) {
   switch (action.type) {
-    case INCREASE:
+    case "INCREASE":
       return {
         ...state,
         count: state.count + 1
       };
-    case DECREASE:
+    case "DECREASE":
       return {
         ...state,
         count: state.count - 1
       };
-    case ADD_TO_CART:
+    case "ADD_TO_CART":
       return {
         ...state,
         list: state.list.concat(action.item)
@@ -72,25 +70,33 @@ function reducer(state = initialState, action) {
 }
 
 /* 스토어 만들기 */
-const store = createStore(rootReducer);
+const store = createStore(reducer);
 console.log(store.getState()); // 현재 store 안에 들어있는 상태를 조회합니다.
+
 // 스토어안에 들어있는 상태가 바뀔 때 마다 호출되는 listener 함수
 const listener = () => {
   const state = store.getState();
   console.log(state);
+  console.log(state.count);
 };
 const unsubscribe = store.subscribe(listener); // 구독을 해제하고싶을 때는 unsubscribe() 를 호출
 
 // 액션들을 디스패치 해봅시다.
 store.dispatch(increase());
 store.dispatch(decrease());
-store.dispatch(addToCart({ id: 1, text: '장바구니' }));
+store.dispatch(increase());
+store.dispatch(increase());
+store.dispatch(addToCart({ id: 1, name:'뭘까', count:0 }));
 
+const height = 100;
 const userId = localStorage.getItem("authId");
 const serverURL = "https://localhost:8383";
 axios.defaults.baseURL = "https://localhost:8383";
 axios.defaults.withCredentials = true;
 
+const kakaoMap = props => {
+  <KakaoMapRestaurant {...props} />
+}
 const imageUploader = new ImageUploader();
 const FileInput = props => (
   <ImageFileInput {...props} imageUploader={imageUploader} />
@@ -104,7 +110,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
       <Provider store={store}>
-        <App FileInput={FileInput} ProfileInput={ProfileInput} serverURL={serverURL} userId={userId} store={store} />
+        <App FileInput={FileInput} ProfileInput={ProfileInput} serverURL={serverURL} userId={userId} store={store} map={kakaoMap}/>
       </Provider>
     </BrowserRouter>
 );

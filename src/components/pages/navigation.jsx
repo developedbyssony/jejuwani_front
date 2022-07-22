@@ -21,6 +21,8 @@ export default function navigation() {
           });
 
     })
+    const width = 560;
+    const [ search, searchStart] = useState(false);
     const [ inputText, setInputText ] = useState('');
     const [ place, setPlace ] = useState('');
 
@@ -41,7 +43,7 @@ export default function navigation() {
                     <div className="section">
                             <h1 className="page-tit">제주도 지역별 추천 명소 키워드 검색</h1>
                             <div class="map-group">
-                            <KakaoMapScript searchPlace={place} />
+                            <KakaoMapScript searchPlace={place} width={width} />
                             <div className="map-contents">
                             <div className="search-tag">
                             <p className="tag-orange">#사려니숲길</p>
@@ -65,7 +67,10 @@ export default function navigation() {
                                 </form>
                             </div>
                                 <ul id="placesList">
-                                    <div id="pagination"></div>
+                                <div className="default-sec-search">
+                                    <p className="text-style-13" id="search-inner-txt">검색어를 입력해주세요</p>
+                                </div>
+                                { search  &&  <div id="pagination"></div> }
                                 </ul>
                             </div>
                             </div>
@@ -117,7 +122,7 @@ export default function navigation() {
                             </div>
                             <div className="d-flex flex-column" style={{outline: 0}}>
                 <Button id="toggle">
-                    <h1 className="page-tit" id="rentalCarCTA">어떤 렌트카 찾으세요?(CTA)</h1>
+                    <h1 className="page-tit" id="rentalCarCTA">어떤 렌트카 찾으세요?</h1>
                 </Button>
                         <UncontrolledCollapse toggler="#toggle" className="m-0 p-0">
                             <Card className="collapseCard">

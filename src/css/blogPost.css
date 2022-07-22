@@ -33,6 +33,7 @@
     flex-direction: column;
 }
 .blog-post-right p {
+    white-space: normal;
     margin-bottom: 17px;
 }
 .user-new-post-contents {

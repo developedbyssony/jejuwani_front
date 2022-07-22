@@ -94,6 +94,8 @@
 }
 
 .btn-group-cart {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 

@@ -2,6 +2,7 @@
     position: relative;
     margin-bottom: 8px;
     border-radius: 4px;
+    width: 470px;
     background-color: #f7f8fa;
     padding: 8px 10px 8px 12px; }
     .checkout-card .checkout-header {
@@ -74,4 +75,8 @@
 
 .order-checkouts {
   margin-top: 20px;
+}
+
+.margin-right {
+  width: 30px;
 }

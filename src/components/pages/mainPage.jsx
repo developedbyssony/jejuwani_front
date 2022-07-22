@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Slider1 from '../slider1';
 import Slider2 from '../slider2';
 import Slider3 from '../slider3';
+import Slider5 from '../slider5';
 
 import ProductUnitListActivity from '../productUnitListActivity';
 import ProductUnitRestaurantMap from '../productUnitListRestaurant';
@@ -122,8 +123,8 @@ return(
                 <div className="more">더 보기<h1 className="ic-more"></h1></div>
 
                 <div className="section-main-activity-contentsDisplayArea">
-                            <Slider2 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider2>
-                            <Slider2 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider2>
+                            <Slider5 map={kakaomap}></Slider5>
+                            <Slider5 map={kakaomap}></Slider5>
                 </div>
                 </div>
                 </div>

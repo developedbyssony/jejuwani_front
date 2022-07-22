@@ -4,8 +4,9 @@ import LikeListA from '../likeListActivity';
 import LikeListR from '../likeListRestaurant';
 import CartList from '../cart/CartList';
 import CartCount from '../cart/CartCount';
+import { increase } from '../../actions/index';
 
-function my({serverURL, onIncrease, onDecrease, number, userId}) {
+function my({serverURL, onIncrease, onDecrease, userId, store}) {
     let [ cartData, setCartItems ] = useState([]); 
     async function getCartItems() {
         try {
@@ -52,32 +53,25 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
         }
     }
 
-    //.then(res => {let data = JSON.stringify(res,null,2); 
-    // setCartItems(data);});
-    // console.log(cartData);  
+    const listener = () => {
+        const state = store.getState();
+        console.log(state);
+        console.log(state.count);
+      };
 
     useEffect(() => {
         getCartItems();
-        console.log(cartData[0]);
-    },[cartData]);
+        store.dispatch(increase(1));
+        store.dispatch(increase(1));
+        store.dispatch(increase(1));
+        store.dispatch(increase(2));
+    },[]);
 
     const likeCate1 = "액티비티";
     const eventKey1 = "activity";
     const likeCate2 = "레스토랑";
     const eventKey2 = "restaurant";
-    /*
-    const [ Product , getProductData ] = [{
-        cart_id : 121152,
-        product_id : 1232423,
-        category : 1,
-        count : 1,
-        item : 'item',
-        status : 1,
-        price : 10000,
-        address_id : 1,
-        promotion_id : 1
-    }
-    */
+
     /*
     const totalCart = cartData.length;
     const createArray = length => [...Array(length)];
@@ -94,8 +88,12 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
     }
     */
     
-    const onRemove = () => {
-        console.log('ss');
+    const onRemoveCart = () => {
+        console.log('삭제');
+    }
+
+    const onRemoveLike = () => {
+        console.log('삭제');
     }
 
 
@@ -106,7 +104,8 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
                 <div className="cart-top-sec">
                 <h1 className="page-tit">장바구니 🛒</h1>
                 {/*setCartList(totalCart)*/}
-                <CartList cartItem={cartData} onRemove={onRemove} />
+                <CartList cartItem={cartData} onRemove={onRemoveCart} onIncrease={onIncrease} onDecrease={onDecrease} store={store} userId={userId} serverURL={serverURL} />
+                <CartCount />
                 <h1 className="page-tit">찜 List</h1>
                 <div>
                     <Tab 
@@ -114,8 +113,8 @@ function my({serverURL, onIncrease, onDecrease, number, userId}) {
                     eventKey2={eventKey2}
                     tapTitle1={likeCate1}
                     tapTitle2={likeCate2}
-                    contents1={<LikeListA />}
-                    contents2={<LikeListR />}
+                    contents1={<LikeListA onRemove={onRemoveLike}/>}
+                    contents2={<LikeListR onRemove={onRemoveLike}/>}
                     />
                 </div>
             </div>

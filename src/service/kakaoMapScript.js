@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 const { kakao } = window;
 
-const KakaoMapScript = ({searchPlace}) => {
+const KakaoMapScript = ({searchPlace, width }) => {
     useEffect(() => {
         var markers = [];
         const container = document.getElementById('map');
@@ -214,7 +214,7 @@ function removeAllChildNods(el) {
       },[searchPlace])
       return (
         <div>
-        <div id="map" style={{width:"700px", height:"377px", borderRadius:"20px"}}></div>
+        <div id="map" style={{width:`${width}px`, height:"377px", borderRadius:"20px"}}></div>
         </div>
     )
 }

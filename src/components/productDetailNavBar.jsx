@@ -47,10 +47,7 @@ function productDetailNavBar() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla numquam similique ab, ea sit non culpa deleniti incidunt? Repudiandae dolor veritatis eligendi corporis atque nulla quia repellat voluptatibus temporibus earum.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla numquam similique ab, ea sit non culpa deleniti incidunt? Repudiandae dolor veritatis eligendi corporis atque nulla quia repellat voluptatibus temporibus earum.
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla numquam similique ab, ea sit non culpa deleniti incidunt? Repudiandae dolor veritatis eligendi corporis atque nulla quia repellat voluptatibus temporibus earum.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla numquam similique ab, ea sit non culpa deleniti incidunt? Repudiandae dolor veritatis eligendi corporis atque nulla quia repellat voluptatibus temporibus earum.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla numquam similique ab, ea sit non culpa deleniti incidunt? Repudiandae dolor veritatis eligendi corporis atque nulla quia repellat voluptatibus temporibus earum.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla numquam similique ab, ea sit non culpa deleniti incidunt? Repudiandae dolor veritatis eligendi corporis atque nulla quia repellat voluptatibus temporibus earum.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla numquam similique ab, ea sit non culpa deleniti incidunt? Repudiandae dolor veritatis eligendi corporis atque nulla quia repellat voluptatibus temporibus earum.
+                (최대 글자수 1000자, 1000자 이상 ...처리)
                 </div>
             </div>
             </div>
