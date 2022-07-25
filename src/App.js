@@ -1,5 +1,5 @@
 import "./css/App.css";
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Main1 from "./components/pages/mainPage";
 import Main2 from "./components/pages/mainPage";
@@ -36,6 +36,7 @@ export default function App({ FileInput, ProfileInput, serverURL, userId, map, s
     const onDecrease = () => {
       dispatch(decrease());
     };
+  
   
   
 const isAuthorized = localStorage.getItem("isAuthorized");
@@ -163,11 +164,17 @@ function dd() {
           <LayoutLogin children={<Restaurant/>}/>
         </Route>
         <Route path="/detail">
-          <LayoutLogin children={<Detail/>}/>
+          <LayoutLogin children={<Detail />}/>
         </Route>
+        {/*
+        <Route path="/detail" Component={Detail} /> 
+         */}
         <Route path="/detail2">
           <LayoutLogin children={<Detail2 map={map}/>}/>
         </Route>
+        {/*
+        <Route path="/detail2" Component={Detail2} />
+        */}
         <Route path="/navigation">
           <LayoutLogin children={<Navigation/>}/>
         </Route>

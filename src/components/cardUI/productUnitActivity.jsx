@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import Modal from '../modals/cartModal';
 import '../../css/productUnit.css';
 
-function productUnit({item, setCart, closeCart, addToCart}) {
+function productUnit({item, setCart, closeCart}) {
     const cartBtn = useRef();
 
     useEffect(() => {
@@ -10,7 +10,7 @@ function productUnit({item, setCart, closeCart, addToCart}) {
     },[]);
 
     return (
-        <div className="productUnit-frame">
+        <div className="productUnit-frame-activity">
             <div className="productUnit-img">
             </div>
             <button
@@ -23,7 +23,6 @@ function productUnit({item, setCart, closeCart, addToCart}) {
                 {
                   setCart && <Modal modalClose={closeCart} productId={item.id} />
                 }
-
             <div className="productUnit-contents">
                 <div className="productUnit-contents-tit">
 

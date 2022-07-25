@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "../css/slider.css";
 import MainLandMark from "./slider/mainLandMark.jsx";
+import MainLandMark2 from "./slider/mainLandMark2.jsx";
+import MainLandMark3 from "./slider/mainLandMark3.jsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components';
@@ -39,10 +41,10 @@ export default class SimpleSlider extends Component {
           <MainLandMark />
           </div>
           <div className="slider">
-          <MainLandMark />
+          <MainLandMark2 />
           </div>
           <div className="slider">
-          <MainLandMark />
+          <MainLandMark3 />
           </div>
         </StyledSlider>
       </div>

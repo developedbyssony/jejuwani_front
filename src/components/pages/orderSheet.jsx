@@ -188,12 +188,7 @@ function orderSheet() {
                             <div className="name"><strong>전화번호</strong> <Input type={'text'} name={'buyer_phone'} /></div>
                             <div className="addr"><strong>주소</strong> <Input type={'text'} name={'buyer_addr'} /></div>
                             <div className="postcode"><strong>우편번호</strong> <Input type={'text'} name={'postcode'} /></div>
-                        <h1 className="page-tit">결제 수단</h1>
-                        <div className="pay-method-sec">
-                        <p className="pay-method-radio"><input type="radio" name="gender" id="check-label"></input><span>휴대폰</span></p>
-                        <p className="pay-method-radio"><input type="radio" name="gender" id="check-label"></input><span>신용카드</span></p>
-                        <p className="pay-method-radio"><input type="radio" name="gender" id="check-label"></input><span>무통장 입금</span></p>
-                        </div>
+                        
                         <div className="order-form-message">
                         <p>주문 내용을 확인하였으며, 정보 제공 등에 동의합니다.</p>
                         </div>

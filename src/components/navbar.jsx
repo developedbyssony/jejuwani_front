@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import "../css/App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Tooltip1 from './tooltip1';
-import Tooltip2 from './tooltip2';
 
 function Navbar() {
     let [ modalOpen, setModalOpen] = useState(false);
@@ -28,20 +25,13 @@ function Navbar() {
                             <a className="menu text-style-18"><Link to="/navigation">교통</Link></a>
                             <a className="menu text-style-18"><Link to="/activity">액티비티</Link></a>
                             <a className="menu text-style-18"><Link to="/restaurant">맛집</Link></a>
-                            <a className="menu text-style-18"><Link to="/blog">커뮤니티</Link></a>
+                            <a className="menu text-style-18"><Link to="/login">커뮤니티</Link></a>
                         </div>
                         <div className='navbar-menu-right'>
-                            <a hef="#"><Link to="/cart"><h1 className="cart"></h1></Link></a>
+                            <a hef="#"><Link to="/login"><h1 className="cart"></h1></Link></a>
                             <a className="menu-right text-style-14"><Link to="/login">로그인</Link></a>
                             <a className="menu-right text-style-14"><Link to="/signup">회원가입</Link></a>
-                            <button className="btn-primary btn-40" id="nav-btn-write" onClick={modalClose}>글쓰기<h1 className="i-chevron"></h1></button>
-                            {
-                            modalOpen && <Tooltip1
-                            text1={writeText1}
-                            text2={writeText2}
-                            modalClose={modalClose}
-                            />
-                            }
+                            <button className="btn-primary btn-40" id="nav-btn-write" onClick={modalClose}><Link to="/login">글쓰기</Link><h1 className="i-chevron"></h1></button>
                         </div>                                
                     </div>
                     </div>

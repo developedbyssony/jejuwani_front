@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 import axios from "axios";
-import AuthenticationService from '../../service/jwtlogin/AuthenticationService';
 import '../../css/login.css';
 import naverLogo from '../../css/assets/naverLogo.png';
 
@@ -62,7 +61,6 @@ function login({loginCallBack, serverURL}) {
             if (id === 'n_uck') {
                 if (pwd == '1324') {
                     console.log('로그인 완료입니다!');
-                    /*
                     try{
                     let data = {id: id, password : pwd};
                     
@@ -92,7 +90,7 @@ function login({loginCallBack, serverURL}) {
             .finally(()=>{console.log("login request end")});
         }catch(e){
             console.log(e);
-        }  */
+        }  
                     location.replace('http://localhost:3000/main');
                 } else {
                     if(pwtag.current.value.length === 0) {

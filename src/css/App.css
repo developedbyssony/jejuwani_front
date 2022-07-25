@@ -767,6 +767,15 @@
   
   
   /* GNB */
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+  #nav-btn-write {
+    display: flex;
+    flex-direction: row;
+  }
   .i-chevron {
     background: url('assets/css_sprites_20220720.png') no-repeat -283px -549px;
 	  width: 21px;
@@ -828,11 +837,12 @@
   
   .cart {
     display: inline-block;
+    margin-top: 4px;
     margin-right: 10px;
     background: url('assets/css_sprites_sub.png') no-repeat -841px -386px;
       width: 22px;
       height: 21px;
-    transform: scale(0.8);
+    transform: scale(0.7);
   }
   
   .menu-right {

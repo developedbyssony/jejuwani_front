@@ -2,10 +2,13 @@ import axios from "axios";
 import { useState, useRef } from 'react';
 import '../../css/update.css';
 import Input from '../tinyForm/input';
-
+import BlogInput from '../tinyForm/blogInput';
 
 function update({serverURL}) {
+    /* 로컬스토리지에 저장해둔 토큰에서 아이디와 블로그 유저 여부 변수처리  */
     const uid = localStorage.getItem('authId');
+    const blogId = localStorage.getItem('blogId');
+
     const rpwd = useRef();
     const remail = useRef();
     const raddress = useRef();
@@ -25,6 +28,7 @@ function update({serverURL}) {
         blogContents:"",
     }); 
 
+    /* 백엔드 통신 - 탈퇴 로직 */
     const DeleteUserInfo = event => {
         event.preventDefault();
         axios.delete(`${serverURL}/user/${uid}`).then(res => {
@@ -36,7 +40,20 @@ function update({serverURL}) {
             console.log('delete user');
         })} 
 
+    /* 백엔드 통신 - 블로그 유저 생성 로직 */
+    const setBlogUser = event => {
+        event.preventDefault();
+        /* 블로그 유저 생성 구문 
+        axios.post(``).then(res => {
+            console.log(res);
+        }).catch(error => {
+            console.log('error');
+        }).then(() => {
+            console.log('post data');
+        }) */
+    } 
     
+    /* 백엔드 통신 - 유저 정보 업데이트 로직 */
     const UpdateUserInfo = event => {
             event.preventDefault();
             setState({
@@ -55,6 +72,7 @@ function update({serverURL}) {
                 console.log('update user info');
             })} 
 
+    /* 백엔드 통신 - 블로그 유저 정보 업데이트 로직 */
     const UpdateBlogUserInfo = event => {
         event.preventDefault();
         blogsetState({
@@ -82,37 +100,29 @@ function update({serverURL}) {
                                 <span className="signup-title update">블로그 설정</span>
                             </div>
                             <div className="update-sec-last">
-                            <form className="blog-write-form" action="/" method="POST">
+                            <form className="blog-write-form" method="POST">
                                 <div className="write-inputs">
                                 <div className="first-inputs">
-                                <div className="uid"><strong>아이디</strong> <Input type={'text'} placeholder={'n_uck'} name={'id'} /></div>
+                                <div className="uid"><strong>아이디</strong> <Input type={'text'} name={'id'} /></div>
                                 <div className="upass"><strong>비밀번호</strong><Input type={'password'} name={'password'} ref={rpwd} /></div>
-                                <div className="umail"><strong>이메일</strong><Input type={'text'} placeholder={'n_uck@naver.com'} name={'email'} ref={remail}/></div>
-                                <div className="uaddress"><strong>주소</strong><Input type={'text'} placeholder={'서울특별시 마포구 백범로 23'} name={'address'} ref={raddress}/></div>
-                                <div className="unick"><strong>닉네임</strong><Input type={'text'} placeholder={'닉네임뭐하지'} name={'nick'} ref={rnick}/></div>
+                                <div className="umail"><strong>이메일</strong><Input type={'text'} name={'email'} ref={remail}/></div>
+                                <div className="uaddress"><strong>주소</strong><Input type={'text'} name={'address'} ref={raddress}/></div>
+                                <div className="unick"><strong>닉네임</strong><Input type={'text'} name={'nick'} ref={rnick}/></div>
                                 <div className="upload-btn-sec1">
                                     <button className="btn-outlined btn-55" onClick={DeleteUserInfo}>회원 탈퇴</button>
                                     <button className="btn-primary btn-55" onClick={UpdateUserInfo}>회원 정보 수정</button>
-                            </div>
                                 </div>
-                                <div className="second-inputs">
-                                <div className="ublogtit"><strong>블로그 제목</strong><Input type={'text'} placeholder={'n_uck님의 블로그입니다.'} name={'blog-title'} ref={rblogtit} /></div>
-                                <div className="ublogtxt"><strong>블로그 설명</strong><Input type={'text'} placeholder={'소개글을 입력해주세요.'} name={'blog-contents'} ref={rblogcon} /></div>
-                                <div className="upload-btn-sec2">
-                                    <button className="btn-primary btn-55" onClick={UpdateBlogUserInfo}>변경 사항 저장</button>
-                            </div>
                                 </div>
-                            </div>
+                                </div>
                             </form>
-                            <div className="section">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                                </div>
+                                </div>
+                                {blogId ? (<BlogInput rblogtit={rblogtit} rblogcon={rblogcon} UpdateBlogUserInfo={UpdateBlogUserInfo} />) : (<button className="btn-primary btn-55" id="blogCreate" onClick={setBlogUser}>블로그 만들기</button>)}
+                                </div>
+                                </div>
+                                </div>
+                                </div>
         )
-        }
+    }
 
 export default update;

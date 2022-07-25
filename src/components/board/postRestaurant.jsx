@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 
-const posts = ({posts, loading, reverse}) => {
+const posts = ({ posts, loading, reverse}) => {
         return(
         <>
         { loading && <div> loading ... </div>}

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import {  BrowserRouter as Router, Link } from "react-router-dom";
 import "../css/App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Tooltip1 from './tooltip1';
 import Tooltip2 from './tooltip2';
 

@@ -15,18 +15,18 @@ const KakaoMapScript = ({searchPlace, width }) => {
 
         searchPlaces();
 
-        // 키워드 검색을 요청하는 함수입니다
-function searchPlaces() {
+    // 키워드 검색을 요청하는 함수입니다
+    function searchPlaces() {
 
-  var keyword = document.getElementById('keyword').value;
+    var keyword = document.getElementById('keyword').value;
 
-  if (!keyword.replace(/^\s+|\s+$/g, '')) {
+    if (!keyword.replace(/^\s+|\s+$/g, '')) {
       return false;
-  }
+    }
 
   // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
   ps.keywordSearch(keyword, placesSearchCB); 
-}
+    }
 
 
 // 장소검색이 완료됐을 때 호출되는 콜백함수 입니다

@@ -88,10 +88,9 @@ store.dispatch(increase());
 store.dispatch(increase());
 store.dispatch(addToCart({ id: 1, name:'뭘까', count:0 }));
 
-const height = 100;
 const userId = localStorage.getItem("authId");
-const serverURL = "https://localhost:8383";
-axios.defaults.baseURL = "https://localhost:8383";
+const serverURL = "https://localhost:8080";
+axios.defaults.baseURL = "https://localhost:8080";
 axios.defaults.withCredentials = true;
 
 const kakaoMap = props => {

@@ -5,6 +5,7 @@ function youtubeFooter() {
     return (
         <div className="youtube-footer">
         <div className="section-main-youtube">
+        <div className="sec-youtube-contents">
         <div className="section-main-youtube-tit">
             <div className="youtube-avart"></div>
             <strong className="youtube-ch-tit">제주완니</strong>
@@ -17,6 +18,7 @@ function youtubeFooter() {
         </div>
         <div className="btn-youtube btn-primary btn-55">
         유튜브 구독하러가기
+        </div>
         </div>
         <div className="section-main-youtube-contentsDisplayArea">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/uNaf-w9SQis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

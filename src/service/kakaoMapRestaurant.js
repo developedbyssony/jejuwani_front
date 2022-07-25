@@ -12,7 +12,7 @@ function KakaoMapRestaurant() {
     });
     return (
         <div>
-            <div id="map" style={{width:"570px", height:"100px"}}></div>
+            <div id="map" style={{width:"570px", height:"400px"}}></div>
         </div>
     );
 }

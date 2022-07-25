@@ -4,7 +4,7 @@ import '../../css/productUnit.css';
 function productUnitRestaurantMap({map}) {
     return (
         <div className="productUnit-frame">
-            <div className="productUnit-img-map">
+            <div className="productUnit-img">
             {map}
             </div>
             <div className="productUnit-contents">

@@ -5,6 +5,7 @@ import '../../css/rentalCollapse.css';
 import '../../css/navi.css';
 import TransportaitonInfoUnit from '../cardUI/transportationInfoUnit';
 import DatePickerComponent from '../DatePickerComponent';
+import Slider5 from '../slider5';
 
 export default function navigation() {
     useEffect(() => {
@@ -87,39 +88,11 @@ export default function navigation() {
                       </div>
 
                             </div>
-                            </div>
-                            <div className="post-slider">
-                            <div className="post-wrapper">
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                            </div>
-                            <div id="pager">
-                                <div className="prev">
-                                </div>
-                                <div className="next">
-                                </div>
+                            <Slider5></Slider5>
+                            <Slider5></Slider5> 
                             </div>
                             </div>
-                            <div className="post-slider">
-                            <div className="post-wrapper">
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                                    <div className="post"><TransportaitonInfoUnit /></div>
-                            </div>
-                            <div id="pager">
-                                <div className="prev">
-                                </div>
-                                <div className="next">
-                                </div>
-                            </div>
-                            </div>
+                            {/*
                             <div className="d-flex flex-column" style={{outline: 0}}>
                 <Button id="toggle">
                     <h1 className="page-tit" id="rentalCarCTA">어떤 렌트카 찾으세요?</h1>
@@ -143,23 +116,21 @@ export default function navigation() {
                             </div>
                             </div>
                             <div className="rentalCarContentsDisplay">
-                            <div className="rentalCarFilter">
+                            <div className="rentalCarFilter"> */}
                                 {/*<ul className="rentalCarFilterUl">
                                 <h1 className="page-tit" id="smart-filter">스마트 필터</h1>
                                 <li><span className="signup-tit1">보험</span></li>
                                 <li><span className="signup-tit1">연료</span></li>
                                 <li><span className="signup-tit1">연식</span></li>
                                 <li><span className="signup-tit1">평점</span></li>
-                                </ul>*/}
+                                </ul>*/}{/*
                             </div>
                             <div className="rentalCarList">
                             </div>
                             </div>
                         </CardBody>
                         </Card>
-                    </UncontrolledCollapse>
-                    </div>
-                </div>
-            </div>
+                    </UncontrolledCollapse>*/}
+                        </div>
         );
     }

@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import Modal from "../modals/modal.jsx"; 
 
-const posts = ({posts, loading, reverse }) => {
+const posts = ({ posts, loading, reverse }) => {
+    
     const [ modalOpen, setModalOpen] = useState();
 
     const modalClose = () => {
@@ -25,6 +26,9 @@ const posts = ({posts, loading, reverse }) => {
                         {
                         modalOpen && <Modal
                         modalClose={modalClose}
+                        title={post.title}
+                        region={post.region}
+                        price={post.price}
                         />
                         }</td>
                         </tr>

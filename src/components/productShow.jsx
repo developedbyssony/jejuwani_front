@@ -7,7 +7,7 @@ import ModalD from './modals/deleteModal.jsx';
 import ProductNavBar from './productDetailNavBar';
 
 
-function productShow() {
+function productShow({serverURL, product_id}) {
     useEffect(() => {
     /* 백엔드 통신 함수 
        const getProductInfo = async() => {
@@ -15,7 +15,7 @@ function productShow() {
             headers: {
               'Content-Type': 'application/json',}}).then(res => {
                 console.log("해당 상품 정보 보기"); 
-                setState(res.json());
+                setProduct(res.json());
             }).catch(ex =>{
                 console.log("requset fail");
                 }).finally(()=>{console.log("request end")});
@@ -23,7 +23,6 @@ function productShow() {
         */
       },[]);
 
-    // localStorage를 체크 > 값이 있으면 > 그걸 초기값!
     let [ cartState, setCart ] = useState([]);
     let [ like, setlike ] = useState(0);
     let [ heart, setheart ] = useState([false]);

@@ -3,6 +3,11 @@
     align-items: center;
 }
 
+#blogCreate {
+    margin-bottom: 120px;
+    background-color: #4e6a75;
+}
+
 form {
     margin-bottom: 0px;
 }

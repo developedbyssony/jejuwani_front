@@ -1,12 +1,21 @@
 .section-main-youtube {
+    margin-top: 350px;
     padding-left: 160px;
     padding-right: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sec-youtube-contents {
+   display: block;
+   position: relative;
+   width: 800px;
 }
 
 .section-main-youtube-contentsDisplayArea {
     position: relative;
-    top:-15%;
-    float: right;
+    top:15%;
 }
 
 .youtube-avart {

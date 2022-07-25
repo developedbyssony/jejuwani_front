@@ -1,6 +1,6 @@
 [{
     "id": 1,
-    "title": "액티비티 상품 타이틀",
+    "title": "액티비티 상품 타이틀2",
     "region": "서귀포시",
     "price": "50000",
     "regdate": "3/27/2022",
@@ -10,7 +10,7 @@
     "imgSrc" : "../../css/assets/main/activity/main-activity1.png"
     }, {
        "id": 2,
-       "title": "액티비티 상품 타이틀",
+       "title": "액티비티 상품 타이틀2",
        "region": "서귀포시",
        "price": "50000",
        "regdate": "10/8/2021",
@@ -80,7 +80,7 @@
        "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
      }, {
        "id": 9,
-       "title": "액티비티 상품 타이틀",
+       "title": "액티비티 상품 타이틀2",
        "region": "서귀포시",
        "price":  "50000",
        "regdate": "1/21/2022",
@@ -90,7 +90,7 @@
        "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
      }, {
        "id": 10,
-       "title": "액티비티 상품 타이틀",
+       "title": "액티비티 상품 타이틀2",
        "region": "서귀포시",
        "price":  "50000",
        "regdate": "8/19/2021",

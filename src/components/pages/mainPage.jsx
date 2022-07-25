@@ -13,6 +13,10 @@ import YoutubeFooter from '../youtubeFooter';
 import MainBlogUnit from '../cardUI/mainBlogUnit';
 
 function main({kakaomap})  {
+    /*                           
+    localStorage.getItem('authId');
+    */
+   
     const [ modalOpen, setModalOpen] = useState();
     const modalClose = () => {
         setModalOpen(!modalOpen);
@@ -95,9 +99,9 @@ return(
                     </div>
                  <div className="more">더 보기<h1 className="ic-more"></h1></div>
                 <div className="section-main-activity-contentsDisplayArea">
-                            <Slider2 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider2>
-                            <Slider2 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider2>
                 </div>
+                            <Slider2 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider2>
+                            <Slider2 data={ProductData} setCart={modalOpen} closeCart={modalClose}></Slider2>
                 </div>
                 </div>
                         <div className="section-main-search">
@@ -123,22 +127,13 @@ return(
                 <div className="more">더 보기<h1 className="ic-more"></h1></div>
 
                 <div className="section-main-activity-contentsDisplayArea">
-                            <Slider5 map={kakaomap}></Slider5>
-                            <Slider5 map={kakaomap}></Slider5>
                 </div>
+                            <Slider5></Slider5>
+                            <Slider5></Slider5>
                 </div>
                 </div>
 
-                <div className="section-main-search">
-                            <div className="section-main-search-input-group">
-                            <form className="input-group" id="main-search-input">
-                                <input class="form-input" type="text" placeholder="월정리 투명카약" />
-                                <button type="submit"><div class="ic-search"></div></button>
-                            </form>
-                            <div className="section-main-search-tit">
-                            <p className="text-style-13" id="main-search-tit">지금 바로 떠나보세요!</p>
-                            </div>
-                            </div>
+                <div className="section-main-search2">
                 </div>
 
                 <div className='wrapper-main'> 

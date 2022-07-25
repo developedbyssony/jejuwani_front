@@ -5,26 +5,24 @@ import "../css/slider.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components';
-import NextArrow from './slider/nextArrow';
+import NextArrow from './slider/nextArrow.jsx';
 
 
 const StyledSlider = styled(Slider)`
-  margin-bottom: 80px;
-    .slider {
-      display:flex;
-      justify-contents:center;
-      position:relative;
-      height: 45vh;
-      margin-bottom:100px;
-      margin-left:-50px;
-    }
+margin-right: -80px;
+margin-bottom: -100px;
+  .slider {
+    display:flex;
+    justify-contents:center;
+    position:relative;
+    height: 45vh;
+    margin-bottom:80px;
+  }
 `;
 
 export default function SimpleSlider({map}) {
     const settings = {
       dots: false,
-      centerMode:true,
-      centerPadding:'5px',
       infinite: true,
       speed: 500,
       nextArrow: <NextArrow />,
