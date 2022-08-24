@@ -1,0 +1,33 @@
+.section-main-youtube {
+    margin-top: 350px;
+    padding-left: 160px;
+    padding-right: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.youtube-ch-tit {
+    position: relative;
+    margin-left: -3px;
+}
+
+.sec-youtube-contents {
+   display: block;
+   position: relative;
+   margin-top: 40px;
+   width: 800px;
+}
+
+.section-main-youtube-contentsDisplayArea {
+    position: relative;
+    top:25%;
+    float: right;
+}
+
+.youtube-avart {
+    background-image: url("./assets/sub/user-profile.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    border: 1px solid white;
+}

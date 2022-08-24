@@ -1,0 +1,48 @@
+.reviewEditor {
+    width: 100%;
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+/* #E0E2E7; */
+
+.reviewWrite {
+    overflow: auto;
+    vertical-align: top;
+    resize: none;
+    height: 110px;
+    font-size: 20px;
+    color: black;
+    appearance: none;
+    padding: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+#reviewSubmit {
+    position: relative;
+    font-weight: 700;
+    top:-20px;
+    right: -20px;
+    transform: scale(0.6);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.commentSubmit {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 152px;
+}
+
+.commentBox {
+    position: relative;
+    border-radius: 18px;
+    height: 250px;
+    background-color: #f7f8fa;
+    border: 1px solid #E0E2E7;
+}

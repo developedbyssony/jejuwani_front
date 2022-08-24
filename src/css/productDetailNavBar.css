@@ -1,0 +1,133 @@
+.product-contents-txt {
+    white-space: normal;
+}
+
+.product-detail-navbar {
+    position: relative;
+    top:0;
+    width: 100%;
+    height: 54px;
+    background-color: #F7F8FA;
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+.product-spec, .product-reivew {
+    width: 148px;
+    height: 100%;
+}
+
+.product-detail-navbar-cate {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    
+}
+
+.product-detail-navbar-cate-item {
+    width: 148px;
+    height: 100%;
+    padding-bottom: 15px;
+}
+
+.product-detail-navbar-cate-item:hover {
+    font-weight: 700;
+    border-bottom: 2px solid #4e6a75;
+}
+
+.detail-info-contents {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.sec-productinfo {
+    height: 200px;
+    margin-right: 40px;
+}
+
+.reviewUnitWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+.product-detail-navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-spec {
+    position: relative;
+    order: 0;
+}
+
+.product-reivew {
+    position: relative;
+    order: 1;
+}
+
+.sec-product-info-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.sec-productinfo, .sec-service-rule  {
+    order: 1;
+    margin-bottom: 60px;
+}
+
+.sec-service-rule {
+    width: 100%;
+}
+
+.sec-productreview {
+    order: 2;
+}
+
+.sec-tit {
+    display: flex;
+    flex-direction: row;
+}
+
+.check {
+    display:inline-block;
+    background: url('./assets/css_sprites_sub.png') no-repeat -854px -168px;
+	width: 18px;
+	height: 14px;
+    margin-right: 10px;
+}
+
+#product-service-rule {
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+.sec-product-info-rule-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#detail-rule {
+    white-space: normal;
+    padding: 30px;
+    height: 208px;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 4px;
+    border: 1px solid #ddd; 
+}
+
+.detail-rule-1, .detail-rule-2, .detail-rule-3 {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 15px;
+}
+
+dt {
+    width: 870px;
+}

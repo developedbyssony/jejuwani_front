@@ -1,0 +1,37 @@
+[{
+    "id": 1,
+    "title": "블로그 제목",
+    "nick": "닉네임",
+    "uid": "ididid",
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum5.jpg"
+},{
+    "id": 2,
+    "title": "블로그 제목",
+    "nick": "닉네임",
+    "uid": "ididid",
+    "imgSrc" :"/assets/sub/yourblog-profile.png"
+},{
+    "id": 3,
+    "title": "블로그 제목",
+    "nick": "닉네임",
+    "uid": "ididid",
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum62.jpg"
+},{
+    "id": 4,
+    "title": "블로그 제목",
+    "nick": "닉네임",
+    "uid": "ididid",
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum1.webp"
+},{
+    "id": 5,
+    "title": "블로그 제목",
+    "nick": "닉네임",
+    "uid": "ididid",
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum3.jpg"
+},{
+    "id": 6,
+    "title": "블로그 제목",
+    "nick": "닉네임",
+    "uid": "ididid",
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum73.jpg"
+}]

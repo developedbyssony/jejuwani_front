@@ -1,0 +1,82 @@
+.checkout-card {
+    position: relative;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    width: 470px;
+    background-color: #f7f8fa;
+    padding: 8px 10px 8px 12px; }
+    .checkout-card .checkout-header {
+      margin-bottom: 8px; }
+    .checkout-card .checkout-tit {
+      font-size: 13px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+      color: #4e6a75;
+      padding-right: 26px;
+      font-weight: 400; }
+    .checkout-card .delete-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      color: #4e6a75; }
+    .checkout-card .checkout-select {
+      position: relative;
+      display: inline-block; 
+    }
+      .checkout-card .checkout-select select {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.01em;
+        color: #4e6a75;
+        width: 72px;
+        height: 24px;
+        line-height: 1;
+        padding-left: 8px;
+        padding-right: 8px;
+        background-color: #fff;
+        border: 1px solid #e0e2e7;
+        border-radius: 3px;
+        appearance: none; }
+      .checkout-card .checkout-select i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #b2b3b9;
+        pointer-events: none; }
+      .checkout-card .checkout-select .checkout-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+
+      .checkout-output {
+        color: #000;
+        float: right;
+      }
+      .checkout-title {
+        color: #000;
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.01em; 
+      }
+
+.checkout-select select:hover {
+      transition: border-color 100ms ease-in-out;
+}
+.checkout-select select:hover {
+  border: 1px solid #B2B3B9;
+}
+
+.order-checkouts {
+  margin-top: 20px;
+}
+
+.margin-right {
+  width: 30px;
+}

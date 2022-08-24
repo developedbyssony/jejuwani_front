@@ -1,0 +1,268 @@
+.wrapper-main {
+    padding-left: 160px;
+    padding-right: 160px;
+}
+
+.main-slider1 {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main-slider2 {
+    height: 588px;
+    border: 1px solid black;
+}
+
+#main-sub-tit {
+    color: #000;
+    margin-bottom: 4px;
+    padding-top: 150px;
+}
+
+#main-tit {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.more {
+    float: right;
+}
+
+.post {
+    margin-left: 0px;
+}
+#features {
+    margin-top: 150px;
+}
+/*
+.center {
+    border: 1px solid black;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 20px;
+}
+*/
+
+.productUnitwrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.productUnitwrapper:last-child { 
+    margin-bottom: 200px;
+}
+
+.section-main-activity-sorting {
+    height: 113px;
+    margin-bottom: 45px;
+}
+
+.section-main-activity-sorting div button {
+    border-radius: 8px;
+    margin-right: 16px;
+}
+
+.section-main-activity-sorting .main-sort-row1 {
+    margin-bottom: 21px;
+} 
+
+.section-main-activity-contentsDisplayArea {
+    position: relative;
+    width: 100%;
+    top:100px;
+    margin-bottom: 156px;
+}
+
+.section-main-search {
+    display: flex;
+    flex-direction: column;
+    background-image: url('assets/main/main-search.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 541px;
+    margin-top: 180px;
+}
+
+#main-search-input {
+    height: 70px;
+    width: 500px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+#main-search-tit {
+    text-align: center;
+    font-weight: 700;
+    color: white;
+}
+
+.blog-main-contents {
+    padding: 20px 27px;
+}
+
+.section-main-blog {
+    padding-top: 100px;
+    height: 924px;
+}
+
+.blog-main-contents {
+    height: 204px;
+}
+
+.blog-main-contents-tit {
+    color:#000;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top:10px;
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+
+.blog-main-img {
+    height: 412px;
+    border: 1px solid #ddd;
+}
+
+.blog-main-contents{
+    color:#3F4050;
+    border-radius: 4px;
+    background-color: #F5F5F5;
+    border: 1px solid #ddd;
+}
+
+.plus-btn-section {
+    position: absolute;
+    top:0px;
+    right: 10px;
+    width: 43px;
+    height: 65px;
+}
+
+.plus-btn {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    margin-bottom: 4px;
+}
+
+.plus-num {
+    color:#000;
+    font-size: 12px;
+    text-align: center;
+}
+
+.plus-btn:hover {
+    background-color: #3F4050;
+}
+
+.blog-main-desc {
+    margin-top: 50px;
+    padding-right: 200px;
+}
+
+.youtube-avart {
+    position: relative;
+    top: 60px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.youtube-ch-tit {
+    position: relative;
+    top:10px;
+    left: 74px;
+    color: #fff;
+}
+
+.section-main-youtube-tit {
+    position: relative;
+    top:10px;
+    left: 74px;
+    color: #fff;
+}
+
+.section-main-youtube-video-tit {
+    position: relative;
+    top: 19px;
+    left: 144px;
+    color: #fff;
+}
+
+.section-main-youtube-contents {
+    position: relative;
+    top: 37px;
+    left: 67px;
+    color: #fff;
+}
+.youtube-footer {
+    background-color: #3F4050;
+}
+.section-main-youtube {
+    padding:0px;
+    width: 100%;
+    height: 434px;
+    background-color: #3F4050;
+}
+
+.btn-youtube {
+    position: relative;
+    top: 60px;
+    left: 67px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #D3211F;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    border-radius: 4px; 
+}
+
+.btn-youtube:hover {
+    cursor: pointer;
+    color:gray;
+    background-color: #911c1b;
+}
+
+.productUnitwrapper {
+    display: flex;
+    width: 1810px;
+}
+
+.add {
+    background: url('assets/css_sprites_sub.png') no-repeat -801px -389px;
+	width: 14px;
+	height: 15px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 15px;
+    left:15px;
+}
+
+.section-main-blog-contentsDisplayArea {
+    display: flex;
+    flex-direction: row;
+}
+
+.more {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+.ic-more {
+    background: url('assets/css_sprites_20220720.png') no-repeat -211px -549px;
+	width: 21px;
+	height: 38px;
+    transform: scale(0.5);
+    margin-left: 10px;
+}

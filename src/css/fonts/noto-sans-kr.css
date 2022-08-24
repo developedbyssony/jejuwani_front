@@ -1,0 +1,19 @@
+@font-face {
+    font-family:"NotoSansKR-regular";
+    font-style: normal;
+    src: local('NotoSansKR-Regular'),
+    url('NotoSansKR-Regular.ttf') format('eot'),
+    url('NotoSansKR-Regular.ttf') format('truetype'),
+    url('NotoSansKR-Regular.ttf') format('woff'),
+    url('NotoSansKR-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family:"NotoSansKR-bold";
+    font-style: normal;
+    src: local('NotoSansKR-Bold'),
+    url('NotoSansKR-Bold.ttf') format('eot'),
+    url('NotoSansKR-Bold.ttf') format('truetype'),
+    url('NotoSansKR-Bold.ttf') format('woff'),
+    url('NotoSansKR-Bold.ttf') format('woff2');
+}

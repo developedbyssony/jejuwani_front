@@ -1,0 +1,115 @@
+// scss-lint:disable all
+@font-face {
+    font-family: 'custom';
+    src:  url('../../css/fonts/custom.eot');
+    src:  url('../../css/fonts/custom.eot') format('embedded-opentype'),
+      url('../../css/fonts/custom.ttf') format('truetype'),
+      url('../../css/fonts/custom.woff') format('woff'),
+      url('../../css/fonts/custom.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'custom' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .ic-social-github:before {
+    content: "\e900";
+  }
+  .ic-social-github-circular:before {
+    content: "\e901";
+  }
+  .ic-home:before {
+    content: "\e902";
+  }
+  .ic-clipboard:before {
+    content: "\e903";
+  }
+  .ic-attachment:before {
+    content: "\e904";
+  }
+  .ic-attachment-outline:before {
+    content: "\e905";
+  }
+  .ic-heart:before {
+    content: "\e906";
+  }
+  .ic-heart-outline:before {
+    content: "\e907";
+  }
+  .ic-view:before {
+    content: "\e908";
+  }
+  .ic-delete:before {
+    content: "\e909";
+  }
+  .ic-marker:before {
+    content: "\e90a";
+  }
+  .ic-upload:before {
+    content: "\e90b";
+  }
+  .ic-path:before {
+    content: "\e90c";
+  }
+  .ic-combined:before {
+    content: "\e90d";
+  }
+  .ic-add:before {
+    content: "\e90e";
+  }
+  .ic-bell:before {
+    content: "\e90f";
+  }
+  .ic-bookmark:before {
+    content: "\e910";
+  }
+  .ic-bookmarkfilled:before {
+    content: "\e911";
+  }
+  .ic-caret:before {
+    content: "\e912";
+  }
+  .ic-cart:before {
+    content: "\e913";
+  }
+  .ic-check:before {
+    content: "\e914";
+  }
+  .ic-chevron:before {
+    content: "\e915";
+  }
+  .ic-close:before {
+    content: "\e916";
+  }
+  .ic-lock:before {
+    content: "\e917";
+  }
+  .ic-menu:before {
+    content: "\e918";
+  }
+  .ic-new:before {
+    content: "\e919";
+  }
+  .ic-search:before {
+    content: "\e91a";
+  }
+  .ic-star:before {
+    content: "\e91b";
+  }
+  .ic-store:before {
+    content: "\e91c";
+  }
+  

@@ -1,0 +1,22 @@
+.category {
+    padding: 13px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-left: 160px;
+    z-index: 999;
+    background-color: #fff;
+  }
+  
+  .category-menu {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .category-menu a {
+    margin-right: 40px;
+    color: #000;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.01em; 
+  }

@@ -1,0 +1,130 @@
+.email, .name, .phone, .addr, .postcode {
+    display: flex;
+}
+
+.email strong, .name strong, .phone strong, .addr strong, .postcode strong{
+    width: 100px;
+}
+
+#order-sheet-sumcount {
+    background-color: #4E6A75;
+    margin-bottom: 100px;
+}
+.currency-order {
+    color: white;
+}
+
+#price-sum-order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top:10px;
+    padding-right: 60px;
+}
+
+#price-sum-order span {
+   margin-right: 30px;
+}
+
+#order-wholeprice {
+    font-size: 30px;
+}
+
+.heading {
+    display: table-row;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading .cell .currency {
+    margin: 0 auto;
+}
+
+.cell {
+    display: table-cell;
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-th {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #4e6a75;
+    border-bottom: 1px solid #4e6a75;
+}
+
+.table-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 10px;
+    height: 80px;
+    border-bottom: 1px solid #4e6a75;
+}
+
+.order-form-message {
+    position: relative;
+    top:60px;
+    display: flex;
+    justify-content: center;
+}
+
+.bread-scrum {
+    position: absolute;
+    right: 105px;
+    float: right;
+    transform: scale(0.6);
+}
+
+.bread-scrum ul {    
+    display: flex;
+    flex-direction: row;
+}
+
+.bread-scrum ul li{
+    margin-left: 5px;
+    margin-right: 30px;
+}
+
+.bread-scrum ul li:last-child{
+    margin-right: 0px;
+}
+
+.pay-method-sec {
+    position: relative;
+    top:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #F7F8FA;
+    border-radius: 10px;
+    vertical-align: baseline;
+    line-height: 2.5;
+}
+
+.ic-chevron {
+    position: absolute;
+    transform: rotate(270deg);
+    margin-left: 2px;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.pay-method-radio {
+    display: flex;
+    flex-direction: row;
+    margin-right: 20px;
+}
+
+
+.pay-method-radio span {
+    margin-left: 20px;
+}

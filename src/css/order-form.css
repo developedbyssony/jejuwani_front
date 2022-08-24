@@ -1,0 +1,227 @@
+.product-img-detail {
+  background-image: url(assets/sub/Overview.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#product-show-sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#info-tit {
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.01em;
+  color: #000;
+  padding-right: 100px;
+}
+
+.productShow {
+  display: flex;
+  justify-content: center;
+  padding-left: 160px;
+  padding-right: 160px;
+  margin-bottom: 95px;
+}
+
+.modal-ic-close {
+  cursor: pointer;
+}
+
+.product-overview {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 160px;
+}
+
+#order-inputs {
+  position: relative;
+  top:-130px;
+  right: -28px;
+}
+
+#order-inputs:last-child {
+  margin-bottom: 30px;
+}
+
+.product-info {
+  width: 500px;
+}
+
+.product-img-detail {
+    position: relative;
+    border-radius: 16px;
+    top:34px;
+    width: 670px;
+    height: 670px;
+}
+
+.product-info-header {
+  position: relative;
+  top: 34px;
+  width: 455px;
+}
+
+.tag {
+  margin-left: -5px;
+}
+
+.tag-orange {
+  position: relative;
+  margin-left: 5px;
+  transform: scale(0.8);
+  vertical-align: top;
+}
+
+.product-info-top {
+  display: flex;
+  align-items: center;
+  margin-top: 31px;
+  margin-bottom: 26px;
+}
+
+.product-like {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -20px;
+  transform: scale(0.8);
+}
+
+.product-info-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.product-info-bottom {
+  width: 100%;
+  margin-bottom: 32px;
+  border-top: 1px solid #E0E2E7;
+  border-bottom: 1px solid #E0E2E7;
+}
+
+
+.product-info-like {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.order-form {
+    margin-top: 200px;
+    margin-bottom: 10px; }
+    .order-form .order-inputs {
+      margin-left: -25px;
+      margin-bottom: 20px; }
+      .order-form .order-inputs .select-group {
+        margin-bottom: 8px; }
+        .order-form .order-inputs .select-group:last-child {
+          margin-bottom: 0; }
+      .order-form .order-inputs .order-summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px; }
+        .order-form .order-inputs .order-summary dt {
+          font-size: 13px;
+          line-height: 20px;
+          letter-spacing: -0.01em;
+          color: #000;
+          font-weight: 700; }
+      .order-form .order-inputs .button-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px; }
+        .order-form .order-inputs .button-group button {
+          width: 50%;
+          margin-right: 8px; }
+          .order-form .order-inputs .button-group button:last-child {
+            margin-right: 0; }
+
+.order-summary {
+  margin-right: 160px;
+}
+
+.ic-delete {
+  position: relative;
+  right: 10px;
+}
+
+.ic-caret {
+  position: relative;
+  right: 4px;
+}
+
+.address {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.alltag {
+  position: relative;
+  left: -299px;
+  top:69px;
+  width: 500px;
+  display: inline-block;
+  word-break: keep-all;
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.button-group button{
+  margin-right: 10px;
+  width: 50%;
+}
+
+.button-group button:last-child{
+  width: 100%;
+  margin-right: 0px;
+}
+
+.star-rating-13, .star-rating-16 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; }
+  .star-rating-13 .ic-start, .star-rating-16 .ic-start {
+    color: #e0e2e7; }
+    .star-rating-13 .ic-start.is-active, .star-rating-16 .ic-start.is-active {
+      color: #4e6a75; }
+
+.star-rating-13 {
+  font-size: 13px; 
+  margin-right: 10px;}
+
+.star-rating-16 {
+  font-size: 16px; }
+
+.info-review {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  line-height: 1;
+  align-items: flex-start;
+  }
+
+.tag-outline {
+    margin-right: 10px;
+    transform: scale(0.9);
+  }
+
+.ic-close:hover, .ic-close:active {
+    opacity: 0.4;
+  }

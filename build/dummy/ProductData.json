@@ -1,0 +1,101 @@
+[{
+    "id": 1,
+    "title": "액티비티 상품 타이틀",
+    "region": "서귀포시",
+    "price": "50000",
+    "regdate": "3/27/2022",
+    "hit": 1,
+    "like" : 111,
+    "count" : 1,
+    "imgSrc" : "../../css/assets/main/activity/main-activity1.png"
+    }, {
+       "id": 2,
+       "title": "액티비티 상품 타이틀",
+       "region": "서귀포시",
+       "price": "50000",
+       "regdate": "10/8/2021",
+       "hit": 2,
+       "like" : 111,
+       "count" : 1,
+       "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
+     }, {
+       "id": 3,
+       "title":"액티비티 상품 타이틀",
+       "region": "서귀포시",
+       "price": "50000",
+       "regdate": "4/5/2022",
+       "hit": 3,
+       "like" : 111,
+       "count" : 1,
+       "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
+     }, {
+       "id": 4,
+       "title": "액티비티 상품 타이틀",
+       "region": "서귀포시",
+       "price": "50000",
+       "regdate": "11/29/2021",
+       "hit": 4,
+       "like" : 111,
+       "count" : 1,
+       "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
+     }, {
+       "id": 5,
+       "title": "액티비티 상품 타이틀",
+       "region": "서귀포시",
+       "price": "50000",
+       "regdate": "4/26/2022",
+       "hit": 5,
+       "like" : 111,
+       "count" : 1,
+       "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
+     }, {
+       "id": 6,
+       "title": "액티비티 상품 타이틀",
+       "region": "서귀포시",
+       "price": "50000",
+       "regdate": "12/17/2021",
+       "hit": 6,
+       "like" : 111,
+       "count" : 1,
+       "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
+     }, {
+       "id": 7,
+       "title": "액티비티 상품 타이틀",
+       "region": "서귀포시",
+       "price": "50000",
+       "regdate": "6/30/2022",
+       "hit": 7,
+       "like" : 111,
+       "count" : 1,
+       "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
+     }, {
+       "id": 8,
+       "title": "액티비티 상품 타이틀",
+       "region": "서귀포시",
+       "price":  "50000",
+       "regdate": "1/15/2022",
+       "hit": 8,
+       "like" :111,
+       "count" : 1,
+       "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
+     }, {
+       "id": 9,
+       "title": "액티비티 상품 타이틀",
+       "region": "서귀포시",
+       "price":  "50000",
+       "regdate": "1/21/2022",
+       "hit": 9,
+       "like" : 111,
+       "count" : 1,
+       "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
+     }, {
+       "id": 10,
+       "title": "액티비티 상품 타이틀",
+       "region": "서귀포시",
+       "price":  "50000",
+       "regdate": "8/19/2021",
+       "hit": 10,
+       "like" : 111,
+       "count" : 1,
+       "imgSrc" : "css/assets/activityThumbnail/activityThumbnailTest1.png"
+     }]

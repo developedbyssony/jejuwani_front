@@ -1,0 +1,100 @@
+.write-region-inputs {
+    display: flex;
+    align-items: center;
+}
+
+#blogCreate {
+    margin-bottom: 120px;
+    background-color: #4e6a75;
+}
+
+form {
+    margin-bottom: 0px;
+}
+.btn-55 {
+    padding-left: 77px;
+    padding-right: 77px;
+}
+.input-group {
+    width: 100%;
+}
+
+.input-group.write-title {
+    display: flex;
+    margin-left: 100px;
+}
+
+.update-sec {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+
+.update-input-tit {
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+.update-sec-first {
+    width: 292px;
+    height: 100%;
+}
+.update-sec-second {
+    width: 300px;
+    height: 100%;
+}
+.update-sec-last {
+    position: relative;
+    top:-30px;
+    width: 100%;
+}
+
+form {
+    margin-top: 35px;
+}
+
+.signup-tit1 update {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#inputGray {
+    background-color: #ddd;
+}
+
+.upload-btn-sec1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top:60px;
+    margin-bottom: 112px;
+}
+
+.upload-btn-sec2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top:60px;
+    margin-bottom: 721px;
+}
+
+.signup-title::after {
+    display: none;
+}
+
+.uid, .upass, .umail, .uaddress, .unick, .ublogtit, .ublogtxt {
+    display: flex;
+}
+
+.uid strong, .upass strong, .umail strong, .uaddress strong, .unick strong, .ublogtit strong, .ublogtxt strong {
+    width: 100px;
+}
+
+#update-first-tit {
+    margin-bottom: 482px;
+}
+
+.first-inputs {
+    margin-bottom: 60px;
+}

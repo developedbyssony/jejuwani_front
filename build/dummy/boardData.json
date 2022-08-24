@@ -1,0 +1,72 @@
+[{
+    "id": 1,
+    "title": 2,
+    "region": "12663 Upham Circle",
+    "price": "$6.08",
+    "regdate": "3/27/2022",
+    "hit": 1
+    }, {
+       "id": 2,
+       "title": 2,
+       "region": "7714 Knutson Junction",
+       "price": "$6.52",
+       "regdate": "10/8/2021",
+       "hit": 2
+     }, {
+       "id": 3,
+       "title": 2,
+       "region": "536 Grayhawk Alley",
+       "price": "$3.83",
+       "regdate": "4/5/2022",
+       "hit": 3
+     }, {
+       "id": 4,
+       "title": 1,
+       "region": "65 Farwell Avenue",
+       "price": "$8.56",
+       "regdate": "11/29/2021",
+       "hit": 4
+     }, {
+       "id": 5,
+       "title": 1,
+       "region": "1 Cody Junction",
+       "price": "$8.19",
+       "regdate": "4/26/2022",
+       "hit": 5
+     }, {
+       "id": 6,
+       "title": 2,
+       "region": "3 Melby Crossing",
+       "price": "$5.33",
+       "regdate": "12/17/2021",
+       "hit": 6
+     }, {
+       "id": 7,
+       "title": 4,
+       "region": "2159 Graceland Way",
+       "price": "$4.26",
+       "regdate": "6/30/2022",
+       "hit": 7
+     }, {
+       "id": 8,
+       "title": 4,
+       "region": "8 Maple Street",
+       "price": "$0.59",
+       "regdate": "1/15/2022",
+       "hit": 8
+     }, {
+       "id": 9,
+       "title": 3,
+       "region": "1598 Canary Drive",
+       "price": "$3.58",
+       "regdate": "1/21/2022",
+       "hit": 9
+     }, {
+       "id": 10,
+       "title": 4,
+       "region": "92 Lerdahl Drive",
+       "price": "$3.62",
+       "regdate": "8/19/2021",
+       "hit": 10
+     }
+ ]
