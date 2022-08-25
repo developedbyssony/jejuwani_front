@@ -18,7 +18,7 @@ function Navbar({initialCartItem}) {
       }
 
         const loginText1 = '마이페이지';
-        const loginText2 = '🌴 여행계획서';
+        const loginText2 = '로그아웃';
         const loginText3 = '로그아웃';
         const writeText1 = '블로그 쓰기  ✏️';
         const writeText2 = '리뷰 쓰기  ✍';
@@ -39,7 +39,6 @@ function Navbar({initialCartItem}) {
                         <div className='navbar-menu-right'>
                             <div className="navber-menu-right-item">
                             <Link to="/cart"><h1 className="cart"></h1></Link>
-                            { initialCartItem ? (<div className="dot"></div>) : null }
                             </div>
                             <div className="navber-menu-right-item">
                             <strong className="menu-right text-style-14" onClick={modalCloseL}>{uid}</strong>
@@ -47,7 +46,6 @@ function Navbar({initialCartItem}) {
                             modalOpenL && <Tooltip2
                             text1={loginText1}
                             text2={loginText2}
-                            text3={loginText3}
                             modalCloseL={modalCloseL}
                             />
                             }

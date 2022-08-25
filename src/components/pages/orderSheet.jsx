@@ -24,7 +24,7 @@ function orderSheet() {
     const location = useLocation();
     const item = location.state.item;
     const itemCount = item[0].count;
-    const itemPrice = item[0].price.replace(/\D/g,'');
+    const itemPrice = item[0].price;
     const wholeCountNum = location.state.wholeCountNum || itemCount * itemPrice ;
 
     /*

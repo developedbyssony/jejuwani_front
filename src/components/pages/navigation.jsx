@@ -8,6 +8,72 @@ import DatePickerComponent from '../DatePickerComponent';
 import Slider5 from '../slider5';
 
 export default function navigation() {
+    async function getInjuries() {
+        try {
+            const response =  await fetch(
+                "https://open.jejudatahub.net/api/proxy/36333aD6tba8aa1D6D1aaab8D1aa6ba8/10e1t11j4jte041bt14p1tporp1b106t?sidoSigungu=제주시",
+                {
+                    method: "GET",
+                });
+            if(response.ok) {
+                console.log('ok');
+                const data = await response.json();
+                console.log(data);
+                const init = data.data.map((it,idx) => {
+                  return {
+                    "id": idx+1,
+                    "sidoSigungu": it.sidoSigungu,
+                    "place": it.occurrencePlace,
+                    "occurrenceCount":it.occurrenceCount,
+                    "bjdCode": it.bjdCode,
+                    "latitude" : it.latitude,
+                    "longitude" : it.longitude,
+                    }
+                })
+                setInjuries([...init,injury]);
+                console.log(init);
+                return init;
+            } else {
+            console.log('err');
+            const errData = await response.json();
+            throw errData;}
+        } catch (e) {
+            console.log(e);
+        }
+    }
+    /*
+    async function getRentCarData() {
+        try {
+            const response =  await fetch(
+                "http://localhost:5373/dummy/rentcar.json",
+                {
+                    method: "GET",
+                });
+            if(response.ok) {
+                console.log('ok');
+                const data = await response.text();
+                const dd = JSON.parse(data);
+                console.log(dd);
+                const init = dd.map((it,idx) => {
+                  return {
+                    "id": idx+1,
+                    "car": it.VHCLE_NM,
+                    "category": it.VHCLE_TY_NM,
+                    "useTime":it.USE_TIME_CO
+                    }
+                })
+                setRentCarData([...init,rentCar]);
+                console.log(init);
+                return init;
+            } else {
+            console.log('err');
+            const errData = await response.json();
+            throw errData;}
+        } catch (e) {
+            console.log(e);
+        }
+    }*/
+    
     useEffect(() => {
         $('.post-wrapper').not('.slick-initialized').slick({
             dots:true,
@@ -20,12 +86,15 @@ export default function navigation() {
             prevArrow: $('.prev'),
             nextArrow: $('.next'),
           });
-
-    })
+          getInjuries();
+          getInjuries();
+    },[])
     const width = 560;
     const [ search, searchStart] = useState(false);
     const [ inputText, setInputText ] = useState('');
     const [ place, setPlace ] = useState('');
+    const [ injury, setInjuries ] = useState([]);
+    const [ rentCar, setRentCarData ] = useState([]);
 
     const onChange = (e) => {
         setInputText(e.target.value);
@@ -38,6 +107,7 @@ export default function navigation() {
     }
 
         return (
+            <>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12">
@@ -80,6 +150,15 @@ export default function navigation() {
                     </div>
                     </div>
                     </div>
+                    <div className="section">
+                        <p>{injury.map((it) => 
+                        <p>{it.place}  {it.occurrenceCount}</p>)}</p>
+                    </div>        
+                    <div className="section">
+                        <p>{rentCar.map((it) => 
+                        <p>{it.car}  {it.useTime}</p>)}</p>
+                    </div>
+                    </>
                     /*
                         <div className="section">
                             <h1 className="page-tit">제주도 교통 A to Z</h1>

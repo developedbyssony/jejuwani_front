@@ -68,11 +68,11 @@ function main({store})  {
                     "introduction":it.introduction,
                     "tag": it.tag,
                     "phone": it.phoneno,
-                    "price": 30000,
-                    "hit": 0,
-                    "like":0,
+                    "price": Math.floor((Math.random()* (10000 - 3000 + 1) + 3000) / 10) * 100,
+                    "hit": Math.floor(Math.random()*10000),
+                    "like":Math.floor(Math.random()*100),
                     "review": 0,
-                    "rating": 5,
+                    "rating": Math.floor(Math.random() * 5),
                     "region1" : it.region1cd,
                     "region2" : it.region2cd,
                     "tag" : it.alltag,
@@ -109,10 +109,10 @@ function main({store})  {
                     "region": it.address,
                     "tag": it.alltag,
                     "regdate": it.phoneno,
-                    "hit": 0,
-                    "like":0,
+                    "hit": Math.floor(Math.random()*10000),
+                    "like":Math.floor(Math.random()*100),
                     "review": 0,
-                    "rating": 5,
+                    "rating": Math.floor(Math.random() * 5),
                     "latitude" : it.latitude,
                     "longitude" : it.longitude,
                     "region1" : it.region1cd,
@@ -154,25 +154,9 @@ function main({store})  {
     }
 
     useEffect(() => {
-        /*
-        $('.center').slick({
-            centerMode: true,
-            centerPadding: '10px',
-            slidesToShow: 2,
-            autoplay: true,
-            autoplaySpeed: 2000,
-          });
-          $('.single-item').slick({
-            infinite: true,
-            slidesToShow: 1,
-        })
-        */
         getRestaurantItems();
         getProductItems();
         getBlogItems();
-        console.log(ProductData);
-        console.log(RestaurantData);
-        console.log(BlogData);
         $('.post-wrapper').not('.slick-initialized').slick({
             dots:false,
             slidesToShow: 3,

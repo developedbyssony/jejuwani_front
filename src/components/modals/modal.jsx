@@ -23,6 +23,24 @@ const modal = ({ modalClose, id, title, region, price }) => {
     console.log(userEndDate);
   };
 
+  
+  function modalClick(e) {
+    e.preventDefault();
+
+    if (amount.current.value < 1) {
+        alert('수량을 선택해주세요.')
+      } else {
+        const newData = [{
+          id:1,
+          title:title,
+          count:amount.current.value,
+          price:price,
+        }]
+        console.log(newData);
+        history.push({pathname:"/order", state:{item:newData}})
+              }
+            }
+
     return (
       <>
     <div className="moal-wrapper">
@@ -55,7 +73,7 @@ const modal = ({ modalClose, id, title, region, price }) => {
         <div className="order-inputs">
                     <div className="select-group is-active" id="order-inputz">
                     <select ref={amount} className="form-select" id="mandatory-select" required>
-                    <option value="">선택수량</option>
+                    <option value="0">선택수량</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -65,22 +83,14 @@ const modal = ({ modalClose, id, title, region, price }) => {
                     </div>
         </div>
         </div>
-        </form>
-        </div>
-        </div>
         <div className="btn-group">
-        <button onClick={() => {
-                        const newData = [{
-                          id:1,
-                          title:title,
-                          count:amount.current.value,
-                          price:price,
-                        }]
-                        console.log(newData);
-                        history.push({pathname:"/order", state:{item:newData}})}}>예약하기</button>
+        <button onClick={modalClick}>예약하기</button>
         </div>
         <div className="modal-btn-close">
         <h1 className="modal-ic-close" onClick={modalClose}></h1>
+        </div>
+        </form>
+        </div>
         </div>
         </div>
         </div>

@@ -59,8 +59,9 @@ function productUnitRestaurantMap({item, reverse}) {
                     <h1 className="unit-tit text-style-13">{item.region}</h1>
                 </div>
                 <div className="productUnit-contents-rating">
-                    <Rating rating={item.id}></Rating>
-                </div>
+                <div className="productUnit-contents-rating">
+                <Rating rating={item.rating}></Rating> ({item.rating}점)
+                </div>                </div>
             </div>
         </div>
     </div>)

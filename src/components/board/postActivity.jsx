@@ -46,7 +46,8 @@ const posts = ({ posts, loading, reverse }) => {
                             state: {post:post}
                         })}}>{post.title}</Tdd></td>                        
                         <td><Td>{post.region}</Td></td>
-                        <td>{post.price}</td>
+              
+                        <td>{post.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원</td>
                         <td>{post.hit}</td>
                         <td><div id={index} className="heartNotActive" onClick={reverse}></div></td>
                         <td><div className="tag-outline" onClick={modalClose}>예약하기</div>

@@ -25,12 +25,14 @@
   overflow: hidden;
 }
 .modal-ticket-box {
-  position: relative;;
+  position: relative;
   margin: 0 auto;
-  top:10%;
+  top:25%;
+  left: 2%;
   width: 500px;
   height: 623px;
   z-index: 999;
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 .modal {
   position: fixed;
@@ -50,9 +52,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: relative;
-  top:13%;
-  left: 166px;
+  position: absolute;
+  top:16%;
+  left: 28%;
   width: 290px;
   overflow:hidden;
   text-overflow: ellipsis;
@@ -80,8 +82,8 @@
   flex-direction: column;
   height: 140px;
   width: 100%;
-  top:49%;
-  left: 30%;
+  top:52%;
+  left: 26%;
 }
 
 .datepickers::after{
@@ -108,24 +110,24 @@
 .modal-ic-close {
   position: absolute;
   z-index: 999;
-  top:60px;
-  left: 67%;
-	width: 50px;
-	height: 50px;
+  top:0;
+  left: 80%;
+	width: 100px;
+	height: 100px;
   cursor: pointer;
 }
 
 .btn-group {
-  position: fixed;
+  position: absolute;
   z-index: 999;
-  top:97%;
-  left: 55%;
+  top:110%;
+  left: 85%;
 }
 
-#order-inputz {
+.order-inputs {
   position: absolute;
   margin: 0 auto;
-  top:520px;
+  top:880px;
   left: 40px;
 }
 

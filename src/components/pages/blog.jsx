@@ -71,12 +71,12 @@ function blog() {
                                 tapTitle4={likeCate4}
                                 tapTitle5={likeCate5}
                                 tapTitle6={likeCate6}
-                                contents1={<BlogList data={BlogData}/>}
-                                contents2={<BlogList data={BlogData}/>}
-                                contents3={<BlogList data={BlogData}/>}
-                                contents4={<BlogList data={BlogData}/>}
-                                contents5={<BlogList data={BlogData}/>}
-                                contents6={<BlogList data={BlogData}/>}
+                                contents1={<BlogList data={BlogData} sort={BlogData.category}/>}
+                                contents2={<BlogList data={BlogData} sort={2}/>}
+                                contents3={<BlogList data={BlogData} sort={3}/>}
+                                contents4={<BlogList data={BlogData} sort={4}/>}
+                                contents5={<BlogList data={BlogData} sort={5}/>}
+                                contents6={<BlogList data={BlogData} sort={6}/>}
                                 />
                             </div>
                         </div>

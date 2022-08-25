@@ -42,12 +42,18 @@ function productShow({serverURL,product_info,review}) {
         })
 
     let [ like, setlike ] = useState(product.likes);
+    let [ price, setPrice ] = useState(product.price);
 
     const onClickHeart = e => {
         const { count, value } = e.target;
         setProduct({...product, [count]:value});
     }
 
+    const setAmount = () => {
+        const arr = { ...product, price: product_info.post.price * amount.current.value };
+        setProduct(arr);
+        setPrice(price * amount.current.value);
+    }
 
     const ontoggle = () => {
         if(heart === false) {
@@ -72,7 +78,6 @@ function productShow({serverURL,product_info,review}) {
     const modalCloseD = () => {
         setModalOpenD(!modalOpenD);
       }
-                /*<img src={product.imgSrc} alt="액티비티이미지" id="img-activity"/>*/
 
     return(
     <div>
@@ -99,7 +104,7 @@ function productShow({serverURL,product_info,review}) {
             }</a>
             <h1 claassName="info-tit" id="info-tit">{product.title}</h1>
             <div className="info-review">
-                <Rating rating={product.product_id}></Rating>
+                <Rating rating={product.rating}></Rating>
                 <p>
                 <strong>{product.review}</strong>
                 <span>개 리뷰</span>
@@ -109,7 +114,7 @@ function productShow({serverURL,product_info,review}) {
             
             <div className="product-info-top">
             <div className="price-20">
-                <strong className="amount">{product.price}</strong>
+                <strong className="amount">{product_info.post.price}</strong>
                 <span className="currency-product-show">원</span>
             </div>
             <strong className="tag-orange">특가</strong>
@@ -125,9 +130,6 @@ function productShow({serverURL,product_info,review}) {
                 <div className="address">
                 <p className="text-sytle-13">{product.address}</p>
                 <p className="tag-outline">{product.label}</p> 
-                <div className="alltag">
-                <p>{product.tag}</p>
-                </div>
                 <div> 
                 </div>
                 </div>
@@ -135,11 +137,11 @@ function productShow({serverURL,product_info,review}) {
                 </div>
             </div>
         </div>
-        <form className="order-form" action="/" method="POST">
-                <div className="order-inputs">
+        <form className="order-formz" action="/" method="POST">
+                <div className="order-inputz">
                     <div className="select-group is-active" id="order-inputs">
-                    <select ref={amount} className="form-select" id="mandatory-select" required>
-                    <option value="">선택수량</option>
+                    <select ref={amount} onChange={setAmount} className="form-select" id="mandatory-select" required>
+                    <option value="0">선택수량</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -148,10 +150,10 @@ function productShow({serverURL,product_info,review}) {
                     </select>
                     </div>
                 </div>
-                <div className="order-inputs">
+                <div className="order-inputz">
                     <div className="select-group is-active" id="order-inputs">
                     <select className="form-select" id="mandatory-select" required>
-                    <option value="">예약날짜</option>
+                    <option value="0">예약날짜</option>
                     <option value="1">2022-07-05</option>
                     <option value="2">2022-07-06</option>
                     <option value="3">2022-07-07</option>
@@ -161,57 +163,12 @@ function productShow({serverURL,product_info,review}) {
                     </div>
                 </div>
 
-                {/*<div className="order-checkouts">
-                <ul className="checkout-list">
-                    <li className="checkout-item">
-                        <div className="checkout-card">
-                            <header className="checkout-header">
-                                <div classNmae="checkout-title">
-                                2명
-                                </div>
-                                <button 
-                                    className="delete-button" 
-                                    type="button" 
-                                    aria-label="해당 상품을 삭제하기">
-                                <i className="ic-close" onClick={modalCloseD}></i>
-                                {
-                                modalOpenD && <ModalD
-                                modalClose={modalCloseD}
-                                productId={product.product_id}
-                                />
-                                }
-                                </button>
-                            </header>
-                            <footer className="checkout-footer">
-                            <div className="checkout-select">
-                                <select id="checkout-item">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                                <i className="ic-caret" aria-hidden></i>
-                            </div>
-                            <output className="checkout-output" for="checkout-item">
-                             <div className="price-16">
-                                <strong className="amount">0</strong>
-                                <span className="currency">원</span>
-                            </div>
-                            </output>
-                            </footer>
-                        </div>
-                    </li>
-                </ul>
-                </div>*/}
-
-
                 <dl className="order-summary">
                     <dt>주문금액</dt>
                     <dd>
                         <output for="mandatory-select">
                             <div className="price-20">
-                            <strong className="amount">{product.price}</strong>
+                            <strong className="amount">{product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong>
                             <span className="currency-product-show">원</span>
                             </div>
                         </output>

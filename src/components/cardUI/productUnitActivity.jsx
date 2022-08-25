@@ -90,7 +90,7 @@ function productUnit({item, setCart, reverse, store}) {
                     <h1 className="unit-tit text-style-13">{item.region}</h1>
                 </div>
                 <div className="productUnit-contents-rating">
-                <Rating rating={item.id}></Rating>
+                <Rating rating={item.rating}></Rating> ({item.rating}점)
                 </div>
             </div>
         </div>
