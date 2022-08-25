@@ -13,6 +13,7 @@ function productUnit({item, setCart, reverse, store}) {
     const view_url = `/detail/${item.id}`;
     const [ likeItems, setLikeItems ] = useState([]);
     const [ cartItems, setCartItems ] = useState([]);
+    let [ product, setProduct ] = useState(item.like)
     const dispatch = useDispatch();
 
     const fid = useRef();
@@ -43,6 +44,12 @@ function productUnit({item, setCart, reverse, store}) {
 
     function like() {
         console.log("클릭");
+        let classList = event.target.classList.length;
+        if(classList === 1) {
+        setProduct(product-1); }
+        else {
+        setProduct(product+1);   
+        }
         const productId = fid.current.id;
         const productTitle = ftitle.current.innerHTML;
         const productPrice = fprice.current.innerHTML || null;
@@ -83,7 +90,7 @@ function productUnit({item, setCart, reverse, store}) {
                                                                             reverse(event);
                                                                             like(event);
                                                                         }}></div>
-                    <h1 className="unit-tit text-style-13">{item.like}</h1>
+                    <h1 className="unit-tit text-style-13">{product}</h1>
                 </div>
                 </div>
                 <div className="productUnit-contents-address">

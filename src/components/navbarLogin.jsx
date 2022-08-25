@@ -41,7 +41,7 @@ function Navbar({initialCartItem}) {
                             <Link to="/cart"><h1 className="cart"></h1></Link>
                             </div>
                             <div className="navber-menu-right-item">
-                            <strong className="menu-right text-style-14" onClick={modalCloseL}>{uid}</strong>
+                            <strong className="menu-right text-style-14" id="uid" onClick={modalCloseL}>{uid}</strong>
                             {
                             modalOpenL && <Tooltip2
                             text1={loginText1}

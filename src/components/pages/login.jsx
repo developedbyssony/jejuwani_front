@@ -121,6 +121,7 @@ function login({loginCallBack, serverURL}) {
                     </div>
                     <input type="submit" value="로그인" className="btn-secondary btn-55" onClick={loginClick}></input>
                 </form>
+                {/*
                 <div className="social-login">
                     <div className="naver-logo"></div>
                     <button className="btn">
@@ -128,6 +129,7 @@ function login({loginCallBack, serverURL}) {
                         <span className="naver-login-txt">네이버로 로그인</span>
                     </button>
                 </div>
+                */}
                 </div>
                 </div>
                 </div>

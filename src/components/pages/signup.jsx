@@ -194,7 +194,7 @@ function signup({serverURL}) {
                         <input type="text" className="" placeholder="이메일" id="email" ref={remail} onChange={handleInputEmail}/>
                         <span className="signup-input-tit">닉네임</span>
                         <input type="text" className="" placeholder="별명 (2자~5자)" id="nick" ref={rnick} onChange={handleInputNick}/>
-                        <div className="order-inputs">
+                        <div className="order-inputs" id="signUp-input">
                             <div className="select-group is-active">
                             <select className="form-select" id="mandatory-select" required ref={rrole}>
                             <option value="">추가 선택 항목</option>
@@ -203,8 +203,8 @@ function signup({serverURL}) {
                             </select>
                             </div>
                         </div>
-                    <div className="section-optional-info">
-                    <span className="signup-title">선택정보</span>
+                    <div className="section-optional-info" id="signup-tit-optional">
+                    <span className="signup-title" >선택정보</span>
                         <span className="signup-input-tit">전화번호</span>  
                         <div className="tel-box">
                             <input type="tel" className="phone" />

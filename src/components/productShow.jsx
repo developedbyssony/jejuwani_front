@@ -114,7 +114,7 @@ function productShow({serverURL,product_info,review}) {
             
             <div className="product-info-top">
             <div className="price-20">
-                <strong className="amount">{product_info.post.price}</strong>
+                <strong className="amount">{product_info.post.price.toLocaleString()}</strong>
                 <span className="currency-product-show">원</span>
             </div>
             <strong className="tag-orange">특가</strong>

@@ -328,7 +328,12 @@ a, form, p {
         .price-32 {
           display: inline-flex;
           align-items: center;
-          justify-content: flex-start; }
+          justify-content: flex-start;
+          font-weight: 700; 
+          letter-spacing: -0.02em;
+          font-family: "Tahoma";
+          line-height: 1;
+         }
           .price-12 .amount, .price-20 .amount, .price-32 .amount {
             font-family: "Tahoma";
             line-height: 1; }
@@ -782,6 +787,12 @@ textarea:focus {
   flex-direction: row;
   align-items: center;
 }
+
+#uid {
+  position: relative;
+  left: -20px;
+}
+
 #nav-btn-write {
   display: flex;
   flex-direction: row;
@@ -849,7 +860,7 @@ textarea:focus {
   position: absolute;
   display: inline-block;
   top:28px;
-  right: 320px;
+  right: 375px;
   background: url('assets/css_sprites_sub.png') no-repeat -841px -386px;
     width: 22px;
     height: 21px;
@@ -1086,9 +1097,20 @@ margin: 0 auto;
 }
 
 .heartNotActive.isActive {
+  position: relative;
   background: url('assets/css_sprites_sub.png') no-repeat -105px -554px;
   width: 51px;
   height: 43px;
   transform: scale(0.4);
-  margin: 0 auto;
+}
+
+#signUp-input {
+  position: absolute;
+  top:38%;
+  left: 0px;
+}
+
+#signup-tit-optional {
+  position: relative;
+  top:50px;
 }

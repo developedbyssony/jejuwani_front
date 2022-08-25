@@ -27,7 +27,7 @@ function Navbar({initialCartItem}) {
                             <a className="menu text-style-18" aria-label="커뮤니티 페이지로 이동"><Link to="/login">커뮤니티</Link></a>
                         </div>
                         <div className='navbar-menu-right'>
-                            <a hef="#"><Link to="/login"><h1 className="cart"></h1></Link></a>
+                            <a hef="#"><Link to="/cart"><h1 className="cart"></h1></Link></a>
                             <a className="menu-right text-style-14" aria-label="로그인 페이지로 이동"><Link to="/login">로그인</Link></a>
                             <a className="menu-right text-style-14" aria-label="회원가입 페이지로 이동"><Link to="/signup">회원가입</Link></a>
                             <button className="btn-primary btn-40" id="nav-btn-write" onClick={modalClose} aria-label="글쓰기 버튼"><Link to="/login">글쓰기</Link><h1 className="i-chevron"></h1></button>

@@ -12,12 +12,18 @@ function productUnitRestaurantMap({item, reverse}) {
     const fid = useRef();
     const ftitle = useRef();
 
-
+    let [ product, setProduct ] = useState(item.like)
     const [ likeItems, setLikeItems ] = useState([]);
     const dispatch = useDispatch();
 
     function like() {
         console.log("클릭");
+        let classList = event.target.classList.length;
+        if(classList === 1) {
+        setProduct(product-1); }
+        else {
+        setProduct(product+1);   
+        }
         const productId = fid.current.id;
         const productTitle = ftitle.current.innerHTML;
         dispatch(pickItem({productId,productTitle}));
@@ -52,7 +58,7 @@ function productUnitRestaurantMap({item, reverse}) {
                                                                             reverse(event);
                                                                             like(event);
                                                                         }}></div>
-                        <h1 className="unit-tit text-style-13">{item.like}</h1>
+                        <h1 className="unit-tit text-style-13">{product}</h1>
                     </div>
                 </div>
                 <div className="productUnit-contents-address">

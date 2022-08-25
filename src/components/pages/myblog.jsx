@@ -145,6 +145,7 @@ export default function myblog({ FileInput, ProfileInput, blogData, userId}) {
                                 <ProfileInput onFileChange={onFileChange_profile} style={{ position:'absolute', zIndex:'999' }} />
                                     <h1 className="text-style-24"><strong>{nick}({uid})</strong>님의 블로그입니다.</h1>
                                     <h5 className="blog-script">블로그 소개글을 입력해주세요.</h5>
+                                    {/*
                                     <div className="my-blog-user-info-bottom">
                                         <div className="my-blog-user-info-follower">
                                         <dt>Following</dt>
@@ -154,7 +155,7 @@ export default function myblog({ FileInput, ProfileInput, blogData, userId}) {
                                         <dt>Follower</dt>
                                         <dd>0</dd>
                                         </div>
-                                    </div>
+                                    </div>*/}
                                     <div className="my-blog-posts">
                                         <BlogPost myPost={blogData}/>
                                     </div>
