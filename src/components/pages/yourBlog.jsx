@@ -2,18 +2,19 @@ import { useState, useEffect } from 'react';
 import '../../css/myBlog.css';
 import BlogPost from '../cardUI/blogPostMy';
 import BlogProfile from 'components/blog/blogProfile';
+import { useLocation } from "react-router-dom"
 
 export default function yourblog({blogData, userId}) {
-    const [ myData, setMyData ] = useState([
-    ]);
+    const location = useLocation();
+    const [ myData, setMyData ] = useState([location.state.post]);
 
     useEffect(() => {
         for (var pair of blogData) {
             setMyData(myData.concat(pair));
         }},[myData]);
 
-    const uid = 'autumn';
-    const nick = '가을이네';
+    const uid = location.state.post.uid;
+    const nick = location.state.post.nick;
         return (
             <div className="container-fluid">
                <div className="row">
@@ -21,13 +22,15 @@ export default function yourblog({blogData, userId}) {
                         <div className="my-blog-page-wrapper">
                                 <div className="uploadCoverSection-your">
                                     <div className="upload-blog-img-cover">
+                                    <h5 className="blog-script">🐶 혼저옵서예 🐶</h5>
+                                    {/*<img src={location.state.post.imgSrc} alt="액티비티이미지" id="img-activity" style={{width:'670px', height:'670px', objectFit:'cover'}}/>*/}
                                     </div>
                                 </div>
                                 <div className="section">
                                 <div className="my-blog-user-info">
-                                    <BlogProfile />
-                                    <h1 className="text-style-24"><strong>{nick}({uid})</strong>님의 블로그입니다.</h1>
-                                    <h5 className="blog-script">🐶 애견 동반 가능한 제주도 숙소 🐶</h5>
+                                    <BlogProfile data={location.state.post.imgSrc}/>
+                                    <h1 className="text-style-24"><strong>{nick}{uid}</strong>님의 블로그입니다.</h1>
+                                    {/*}
                                     <div className="my-blog-user-info-bottom">
                                         <div className="my-blog-user-info-follower">
                                         <dt>Following</dt>
@@ -38,6 +41,7 @@ export default function yourblog({blogData, userId}) {
                                         <dd>0</dd>
                                         </div>
                                     </div>
+                                    */}
                                     <div className="my-blog-posts">
                                         <BlogPost myPost={blogData}/>
                                         <BlogPost myPost={blogData}/>

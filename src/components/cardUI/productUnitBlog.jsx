@@ -10,7 +10,7 @@ function productUnit({item}) {
 
     return (
         <div className="wrap-css">
- <div className="productUnit-frame-wanner">
+ <div className="productUnit-frame-wanner" onClick={() => {history.push({pathname:"/yourblog",state: {post:item}})}}>
  <div className="productUnit-img-blog">
      <img src={item.imgSrc} alt="메인블로그유닛" style={{width:'250px', height:'230px', objectFit:'cover'}}/>
  </div>
@@ -49,7 +49,7 @@ function productUnit({item}) {
          <p className="unit-tit text-style-24" id="blog-tit" style={{fontWeight:'600'}}>{item.title}</p>
      </div>
          <div className="productUnit-contents-wanner-avatar">
-            <img className="blog-page-avatar" src={`${process.env.PUBLIC_URL}${item.imgSrc}`} alt="블로그프로필" onClick={() => {history.push({pathname:"/yourblog"})}} />
+            <img className="blog-page-avatar" src={`${process.env.PUBLIC_URL}${item.imgSrc}`} alt="블로그프로필" />
         </div>
         <p className="unit-tit text-style-13" id="blog-main-nick"><strong>{item.nick}</strong>{item.uid}</p>
  </div>

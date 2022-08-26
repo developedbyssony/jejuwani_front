@@ -23,12 +23,14 @@ export default function restaurant() {
                 "region": it.address,
                 "tag": it.alltag,
                 "regdate": it.phoneno,
-                "hit": 0,
-                "like":0,
+                "hit": Math.floor(Math.random()*100),
+                "like":Math.floor(Math.random()*100),
                 "review": 0,
-                "rating": 5,
+                "rating": Math.floor(Math.random() * 5),
                 "latitude" : it.latitude,
                 "longitude" : it.longitude,
+                "region1" : it.region1cd,
+                "region2" : it.region2cd,
                 "imgSrc" : it.repPhoto.photoid.imgpath,
                 }
             })

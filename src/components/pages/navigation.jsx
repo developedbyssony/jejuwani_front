@@ -4,14 +4,16 @@ import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import '../../css/rentalCollapse.css';
 import '../../css/navi.css';
 import TransportaitonInfoUnit from '../cardUI/transportationInfoUnit';
-import DatePickerComponent from '../DatePickerComponent';
 import Slider5 from '../slider5';
+import Barchart from '../barchart';
+import '../../css/d3.css';
+import KakaoMapRestaurant from '../../service/kakaoMapRestaurant.js';
 
 export default function navigation() {
     async function getInjuries() {
         try {
             const response =  await fetch(
-                "https://open.jejudatahub.net/api/proxy/36333aD6tba8aa1D6D1aaab8D1aa6ba8/10e1t11j4jte041bt14p1tporp1b106t?sidoSigungu=제주시",
+                "https://open.jejudatahub.net/api/proxy/36333aD6tba8aa1D6D1aaab8D1aa6ba8/6414j__014r6pre0141_66ott111rp_1?sidoSigungu=제주시",
                 {
                     method: "GET",
                 });
@@ -41,11 +43,11 @@ export default function navigation() {
             console.log(e);
         }
     }
-    /*
+    
     async function getRentCarData() {
         try {
             const response =  await fetch(
-                "http://localhost:5373/dummy/rentcar.json",
+                "http://localhost:3000/dummy/rentcar2021img.json",
                 {
                     method: "GET",
                 });
@@ -57,14 +59,10 @@ export default function navigation() {
                 const init = dd.map((it,idx) => {
                   return {
                     "id": idx+1,
-                    "car": it.VHCLE_NM,
-                    "category": it.VHCLE_TY_NM,
-                    "useTime":it.USE_TIME_CO
+                    "img": it.imgSrc
                     }
                 })
-                setRentCarData([...init,rentCar]);
-                console.log(init);
-                return init;
+                setRentCarData([...init,dataImg]);
             } else {
             console.log('err');
             const errData = await response.json();
@@ -72,8 +70,39 @@ export default function navigation() {
         } catch (e) {
             console.log(e);
         }
-    }*/
-    
+    }
+
+    async function popularLandMark() {
+        try {
+            const response =  await fetch(
+                "http://localhost:3000/dummy/popularList.json",
+                {
+                    method: "GET",
+                });
+            if(response.ok) {
+                console.log('ok');
+                const data = await response.json();
+                console.log(data);
+                const init = data.map((it,idx) => {
+                  return {
+                    "id": idx+1,
+                    "title": it.title,
+                    "address": it.address,
+                    "category":it.category,
+                    "searchNum": it.searchNum,
+                    }
+                })
+                setList([...init,popList]);
+                return;
+            } else {
+            console.log('err');
+            const errData = await response.json();
+            throw errData;}
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
     useEffect(() => {
         $('.post-wrapper').not('.slick-initialized').slick({
             dots:true,
@@ -86,15 +115,17 @@ export default function navigation() {
             prevArrow: $('.prev'),
             nextArrow: $('.next'),
           });
+          getRentCarData();
           getInjuries();
-          getInjuries();
+          popularLandMark();
     },[])
     const width = 560;
     const [ search, searchStart] = useState(false);
     const [ inputText, setInputText ] = useState('');
     const [ place, setPlace ] = useState('');
     const [ injury, setInjuries ] = useState([]);
-    const [ rentCar, setRentCarData ] = useState([]);
+    const [ dataImg, setRentCarData ] = useState([]);
+    const [ popList, setList ] = useState([]);
 
     const onChange = (e) => {
         setInputText(e.target.value);
@@ -150,29 +181,43 @@ export default function navigation() {
                     </div>
                     </div>
                     </div>
-                    <div className="section">
-                        <p>{injury.map((it) => 
-                        <p>{it.place}  {it.occurrenceCount}</p>)}</p>
-                    </div>        
-                    <div className="section">
-                        <p>{rentCar.map((it) => 
-                        <p>{it.car}  {it.useTime}</p>)}</p>
-                    </div>
-                    </>
-                    /*
-                        <div className="section">
-                            <h1 className="page-tit">제주도 교통 A to Z</h1>
+
+                    <div className="section section-navi">
                             <div className="section-main-activity-sorting">
+                            <h1 className="page-tit">제주도 핫플레이스 TOP 100</h1>
+                            {/*
                         <div className="main-sort-row1">
-                     <button className="btn-sort btn-s40">렌트카</button>
-                     <button className="btn-sort btn-s40">자전거</button>                               
-                     <button className="btn-sort btn-s40">보행</button>
-                      </div>
+                            <button className="btn-sort btn-s40">제주시</button>
+                            <button className="btn-sort btn-s40">서귀포시</button>                               
+                        </div>*/}
+                     <div className="pop-box">
+                        <div className="pop-header">
+                            <ul className="popList" id="pop-header">
+                            <li>순위</li>
+                            <li className="header-title" id="pop-title">장소</li>
+                            <li className="header-address" id="pop-address">주소</li>
+                            <li id="pop-search">검색수</li>
+                            </ul>
                             </div>
+                     <p>{popList.slice(0,100).map((it) => (
+                                    <ul className="popList">
+                                    {/*<KakaoMapRestaurant latitude={it.latitude} longitude={it.longitude} title={it.place}/>*/}
+                                    <li><p>{it.id}</p></li>
+                                    <li id="pop-title"><p><strong>{it.title}</strong></p></li>
+                                    <li id="pop-address"><p>{it.address}</p></li>
+                                    <li id="pop-search"><p>{it.searchNum}</p></li>
+                                    </ul>
+                                    ))}</p>                                    </div>
 
                             </div>
-                            </div>
-                            {/*
+                        <div className="chart">
+                        <Barchart dataImg={dataImg}></Barchart>
+                        </div>
+                    </div>        
+
+                                                </>
+
+                            /*
                             <div className="d-flex flex-column" style={{outline: 0}}>
                 <Button id="toggle">
                     <h1 className="page-tit" id="rentalCarCTA">어떤 렌트카 찾으세요?</h1>

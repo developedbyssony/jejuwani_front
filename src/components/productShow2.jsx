@@ -30,7 +30,7 @@ function productShow2({serverURL, product_info, review}) {
            imgSrc : product_info.post.imgSrc,
            tag: product_info.post.tag,
            content :  product_info.post.introduction,
-           label:product_info.post.region1.label,
+           label: product_info.post.region1.label,
         })
 
     let [ like, setlike ] = useState(product.likes);

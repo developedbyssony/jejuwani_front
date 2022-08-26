@@ -1,0 +1,39 @@
+[{
+    "id": 1,
+    "imgSrc" : "/assets/sub/rent/kona-electric.jpg"
+    }, {
+       "id": 2,
+       "imgSrc" : "/assets/sub/rent/k52.jpg"
+     }, {
+       "id": 3,
+       "imgSrc" : "/assets/sub/rent/쏘나타.jpg"
+
+     }, {
+       "id": 4,
+       "imgSrc" : "/assets/sub/rent/k53.jpg"
+
+     }, {
+       "id": 5,
+       "imgSrc" : "/assets/sub/rent/쏘나타뉴.jpg"
+
+     }, {
+       "id": 6,
+       "imgSrc" : "/assets/sub/rent/올뉴카니발.png"
+
+     }, {
+       "id": 7,
+       "imgSrc" : "/assets/sub/rent/아반떼AD.png"
+
+     }, {
+       "id": 8,
+       "imgSrc" : "/assets/sub/rent/올뉴k3.png"
+
+     }, {
+       "id": 9,
+       "imgSrc" : "/assets/sub/rent/카니발4.jpg"
+
+     }, {
+       "id": 10,
+       "imgSrc" : "/assets/sub/rent/더뉴k5.jpg"
+     }
+]
