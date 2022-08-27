@@ -62,29 +62,3 @@ const settings = {
       </div>
              );
            }
-        /*
-        <StyledSlider {...settings}>
-        <div className="slider">
-            <ProductUnit item={data} setCart={setCart} closeCart={closeCart} closeLike={likeModalClose} store={store} reverse={reverse}/>
-        </div>
-        <div className="slider">
-            <ProductUnit item={data} setCart={setCart} closeCart={closeCart} closeLike={likeModalClose} store={store} reverse={reverse}/>
-        </div>
-
-        <div className="slider">
-              <ProductUnit item={data} setCart={setCart} closeCart={closeCart} closeLike={likeModalClose} store={store} reverse={reverse}/>
-        </div>
-        <div className="slider">
-              <ProductUnit item={data} setCart={setCart} closeCart={closeCart} closeLike={likeModalClose} store={store} reverse={reverse}/>
-        </div>
-        <div className="slider">
-              <ProductUnit item={data} setCart={setCart} closeCart={closeCart} closeLike={likeModalClose} store={store} reverse={reverse}/>
-        </div>
-        <div className="slider">
-              <ProductUnit item={data} setCart={setCart} closeCart={closeCart} closeLike={likeModalClose} store={store} reverse={reverse}/>
-        </div>
-        <div className="slider">
-              <ProductUnit item={data} setCart={setCart} closeCart={closeCart} closeLike={likeModalClose} store={store} reverse={reverse}/>
-        </div>
-        </StyledSlider>
-        */

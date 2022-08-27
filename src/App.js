@@ -158,15 +158,9 @@ export default function App({ FileInput, ProfileInput, serverURL, userId, store 
         <Route path="/detail">
           <Layout initialCartItem={initialCartItem} children={<Detail addToCart={addToCart} />}/>
         </Route>
-        {/*
-        <Route path="/detail" Component={Detail} /> 
-         */}
         <Route path="/detail2">
           <Layout initialCartItem={initialCartItem} children={<Detail2/>}/>
         </Route>
-        {/*
-        <Route path="/detail2" Component={Detail2} />
-        */}
         <Route path="/navigation">
           <Layout initialCartItem={initialCartItem} children={<Navigation/>}/>
         </Route>

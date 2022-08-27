@@ -35,6 +35,7 @@ var svg = d3.select("section").append("svg")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
+      
   /* y축 */
   svg.append("g")
       .attr("class", "y axis")
