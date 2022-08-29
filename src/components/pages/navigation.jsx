@@ -1,13 +1,9 @@
 import { useState, useEffect } from 'react';
 import KakaoMapScript from '../../service/kakaoMapScript';
-import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import '../../css/rentalCollapse.css';
 import '../../css/navi.css';
 import TransportaitonInfoUnit from '../cardUI/transportationInfoUnit';
-import Slider5 from '../slider5';
 import Barchart from '../barchart';
-import '../../css/d3.css';
-import KakaoMapRestaurant from '../../service/kakaoMapRestaurant.js';
 
 export default function navigation() {
     async function getRentCarData() {
@@ -70,17 +66,6 @@ export default function navigation() {
     }
 
     useEffect(() => {
-        $('.post-wrapper').not('.slick-initialized').slick({
-            dots:true,
-            centerMode: true,
-            centerPadding: '100px',
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            prevArrow: $('.prev'),
-            nextArrow: $('.next'),
-          });
           getRentCarData();
           popularLandMark();
     },[])
@@ -88,7 +73,6 @@ export default function navigation() {
     const [ search, searchStart] = useState(false);
     const [ inputText, setInputText ] = useState('');
     const [ place, setPlace ] = useState('');
-    const [ injury, setInjuries ] = useState([]);
     const [ dataImg, setRentCarData ] = useState([]);
     const [ popList, setList ] = useState([]);
 
@@ -99,7 +83,7 @@ export default function navigation() {
     const handleSubmit = (e) => {
         e.preventDefault();
         setPlace(inputText);
-        setInputText("");
+        setInputText("");}
 
         return (
             <>
@@ -173,4 +157,3 @@ export default function navigation() {
                     </div> 
                     </>
                     )}
-                     }
