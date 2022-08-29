@@ -1,16 +1,17 @@
 const functions = require("firebase-functions");
-const cors = require("cors");
-const express = require("express");
+const cors = require("cors")({origin: true});
 const request = require("request");
-const app = express();
+const admin = require("firebase-admin");
+admin.initializeApp();
 
-app.use(cors({origin: true}));
-
+const url = "http://api.visitjeju.net/vsjApi/contents/searchList?" +
+  "apiKey=rwai4urhns253zsg&" +
+  "locale=kr";
 
 exports.apicall = functions.https.onRequest((req, response) => {
   cors(req, response, () => {
-    request("http://api.visitjeju.net/vsjApi/contents/searchList?apiKey=rwai4urhns253zsg&locale=kr", function(error, res, body) {
-      response.send(res);
+    request(url, function(error, res, body) {
+      response.status(200).json(res);
     });
   });
 });

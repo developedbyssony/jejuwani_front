@@ -78,7 +78,7 @@ function main({store})  {
     async function getProductItems() {
         try {
             const response =  await fetch(
-                "http://localhost:5016/jejuwn-front/us-central1/apicall&category=c1&title=레저&title=액티비티&title=어트랙션&title=체험&title=포토&title=투어&title=카약&title=수상&title=키즈&title=어트랙션&title=다이빙&title=스쿠버&title=어린이&title=테마&title=승마&title=물놀이&title=실내&title=아이&title=요트&title=행글&title=실외",
+                "http://localhost:3000/dummy/activity_n.json",
                 {
                     method: "GET",
                 });
@@ -86,7 +86,7 @@ function main({store})  {
             if(response.ok) {
                 console.log('ok');
                 const data = await response.json();
-                const arr = data.items.slice(0,99);
+                const arr = data;
                 const init = arr.map((it,idx) => {
                   return {
                     "id": idx+1,
@@ -100,10 +100,10 @@ function main({store})  {
                     "like":Math.floor(Math.random()*100),
                     "review": 0,
                     "rating": Math.floor(Math.random() * 5),
-                    "region1" : it.region1cd,
+                    "label" : it.label,
                     "region2" : it.region2cd,
                     "tag" : it.alltag,
-                    "imgSrc" : it.repPhoto.photoid.imgpath,
+                    "imgSrc" : it.photoImg,
                     }
                 })
                 setProductItems(init);
@@ -121,14 +121,14 @@ function main({store})  {
     async function getRestaurantItems() {
         try {
             const response =  await fetch(
-                "http://localhost:5016/jejuwn-front/us-central1/apicall&category=c4",
+                "http://localhost:3000/dummy/restaurants_n.json",
                 {
                     method: "GET",
                 });
             if(response.ok) {
                 console.log('ok');
                 const data = await response.json();
-                const arr = data.items.slice(0,99);
+                const arr = data;
                 const init = arr.map((it,idx) => {
                   return {
                     "id": idx+1,
@@ -142,9 +142,9 @@ function main({store})  {
                     "rating": Math.floor(Math.random() * 5),
                     "latitude" : it.latitude,
                     "longitude" : it.longitude,
-                    "region1" : it.region1cd,
+                    "region1" : it.label,
                     "region2" : it.region2cd,
-                    "imgSrc" : it.repPhoto.photoid.imgpath,
+                    "imgSrc" : it.photoImg,
                     }
                 })
                 setRestaurantItems(init);

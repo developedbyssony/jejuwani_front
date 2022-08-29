@@ -84,7 +84,7 @@ function productUnit({item, setCart, reverse, store, cart}) {
             <CartCTA store={store} item={item} setCart={setCart} cart={cart}/>
             <div className="productUnit-contents">
                 <div className="productUnit-contents-tit">
-                <p className="tag-outline" id="main-restaurant-tag" ref={ftitle}>{item.region1.label}</p>
+                <p className="tag-outline" id="main-restaurant-tag" ref={ftitle}>{item.label}</p>
                 <p className="unit-tit text-style-24" style={{fontWeight:'600'}}>{item.title}
                 <div className="productUnit-contents-price">
                     <h1 className="unit-tit price-20" ref={fprice}>{(item.price * 1).toLocaleString()}원</h1>

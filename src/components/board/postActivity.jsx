@@ -32,7 +32,7 @@ const posts = ({ posts, loading, reverse }) => {
     }
 
     const history = useHistory();
-    const p = posts.filter(n => n.id < 101);
+    const p = posts.filter(n => n.id < 100);
         return(
         <>
         { loading && <div> loading ... </div> }

@@ -8,14 +8,14 @@ export default function activity() {
   async function getActivityItems() {
     try {
         const response =  await fetch(
-            "http://localhost:5001/jejuwn-front/us-central1/apicall&locale=kr&category=c1&title=레저&title=액티비티&title=테라피&title=어트랙션&title=체험&title=힐링&title=농어촌&title=포토&title=투어&title=스파&title=카약&title=수상&title=키즈&title=어트랙션&title=스파&title=다이빙&title=스쿠버&title=어린이&title=테마&title=승마&title=물놀이&title=실내&title=아이&title=요트&title=행글&title=유아&title=실외&title=파크",
+            "http://localhost:3000/dummy/activity_n.json",
             {
                 method: "GET",
             });
         if(response.ok) {
             console.log('ok');
             const data = await response.json();
-            const arr = data.items.slice(0,99);
+            const arr = data;
             const init = arr.map((it,idx) => {
               return {
                 "id": idx+1,
@@ -29,10 +29,10 @@ export default function activity() {
                 "like":Math.floor(Math.random()*100),
                 "review": 0,
                 "rating": Math.floor(Math.random() * 5),
-                "region1" : it.region1cd,
+                "region1" : it.label,
                 "region2" : it.region2cd,
                 "tag" : it.alltag,
-                "imgSrc" : it.repPhoto.photoid.imgpath,
+                "imgSrc" : it.photoImg,
                 }
             })
             setPosts([...init,posts]);

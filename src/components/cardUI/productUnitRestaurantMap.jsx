@@ -48,7 +48,7 @@ function productUnitRestaurantMap({item, reverse}) {
             </div>
             <div className="productUnit-contents">
                 <div className="productUnit-contents-tit">
-                    <p className="tag-outline" id="main-restaurant-tag" ref={ftitle}>{item.region1.label}</p>
+                    <p className="tag-outline" id="main-restaurant-tag" ref={ftitle}>{item.region1}</p>
                     <p className="unit-tit text-style-24" style={{fontWeight:'600'}}>{item.title}</p>
                     <div className="productUnit-contents-price">
                     <h1 className="unit-tit price-20"></h1>

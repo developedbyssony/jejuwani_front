@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import KakaoMapScript from '../../service/kakaoMapScript';
 import { UncontrolledCollapse, Button, CardBody, Card } from 'reactstrap';
 import '../../css/rentalCollapse.css';
@@ -10,40 +10,6 @@ import '../../css/d3.css';
 import KakaoMapRestaurant from '../../service/kakaoMapRestaurant.js';
 
 export default function navigation() {
-    async function getInjuries() {
-        try {
-            const response =  await fetch(
-                "https://open.jejudatahub.net/api/proxy/36333aD6tba8aa1D6D1aaab8D1aa6ba8/6414j__014r6pre0141_66ott111rp_1?sidoSigungu=제주시",
-                {
-                    method: "GET",
-                });
-            if(response.ok) {
-                console.log('ok');
-                const data = await response.json();
-                console.log(data);
-                const init = data.data.map((it,idx) => {
-                  return {
-                    "id": idx+1,
-                    "sidoSigungu": it.sidoSigungu,
-                    "place": it.occurrencePlace,
-                    "occurrenceCount":it.occurrenceCount,
-                    "bjdCode": it.bjdCode,
-                    "latitude" : it.latitude,
-                    "longitude" : it.longitude,
-                    }
-                })
-                setInjuries([...init,injury]);
-                console.log(init);
-                return init;
-            } else {
-            console.log('err');
-            const errData = await response.json();
-            throw errData;}
-        } catch (e) {
-            console.log(e);
-        }
-    }
-    
     async function getRentCarData() {
         try {
             const response =  await fetch(
@@ -135,7 +101,6 @@ export default function navigation() {
         e.preventDefault();
         setPlace(inputText);
         setInputText("");
-    }
 
         return (
             <>
@@ -181,15 +146,9 @@ export default function navigation() {
                     </div>
                     </div>
                     </div>
-
                     <div className="section section-navi">
                             <div className="section-main-activity-sorting">
-                            <h1 className="page-tit">제주도 핫플레이스 TOP 100</h1>
-                            {/*
-                        <div className="main-sort-row1">
-                            <button className="btn-sort btn-s40">제주시</button>
-                            <button className="btn-sort btn-s40">서귀포시</button>                               
-                        </div>*/}
+                            <h1 className="page-tit" id="navi-hotPlace">제주도 핫플레이스 TOP 100</h1>
                      <div className="pop-box">
                         <div className="pop-header">
                             <ul className="popList" id="pop-header">
@@ -201,60 +160,18 @@ export default function navigation() {
                             </div>
                      <p>{popList.slice(0,100).map((it) => (
                                     <ul className="popList">
-                                    {/*<KakaoMapRestaurant latitude={it.latitude} longitude={it.longitude} title={it.place}/>*/}
+                                    {/*<KakaoMapRestaurant latitude={it.latitude} longitude={it.longitude} title={it.place}/> */}
                                     <li><p>{it.id}</p></li>
                                     <li id="pop-title"><p><strong>{it.title}</strong></p></li>
                                     <li id="pop-address"><p>{it.address}</p></li>
                                     <li id="pop-search"><p>{it.searchNum}</p></li>
                                     </ul>
-                                    ))}</p>                                    </div>
-
+                                    ))}</p></div>
                             </div>
                         <div className="chart">
                         <Barchart dataImg={dataImg}></Barchart>
                         </div>
-                    </div>        
-
-                                                </>
-
-                            /*
-                            <div className="d-flex flex-column" style={{outline: 0}}>
-                <Button id="toggle">
-                    <h1 className="page-tit" id="rentalCarCTA">어떤 렌트카 찾으세요?</h1>
-                </Button>
-                        <UncontrolledCollapse toggler="#toggle" className="m-0 p-0">
-                            <Card className="collapseCard">
-                                <CardBody className="collapseCardBody">
-                        <div className="rentalCars">
-                        </div>
-                            <div className="section-main-activity-sorting">
-                            <div className="navi-sort-btn-row">
-                                <div className="rental-sort">
-                                <button className="btn-sort btn-s40">경차</button>
-                                <button className="btn-sort btn-s40">준중형</button>
-                                <button className="btn-sort btn-s40">SUV</button>
-                                <button className="btn-sort btn-s40">고급</button>
-                                </div>
-                                <div className="rental-datepicker">
-                                <DatePickerComponent />
-                                </div>
-                            </div>
-                            </div>
-                            <div className="rentalCarContentsDisplay">
-                            <div className="rentalCarFilter"> 
-                                <ul className="rentalCarFilterUl">
-                                    <h1 className="page-tit" id="smart-filter">스마트 필터</h1>
-                                    <li><span className="signup-tit1">보험</span></li>
-                                    <li><span className="signup-tit1">연료</span></li>
-                                    <li><span className="signup-tit1">연식</span></li>
-                                    <li><span className="signup-tit1">평점</span></li>
-                                </ul>
-                            </div>
-                            <div className="rentalCarList">
-                            </div>
-                            </div>
-                        </CardBody>
-                        </Card>
-                    </UncontrolledCollapse>*/
-        );
-    }
+                    </div> 
+                    </>
+                    )}
+                     }

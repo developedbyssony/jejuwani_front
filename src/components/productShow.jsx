@@ -38,7 +38,7 @@ function productShow({serverURL,product_info,review}) {
            max_capacity : '0', // 주문수, 디폴트는 0
            content :  product_info.post.introduction,
            tag: product_info.post.tag,
-           label:product_info.post.region1.label,
+           label:product_info.post.label,
         })
 
     let [ like, setlike ] = useState(product.likes);

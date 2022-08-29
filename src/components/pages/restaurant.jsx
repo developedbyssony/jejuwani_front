@@ -8,14 +8,14 @@ export default function restaurant() {
   async function getRestaurantItems() {
     try {
         const response =  await fetch(
-            "http://api.visitjeju.net/vsjApi/contents/searchList?apiKey=rwai4urhns253zsg&locale=kr&category=c4",
+            "http://localhost:3000/dummy/restaurants_n.json",
             {
                 method: "GET",
             });
         if(response.ok) {
             console.log('ok');
             const data = await response.json();
-            const arr = data.items.slice(0,99);
+            const arr = data;
             const init = arr.map((it,idx) => {
               return {
                 "id": idx+1,
@@ -29,23 +29,12 @@ export default function restaurant() {
                 "rating": Math.floor(Math.random() * 5),
                 "latitude" : it.latitude,
                 "longitude" : it.longitude,
-                "region1" : it.region1cd,
+                "region1" : it.label,
                 "region2" : it.region2cd,
-                "imgSrc" : it.repPhoto.photoid.imgpath,
+                "imgSrc" : it.photoImg,
                 }
             })
             setPosts([...init,posts]);
-            /*
-            setPosts([...posts,{
-                "id": 1,
-                "title": it.title,
-                "region": it.address,
-                "price": it.alltag,
-                "regdate": it.phoneno,
-                "hit": 1
-                }
-              ]);
-              */
             console.log(pp);
             return pp;
         } else {
