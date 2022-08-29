@@ -82,7 +82,6 @@ export default function navigation() {
             nextArrow: $('.next'),
           });
           getRentCarData();
-          getInjuries();
           popularLandMark();
     },[])
     const width = 560;
