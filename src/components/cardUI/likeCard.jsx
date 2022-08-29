@@ -3,31 +3,13 @@ import { useSelector,  useDispatch } from "react-redux"
 import '../../css/likeCard.css';
 import { addToCart } from '../../actions/index';
 
-function likeCard({category,item,onRemove}) {
+function likeCard({category,item,onRemove,cart}) {
     const [ likeCartItems, setLikeCartItems ] = useState([]);
     const dispatch = useDispatch();
 
     const fid = useRef();
     const ftitle = useRef();
     const fprice = useRef();
-
-    function cart() {
-        console.log("클릭");
-        const productId = fid.current.id;
-        const productTitle = ftitle.current.innerHTML;
-        const productPrice = fprice.current.innerHTML;
-        const count = 1;
-        dispatch(addToCart({productId,productTitle,productPrice,count}));
-        const newItem = {
-            id : productId,
-            title : productTitle,
-            price : productPrice,
-            count : count
-        };
-        setLikeCartItems([newItem,...likeCartItems]);
-        const initData = localStorage.getItem('cartState');
-        console.log(initData);
-    }
 
     const handleRemove = (e) => {
         if(window.confirm(`${e.target.value}를 정말 삭제하시겠습니까?`)) {

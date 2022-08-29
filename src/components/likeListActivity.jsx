@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import LikeUnit from './cardUI/likeCard';
 import LikeList_empty from './cardUI/likeList_empty';
 
-function productUnitList({onRemove}) {
+function productUnitList({onRemove, cart}) {
     const [ isItEmpty, confirmList ] = useState(false);
     useEffect(() => {
         const item = localStorage.getItem('likeState') ? JSON.parse(localStorage.getItem('likeState')): [];
@@ -20,7 +20,7 @@ function productUnitList({onRemove}) {
 
     return (
         <ul className="likeUnitwrapper">
-            { isItEmpty ? (<LikeList_empty/>) : (<LikeUnit category={category} item={item}/>)}
+            { isItEmpty ? (<LikeList_empty/>) : (<LikeUnit category={category} item={item} cart={cart}/>)}
         </ul>
     )
 };

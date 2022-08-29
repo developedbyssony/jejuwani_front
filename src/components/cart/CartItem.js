@@ -11,31 +11,20 @@ function CartItem({item, onIncrease, onDecrease, onRemove, store, userId, server
     const [ cartItems, setCartItems ] = useState([]);
 
     useEffect(() => {
-        console.log(item);
-        if(item.length === 0) {
-            console.log('배열 안에 아이템이 하나도 없습니당 ㅠㅠ');
-        } else if (item.length === 1){
-            console.log('배열 안에 아이템이 하나 들어있습니다.');
-            const newCartItem = {
-                id:initialCartItem.id,
-                price:initialCartItem.price,
-                title:initialCartItem.title,
-                count:1,
+        const data = item.map((it) => {
+            return {
+                id:it.id,
+                price:it.price,
+                title:it.title,
+                count:it.count,
             }
-            setCartItems([newCartItem,...cartItems]);
-            console.log(cartItems);
-        } else {
+        });
+        console.log(data);
+        if(data.length === 0) {
+            console.log('배열 안에 아이템이 하나도 없습니당 ㅠㅠ');
+         } else {
             console.log('배열 안에 아이템이 하나 이상 들어있습니다.');
-            const data = item.map((it) => {
-                return {
-                    id:it.id,
-                    price:it.price,
-                    title:it.title,
-                    count:it.count,
-                }
-            });
-            console.log({item});
-            setCartItems(data);
+            setCartItems([data,...cartItems]);
             console.log(cartItems);
         }
 
@@ -111,10 +100,10 @@ function CartItem({item, onIncrease, onDecrease, onRemove, store, userId, server
         <div className="ml-4 flex flex-1 flex-col">
             <div>
                 <div className="cart-item-txt">
-                    <p>상품번호 {i.id}</p>
-                    <h3>{i.title}</h3>
+                    <p>상품번호 {i[0].id}</p>
+                    <h3>{i[0].title}</h3>
                     <p className="ml-4">
-                        {i.price.replace(/\D/g,'') * i.count}
+                        {i[0].price * i[0].count}
                         <strong>원</strong>
                     </p>
                 </div>
@@ -125,16 +114,16 @@ function CartItem({item, onIncrease, onDecrease, onRemove, store, userId, server
                 <div className="cart-item-count">
                     <button
                         className="decrease-btn"
-                        value={i.id}
-                        onClick={handleDecrement}
+                        value={i[0].id}
+                        onClick={onDecrease}
                     >
                         -
                     </button>
-                    <div className="mx-2 font-bold">{i.count}</div>
+                    <div className="mx-2 font-bold">{i[0].count}</div>
                     <button
                         className="increase-btn"
-                        value={i.id}
-                        onClick={handleIncrement}
+                        value={i[0].id}
+                        onClick={onIncrease}
                     >
                         +
                     </button>
@@ -145,7 +134,7 @@ function CartItem({item, onIncrease, onDecrease, onRemove, store, userId, server
                     <button
                         type="button"
                         className="btn-outlined btn-40 remove-btn"
-                        value={i.id}
+                        value={i[0].id}
                         onClick={handleRemove}>
                         삭제하기
                     </button>

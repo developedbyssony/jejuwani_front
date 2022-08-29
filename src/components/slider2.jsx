@@ -15,7 +15,7 @@ overflow:hidden;
 margin-bottom:30px;
 `;
 
-export default function SimpleSlider({data, setCart, closeCart, likeModalClose, store, reverse}) {
+export default function SimpleSlider({data, setCart, closeCart, likeModalClose, store, reverse, cart}) {
   useEffect(() => {
     console.log(data);
 },[]);
@@ -57,7 +57,7 @@ const settings = {
     return (
       <div>
         <StyledSlider {...settings}>
-                  {data.map((d) => (<ProductUnit item={d} setCart={setCart} closeCart={closeCart} closeLike={likeModalClose} store={store} reverse={reverse}/>))}
+                  {data.map((d) => (<ProductUnit item={d} setCart={setCart} closeCart={closeCart} closeLike={likeModalClose} store={store} reverse={reverse} cart={cart}/>))}
         </StyledSlider>
       </div>
              );

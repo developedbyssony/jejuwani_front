@@ -26,6 +26,7 @@ import Yourblog from './components/pages/yourBlog';
 
 export default function App({ FileInput, ProfileInput, serverURL, userId, store }) {
   const [blogData,setData] = useState([]);
+  localStorage.setItem('cartState',[]);
 
     useEffect(() => {
     },[]);

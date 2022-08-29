@@ -8,11 +8,12 @@ import CartCTA from '../modals/cartCTA';
 import Rating from '../star-rating/rating';
 
 
-function productUnit({item, setCart, reverse, store}) {
+function productUnit({item, setCart, reverse, store, cart}) {
+    // const initialCartItem = localStorage.getItem('cartState') ? JSON.parse(localStorage.getItem('cartState')) : [];
     const history = useHistory();
     const view_url = `/detail/${item.id}`;
     const [ likeItems, setLikeItems ] = useState([]);
-    const [ cartItems, setCartItems ] = useState([]);
+    // const [ cartItems, setCartItems ] = useState(initialCartItem);
     let [ product, setProduct ] = useState(item.like)
     const dispatch = useDispatch();
 
@@ -20,28 +21,32 @@ function productUnit({item, setCart, reverse, store}) {
     const ftitle = useRef();
     const fprice = useRef();
     const ftarget = useRef();
-
+    /*
     useEffect(() => {
+        setCartItems(initialCartItem);
+        console.log(initialCartItem);
     },[]);
-
-    function cart() {
+    */
+    /*
+    function cart(productId,productTitle,productPrice) {
         console.log("클릭");
-        const productId = fid.current.id;
-        const productTitle = ftitle.current.innerHTML;
-        const productPrice = fprice.current.innerHTML;
         const count = 1;
-        dispatch(addToCart({productId,productTitle,productPrice,count}));
-        const newCart = {
+        // dispatch(addToCart({prodnuctId,productTitle,productPrice,count}));
+        const newCart = [ {
             id : productId,
             title : productTitle,
             price : productPrice,
             count : count
-        };
+        }];
         setCartItems([newCart,...cartItems]);
         console.log(cartItems);
-        localStorage.setItem('cartState', JSON.stringify(cartItems));
+        localStorage.setItem('cartItem', JSON.stringify(newCart));
+        const entryArr = localStorage.getItem('cartState') ? JSON.parse(localStorage.getItem('cartState')) : [];
+        if(entryArr == null) entryArr = [];
+        entryArr.push(newCart);
+        localStorage.setItem('newCartState',JSON.stringify(cartItems));
     }
-
+    */
     function like() {
         console.log("클릭");
         let classList = event.target.classList.length;
@@ -76,7 +81,7 @@ function productUnit({item, setCart, reverse, store}) {
         })}}>
                 <img src={item.imgSrc} alt="메인액티비티유닛" style={{width:'265px', height:'230px', objectFit:'cover'}}/>
             </div>
-            <CartCTA store={store} setCart={setCart} cart={cart}/>
+            <CartCTA store={store} item={item} setCart={setCart} cart={cart}/>
             <div className="productUnit-contents">
                 <div className="productUnit-contents-tit">
                 <p className="tag-outline" id="main-restaurant-tag" ref={ftitle}>{item.region1.label}</p>

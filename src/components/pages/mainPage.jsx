@@ -11,9 +11,35 @@ import Modal from '../modals/cartModal';
 import LikeModal from '../modals/likeModal';
 
 function main({store})  {
+    useEffect(() => {
+        setCartItems(initialCartItem);
+        console.log(initialCartItem);
+    },[]);
     /*                           
     localStorage.getItem('authId');
     */
+    const initialCartItem = localStorage.getItem('cartState') ? JSON.parse(localStorage.getItem('cartState')) : [];
+
+    const [ cartItems, setCartItems ] = useState(initialCartItem);
+
+    function cart(productId,productTitle,productPrice) {
+        console.log("클릭");
+        const count = 1;
+        // dispatch(addToCart({prodnuctId,productTitle,productPrice,count}));
+        const newCart = [ {
+            id : productId,
+            title : productTitle,
+            price : productPrice,
+            count : count
+        }];
+        setCartItems([newCart,...cartItems]);
+        console.log(cartItems);
+        localStorage.setItem('cartItem', JSON.stringify(newCart));
+        const entryArr = localStorage.getItem('cartState') ? JSON.parse(localStorage.getItem('cartState')) : [];
+        if(entryArr == null) entryArr = [];
+        entryArr.push(newCart);
+        localStorage.setItem('newCartState',JSON.stringify(cartItems));
+    }
 
     const onToggle = (event) => {
         let classList = event.target.classList.length;
@@ -26,15 +52,16 @@ function main({store})  {
       }
 
     /* 장바구니 모달 */
-    const [ modalOpen, setModalOpen] = useState();
     const [ modalOpenD, setModalOpenD] = useState();
 
     /* 라이크 모달 */
     const [ likeModalOpen, setLikeModalOpen] = useState(false);
 
+
     const setCart = () => {
         setModalOpenD(!modalOpenD);
-    }
+        cart();
+      }
 
     const modalClose = () => {
         setModalOpenD(!modalOpenD);
@@ -51,7 +78,7 @@ function main({store})  {
     async function getProductItems() {
         try {
             const response =  await fetch(
-                "http://api.visitjeju.net/vsjApi/contents/searchList?apiKey=rwai4urhns253zsg&locale=kr&category=c1&title=레저&title=액티비티&title=어트랙션&title=체험&title=포토&title=투어&title=카약&title=수상&title=키즈&title=어트랙션&title=다이빙&title=스쿠버&title=어린이&title=테마&title=승마&title=물놀이&title=실내&title=아이&title=요트&title=행글&title=실외",
+                "http://localhost:5016/jejuwn-front/us-central1/apicall&category=c1&title=레저&title=액티비티&title=어트랙션&title=체험&title=포토&title=투어&title=카약&title=수상&title=키즈&title=어트랙션&title=다이빙&title=스쿠버&title=어린이&title=테마&title=승마&title=물놀이&title=실내&title=아이&title=요트&title=행글&title=실외",
                 {
                     method: "GET",
                 });
@@ -94,7 +121,7 @@ function main({store})  {
     async function getRestaurantItems() {
         try {
             const response =  await fetch(
-                "http://api.visitjeju.net/vsjApi/contents/searchList?apiKey=rwai4urhns253zsg&locale=kr&category=c4",
+                "http://localhost:5016/jejuwn-front/us-central1/apicall&category=c4",
                 {
                     method: "GET",
                 });
@@ -198,8 +225,8 @@ return(
                     <Link to="/activity"><div className="more">더 보기<h1 className="ic-more"></h1></div></Link>
                 <div className="section-main-activity-contentsDisplayArea">
                 </div>
-                            <Slider2 data={ProductData} closeCart={modalClose} closeLike={likeModalClose} setCart={setCart} reverse={onToggle}></Slider2>
-                            <Slider2 data={ProductData} closeCart={modalClose} closeLike={likeModalClose} setCart={setCart} reverse={onToggle}></Slider2>
+                            <Slider2 data={ProductData} closeCart={modalClose} closeLike={likeModalClose} reverse={onToggle} setCart={setCart} cart={cart}></Slider2>
+                            <Slider2 data={ProductData} closeCart={modalClose} closeLike={likeModalClose} reverse={onToggle}  setCart={setCart} cart={cart}></Slider2>
                             { modalOpenD && <Modal modalClose={modalClose} store={store} /> }
                             { likeModalOpen && <LikeModal modalClose={likeModalClose} store={store} /> }
                 </div>

@@ -1,11 +1,11 @@
 import '../../css/productUnit.css';
 import { useState, useEffect } from 'react';
-import Modal from './cartModal';
 
-function cartCTA({setCart, store, cart}) {
+function cartCTA({setCart, item, store, cart}) {
     function openCartModal() {
+            console.log(item);
             setCart();
-            cart();
+            cart(item.id,item.title,item.price);
     }
     return (
         <button
