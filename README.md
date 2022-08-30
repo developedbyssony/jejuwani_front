@@ -26,3 +26,7 @@
 ### DB Schema
 ***
 ![Untitled (1)](https://user-images.githubusercontent.com/98148572/187234137-cca6f415-feea-4c01-b923-ce0ab03f64f3.png)
+
+
+##### - 메인 페이지
+![메인](https://user-images.githubusercontent.com/98148572/187372286-641f55dd-8b74-4d6e-a443-325da7df36ef.png)
