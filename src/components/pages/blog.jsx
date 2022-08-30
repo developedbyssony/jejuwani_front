@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import BlogList from '../blog/blogList';
+import mainBlogData from '../../dummy/MainBlogData.json';
 import Slider4 from '../../components/slider4';
 import Tab  from '../tab';
 
@@ -7,25 +8,8 @@ function blog() {
     let [ BlogData, setBlogData ] = useState([]); 
 
     async function getBlogItems() {
-        try {
-            const response =  await fetch(
-                "http://localhost:3000/dummy/MainBlogData.json",
-                {
-                    method: "GET",
-                });
-            if(response.ok) {
-                console.log('ok');
-                const data = await response.json();
-                console.log(data);
-                setBlogData(data);
+                setBlogData(mainBlogData);
                 return BlogData;
-            } else {
-            console.log('err');
-            const errData = await response.json();
-            throw errData;}
-        } catch (e) {
-            console.log(e);
-        }
     }
 
     useEffect(() => {

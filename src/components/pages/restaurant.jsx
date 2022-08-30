@@ -2,20 +2,12 @@ import { useState, useEffect } from 'react';
 import Posts from "../board/postRestaurant"; 
 import Category from "../category.jsx";
 import Pagination from "../board/pagination.jsx";
+import restaurantsData from '../../dummy/restaurants_sample.json';
 
 export default function restaurant() {
 
   async function getRestaurantItems() {
-    try {
-        const response =  await fetch(
-            "http://localhost:3000/dummy/restaurants_n.json",
-            {
-                method: "GET",
-            });
-        if(response.ok) {
-            console.log('ok');
-            const data = await response.json();
-            const arr = data;
+            const arr = restaurantsData;
             const init = arr.map((it,idx) => {
               return {
                 "id": idx+1,
@@ -37,17 +29,7 @@ export default function restaurant() {
             setPosts([...init,posts]);
             console.log(pp);
             return pp;
-        } else {
-        console.log('err');
-        const errData = await response.json();
-        throw errData;}
-    } catch (e) {
-        console.log(e);
-    }
-}
-
-
-
+        } 
 const [ pp, setPs ] = useState([]);
 /* 테스트용 */
 const [ posts, setPosts ] = useState([]);

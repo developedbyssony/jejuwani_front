@@ -1,0 +1,71 @@
+[{
+    "id": 1,
+    "title": "블로그제목블로그제목블로그",
+    "nick": "유저닉네임유저닉네임",
+    "uid": "(userID)",
+    "category": 1,
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum5.jpg"
+},{
+    "id": 2,
+    "title": "블로그제목블로그제목블로그",
+    "nick": "유저닉네임유저닉네임",
+    "uid": "(userID)",
+    "category": 2,
+    "imgSrc" :"/assets/sub/yourblog-profile.png"
+},{
+    "id": 3,
+    "title": "블로그제목블로그제목블로그",
+    "nick": "유저닉네임유저닉네임",
+    "uid": "(userID)",
+    "category": 6,
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum62.jpg"
+},{
+    "id": 4,
+    "title": "블로그제목블로그제목블로그",
+    "nick": "유저닉네임유저닉네임",
+    "uid": "(userID)",
+    "category": 1,
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum1.webp"
+},{
+    "id": 5,
+    "title": "블로그제목블로그제목블로그",
+    "nick": "유저닉네임유저닉네임",
+    "uid": "(userID)",
+    "category": 2,
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum3.jpg"
+},{
+    "id": 6,
+    "title": "블로그제목블로그제목블로그",
+    "nick": "유저닉네임유저닉네임",
+    "uid": "(userID)",
+    "category": 1,
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum84.jpg"
+},{
+    "id": 6,
+    "title": "블로그제목블로그제목블로그",
+    "nick": "유저닉네임유저닉네임",
+    "uid": "(userID)",
+    "category": 2,
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum73.jpg"
+},{
+    "id": 6,
+    "title": "블로그제목블로그제목블로그",
+    "nick": "유저닉네임유저닉네임",
+    "uid": "ididid",
+    "category": 3,
+    "imgSrc" :"/assets/sub/blog_thum/blog-thum51.jpg"
+},{
+    "id": 6,
+    "title": "블로그제목블로그제목블로그",
+    "nick": "유저닉네임유저닉네임",
+    "uid": "(userID)",
+    "category": 1,
+    "imgSrc" :"/assets/sub/blog_thum/main-blog23.png"
+},{
+    "id": 7,
+    "title": "블로그제목블로그제목블로그",
+    "nick": "유저닉네임유저닉네임",
+    "uid": "(userID)",
+    "category": 5,
+    "imgSrc" :"/assets/sub/blog_thum/main-blog16.jpg"
+}]

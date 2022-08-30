@@ -4,6 +4,9 @@ import Slider1 from '../slider1';
 import Slider2 from '../slider2';
 import Slider3 from '../slider3';
 import Slider5 from '../slider5';
+import activityData from '../../dummy/activity_sample.json';
+import restaurantsData from '../../dummy/restaurants_sample.json';
+import mainBlogData from '../../dummy/MainBlogData.json';
 import Rating from '../star-rating/rating';
 import '../../css/main.css';
 import YoutubeFooter from '../youtubeFooter';
@@ -76,18 +79,7 @@ function main({store})  {
     let [ BlogData, setBlogData ] = useState([]); 
 
     async function getProductItems() {
-        try {
-            const response =  await fetch(
-                "http://localhost:3000/dummy/activity_n.json",
-                {
-                    method: "GET",
-                });
-
-            if(response.ok) {
-                console.log('ok');
-                const data = await response.json();
-                const arr = data;
-                const init = arr.map((it,idx) => {
+                const init = activityData.map((it,idx) => {
                   return {
                     "id": idx+1,
                     "title": it.title,
@@ -108,28 +100,11 @@ function main({store})  {
                 })
                 setProductItems(init);
                 return ProductData;
-            } else {
-            console.log('err');
-            const errData = await response.json();
-            throw errData;}
-        } catch (e) {
-            console.log(e);
-        }
     }
 
     
     async function getRestaurantItems() {
-        try {
-            const response =  await fetch(
-                "http://localhost:3000/dummy/restaurants_n.json",
-                {
-                    method: "GET",
-                });
-            if(response.ok) {
-                console.log('ok');
-                const data = await response.json();
-                const arr = data;
-                const init = arr.map((it,idx) => {
+                const init = restaurantsData.map((it,idx) => {
                   return {
                     "id": idx+1,
                     "title": it.title,
@@ -149,35 +124,13 @@ function main({store})  {
                 })
                 setRestaurantItems(init);
                 return RestaurantData;
-            } else {
-            console.log('err');
-            const errData = await response.json();
-            throw errData;}
-        } catch (e) {
-            console.log(e);
-        }
     }
 
     async function getBlogItems() {
-        try {
-            const response =  await fetch(
-                "http://localhost:3000/dummy/MainBlogData.json",
-                {
-                    method: "GET",
-                });
-            if(response.ok) {
-                console.log('ok');
-                const data = await response.json();
-                console.log(data);
-                setBlogData(data);
-                return BlogData;
-            } else {
-            console.log('err');
-            const errData = await response.json();
-            throw errData;}
-        } catch (e) {
-            console.log(e);
-        }
+        const init = mainBlogData;
+        console.log(init);
+        setBlogData(init);
+        return BlogData;
     }
 
     useEffect(() => {

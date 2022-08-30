@@ -2,20 +2,12 @@ import { useState, useEffect } from 'react';
 import Posts from "../board/postActivity.jsx"; 
 import Category from "../category.jsx";
 import Pagination from "../board/pagination.jsx";
+import activityData from '../../dummy/activity_sample.json';
 
 export default function activity() {
     
   async function getActivityItems() {
-    try {
-        const response =  await fetch(
-            "http://localhost:3000/dummy/activity_n.json",
-            {
-                method: "GET",
-            });
-        if(response.ok) {
-            console.log('ok');
-            const data = await response.json();
-            const arr = data;
+            const arr = activityData;
             const init = arr.map((it,idx) => {
               return {
                 "id": idx+1,
@@ -38,15 +30,7 @@ export default function activity() {
             setPosts([...init,posts]);
             console.log(pp);
             return pp;
-        } else {
-        console.log('err');
-        const errData = await response.json();
-        throw errData;}
-    } catch (e) {
-        console.log(e);
-    }
-}
-
+        }
 
     const [ posts, setPosts ] = useState([]);
 

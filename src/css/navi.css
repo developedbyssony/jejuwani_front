@@ -222,10 +222,10 @@
 }
 
 .chart {
+  display: flex;
+  flex-direction: column;
   position:relative;
-  top:-5%;
-  left:-3%;
-  width: 1500px;
+  width: 100%;
   overflow: hidden;
   margin-bottom: 60px;
 }
@@ -235,7 +235,7 @@
   position: relative;
   left: 210px;
   margin-bottom: 80px;
-  width: 1000px;
+  width: 86%;
 }
 
 #info-tit > p {
@@ -256,7 +256,7 @@
 }
 
 .pop-box {
-  height: 526px;
+  height: 545px;
   overflow-y: scroll;
 }
 

@@ -2,50 +2,22 @@ import { useState, useEffect } from 'react';
 import KakaoMapScript from '../../service/kakaoMapScript';
 import '../../css/rentalCollapse.css';
 import '../../css/navi.css';
-import TransportaitonInfoUnit from '../cardUI/transportationInfoUnit';
+import rentcar2021img from '../../dummy/rentcar2021img.json';
+import popularList from '../../dummy/popularList.json';
 import Barchart from '../barchart';
 
 export default function navigation() {
     async function getRentCarData() {
-        try {
-            const response =  await fetch(
-                "http://localhost:3000/dummy/rentcar2021img.json",
-                {
-                    method: "GET",
-                });
-            if(response.ok) {
-                console.log('ok');
-                const data = await response.text();
-                const dd = JSON.parse(data);
-                console.log(dd);
-                const init = dd.map((it,idx) => {
+                const init = rentcar2021img.map((it,idx) => {
                   return {
                     "id": idx+1,
                     "img": it.imgSrc
                     }
                 })
-                setRentCarData([...init,dataImg]);
-            } else {
-            console.log('err');
-            const errData = await response.json();
-            throw errData;}
-        } catch (e) {
-            console.log(e);
-        }
     }
 
     async function popularLandMark() {
-        try {
-            const response =  await fetch(
-                "http://localhost:3000/dummy/popularList.json",
-                {
-                    method: "GET",
-                });
-            if(response.ok) {
-                console.log('ok');
-                const data = await response.json();
-                console.log(data);
-                const init = data.map((it,idx) => {
+                const init = popularList.map((it,idx) => {
                   return {
                     "id": idx+1,
                     "title": it.title,
@@ -56,14 +28,7 @@ export default function navigation() {
                 })
                 setList([...init,popList]);
                 return;
-            } else {
-            console.log('err');
-            const errData = await response.json();
-            throw errData;}
-        } catch (e) {
-            console.log(e);
-        }
-    }
+            }
 
     useEffect(() => {
           getRentCarData();
