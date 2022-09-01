@@ -31,16 +31,8 @@
 ##### - 메인 페이지
 ![메인](https://user-images.githubusercontent.com/98148572/187372286-641f55dd-8b74-4d6e-a443-325da7df36ef.png)
 
-<details>
-<summary>액티비티, 레스토랑, 블로그 정보 유형 별 카드 UI</summary>
-<div markdown="1">
-
-</div>
-</details>
 
 ##### - 교통 페이지
-![메인](https://user-images.githubusercontent.com/98148572/187372286-641f55dd-8b74-4d6e-a443-325da7df36ef.png)
-
 <details>
 <summary>지도 검색</summary>
 <div markdown="1">
@@ -59,7 +51,7 @@
 
 
 ##### - 액티비티, 맛집 게시판
-![메인](https://user-images.githubusercontent.com/98148572/187372286-641f55dd-8b74-4d6e-a443-325da7df36ef.png)
+![액티비티](https://user-images.githubusercontent.com/98148572/187922640-8ca1be5b-b153-43e9-8ff7-503e35039866.gif)
 
 <details>
 <summary>예약 하기</summary>
