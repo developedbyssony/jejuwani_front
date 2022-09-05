@@ -28,20 +28,32 @@
 ![Untitled (1)](https://user-images.githubusercontent.com/98148572/187234137-cca6f415-feea-4c01-b923-ce0ab03f64f3.png)
 
 
-##### - 메인 페이지
+### UX/UI 설계
+***
+https://www.figma.com/file/BWmbBPJp8k0CGEclJt65jB/jejuwani_allPage?node-id=65%3A3598
+
+
+### 대표 화면 구성
+***
+##### - 1) 🏝️ 메인 페이지
 ![메인](https://user-images.githubusercontent.com/98148572/187372286-641f55dd-8b74-4d6e-a443-325da7df36ef.png)
-![Aug-30-2022 18-05-01](https://user-images.githubusercontent.com/98148572/188305518-41a1db9a-c4d8-4ac9-b722-67f2c074f451.gif)
-액티비티, 맛집, 블로그 정보의 게시글을 메인에 카드 UI 컴포넌트로 노출하여 주목성을 높이고, 압축적으로 정보를 전달하였습니다. <br />
-또한 액티비티, 맛집, 블로그 카드 UI 컴포넌트에 유형별 변화를 주어 같은 디자인 시스템 안에서 정보의 성격에 따라 시각적인 구분을 할 수 있도록 하였습니다.
-<details>
-<summary>액티비티 카드 UI</summary>
-<div markdown="1">
 <img src="https://user-images.githubusercontent.com/98148572/188305741-50f26f99-649b-49f4-aeee-8f29188078e6.gif"/>
-액티비티 상품의 경우, 컴포넌트의 장바구니 버튼을 통해 해당 상품을 Local Storage에 저장합니다. 회원과 비회원 모두 클릭이 가능합니다.
+액티비티, 맛집, 블로그 정보의 게시글을 메인에 카드 UI 컴포넌트로 노출하여 주목성을 높이고, 압축적으로 정보를 전달하였습니다. <br />
+또한 액티비티, 맛집, 블로그 카드 UI 컴포넌트에 유형별 변화를 주어 같은 디자인 시스템 안에서 정보의 성격에 따라 시각적인 구분을 할 수 있도록 하였습니다. 액티비티 상품의 경우, 컴포넌트의 장바구니 버튼을 통해 해당 상품을 Local Storage에 저장합니다. 회원과 비회원 모두 클릭이 가능합니다.
+
+<details>
+<summary>정보 유형 별 상태 디자인/모션</summary>
+<div markdown="1">
+[액티비티]  <br />
+<img src="https://user-images.githubusercontent.com/98148572/188472200-24bc2382-a89e-4c1e-9b02-e7fca2d17322.gif"/> <br />
+[맛집]  <br />
+<img src="https://user-images.githubusercontent.com/98148572/188472193-91d95df3-f1c1-41ef-9871-f64d637cad4e.gif"/> <br />
+[블로그]  <br />
+<img src="https://user-images.githubusercontent.com/98148572/188472179-d7b24d65-c015-4185-ba24-a700ecc95986.gif"/> <br />
 </div>
 </details>
 
-##### - 교통 페이지
+##### - 2) 🏝️ 교통 페이지
 ![교통페이지](https://user-images.githubusercontent.com/98148572/188305113-fdcc50c5-0724-47d9-b766-7c6cb5b92fd1.png)
 <details>
 <summary>지도 검색</summary>
@@ -60,7 +72,7 @@
 </details>
 
 
-##### - 액티비티, 맛집 게시판
+##### - 3) 🏝️ 액티비티, 맛집 게시판
 ![액티비티](https://user-images.githubusercontent.com/98148572/187922640-8ca1be5b-b153-43e9-8ff7-503e35039866.gif)
 
 <details>
