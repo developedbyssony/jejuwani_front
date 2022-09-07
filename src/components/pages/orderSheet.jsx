@@ -1,4 +1,4 @@
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import { useState, useRef, useEffect } from 'react';
 import '../../css/order.css';
 import Input from '../tinyForm/input';
@@ -23,9 +23,9 @@ function orderSheet() {
 
     const location = useLocation();
     const item = location.state.item;
-    const itemCount = item[0].count;
-    const itemPrice = item[0].price;
-    const wholeCountNum = location.state.wholeCountNum || itemCount * itemPrice ;
+    const itemCount = item.count;
+    const itemPrice = item.price;
+    const wholeCountNum = location.state.wholeCountNum;
 
     /*
     const rbuyer_email = remail.current.value;
@@ -34,12 +34,14 @@ function orderSheet() {
     const rbuyer_addr = raddr.current.value;
     const rbuyer_postcode = rpostcode.current.value;
     */
+
     useEffect(() => {
         const newList = item.map((it) => 
             [{title:it.title,
             count:it.count,
             price:it.price}]
         );
+        console.log(newList);
     },[]);
     
     function payment(e) {
@@ -177,7 +179,7 @@ function orderSheet() {
                     <div className="price-13" id="price-sum-order">
                         <span className="currency-order">최종 결제 예정 금액 : </span>
                         <div className="price-sumcount">
-                        <strong className="amount currency-order" id="order-wholeprice">{wholeCountNum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원</strong>
+                        <strong className="amount currency-order" id="order-wholeprice">{wholeCountNum}원</strong>
                         </div>
                     </div>
                 </li>

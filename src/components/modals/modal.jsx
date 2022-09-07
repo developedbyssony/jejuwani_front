@@ -34,10 +34,10 @@ const modal = ({ modalClose, id, title, region, price }) => {
           id:1,
           title:title,
           count:amount.current.value,
-          price:price,
+          price:Number(price),
         }]
         console.log(newData);
-        history.push({pathname:"/order", state:{item:newData}})
+        history.push({pathname:"/order", state:{item:newData, wholeCountNum:(newData.count * newData.price)}})
               }
             }
 

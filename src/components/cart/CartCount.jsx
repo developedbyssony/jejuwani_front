@@ -5,6 +5,7 @@ import CartList_empty from './CartList_empty';
 
 function CartCount({item}) {
     const history = useHistory();
+    const [ itemz, setItems ] = useState([]);
     const [ isItEmpty, conFirmList ] = useState(false);
     useEffect(() => {
         if(item.length === 0) {
@@ -14,7 +15,7 @@ function CartCount({item}) {
             conFirmList(false);
         }
     },[item]);
-    const wholeCount = item.map((i) => Number(i.price * i.count));
+    const wholeCount = item.map((i) => Number(i[0].price) * i[0].count);
     const wholeCountItem = wholeCount.reduce((acc,cur) => `${acc}  ${cur} +`,'결제 예정 금액 : ');
     const wholeCountNum = wholeCount.reduce((acc,cur) => Number(acc) + Number(cur),0);
             return (

@@ -37,7 +37,7 @@
 
 #order-inputs {
   position: relative;
-  top:-130px;
+  top:-113px;
   right: -28px;
 }
 
@@ -115,8 +115,9 @@
 
 .order-formz {
   position: absolute;
-  top: 28%;
+  top: 29%;
 }
+
 .order-inputz {
   position: relative;
   top: 160px;
@@ -156,7 +157,7 @@
 
 .order-summary {
   position: relative;
-  top:40px;
+  top:71px;
   margin-right: 160px;
 }
 
@@ -183,16 +184,6 @@
   display: flex;
   flex-direction: row;
   top: 90px;
-}
-
-.button-group button{
-  margin-right: 10px;
-  width: 50%;
-}
-
-.button-group button:last-child{
-  width: 100%;
-  margin-right: 0px;
 }
 
 .star-rating-13, .star-rating-16 {
@@ -222,7 +213,8 @@
   }
 
 .tag-outline {
-    margin-right: 10px;
+    position: relative;
+    margin-left: 5px;
     transform: scale(0.9);
   }
 

@@ -3,6 +3,7 @@ import Tab  from '../tab';
 import LikeListA from '../likeListActivity';
 import LikeListR from '../likeListRestaurant';
 import CartList from '../cart/CartList';
+import orderSheet from './orderSheet';
 
 function my({serverURL, userId, store}) {
     const [ isItEmpty, conFirmList ] = useState(false);
@@ -93,9 +94,6 @@ function my({serverURL, userId, store}) {
             return it;
         });
         setCartItems(data);
-        console.log(data);
-        console.log('되는곤가');
-        console.log(cartData);
     }
 
     const onDecrease = (i) => {
@@ -111,18 +109,8 @@ function my({serverURL, userId, store}) {
 
     
     const onRemoveCart = (targetId) => {
-        console.log(targetId);
-        const arr = [];
-        const data = cartData.map(it => {
-            if(it[0].id !== targetId) {
-                console.log('연산확인');
-            }
-        });
-        console.log(arr);
-        /*
-        setCartItems(JSON.parse(newCartList));
-        localStorage.setItem('newCartState',newCartList);
-        */
+        setCartItems(cartData.filter(tar => tar.id == targetId));
+        console.log(cartData);
     }
 
     const onRemoveLike = () => {

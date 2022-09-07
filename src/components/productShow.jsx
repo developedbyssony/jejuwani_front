@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from "react-router-dom";
-import { urlToHttpOptions } from 'url';
+import { Link, useHistory } from "react-router-dom";
 import '../css/checkout-card.css';
 import '../css/order-form.css';
 import '../css/product-detail.css';
@@ -11,13 +10,14 @@ import Rating from './star-rating/rating';
 
 
 function productShow({serverURL,product_info,review}) {
+    const history = useHistory();
     const amount = useRef();
     useEffect(() => {
         console.log(product_info.post);
         console.log(review);
       },[]);
 
-    let [ cartState, setCart ] = useState([]);
+    let [ cartState, setCartItems ] = useState([]);
     let [ heart, setheart ] = useState([false]);
     let [ modalOpen, setModalOpen] = useState(false);
     let [ modalOpenD, setModalOpenD] = useState(false);
@@ -38,7 +38,7 @@ function productShow({serverURL,product_info,review}) {
            max_capacity : '0', // 주문수, 디폴트는 0
            content :  product_info.post.introduction,
            tag: product_info.post.tag,
-           label:product_info.post.label,
+           label: product_info.post.label || product_info.post.region1
         })
 
     let [ like, setlike ] = useState(product.likes);
@@ -49,11 +49,46 @@ function productShow({serverURL,product_info,review}) {
         setProduct({...product, [count]:value});
     }
 
+    function cart(productId,productTitle,productPrice) {
+        console.log("클릭");
+        const count = 1;
+        const newCart = [ {
+            id : productId,
+            title : productTitle,
+            price : productPrice,
+            count : count
+        }];
+        setCartItems([newCart,...cartState]);
+        console.log(cartState);
+        localStorage.setItem('cartItem', JSON.stringify(newCart));
+        const entryArr = localStorage.getItem('cartState') ? JSON.parse(localStorage.getItem('cartState')) : [];
+        if(entryArr == null) entryArr = [];
+        entryArr.push(newCart);
+        localStorage.setItem('newCartState',JSON.stringify(entryArr));
+    }
+
     const setAmount = () => {
         const arr = { ...product, price: product_info.post.price * amount.current.value };
         setProduct(arr);
         setPrice(price * amount.current.value);
     }
+
+    function modalClick(e) {
+        e.preventDefault();
+    
+        if (amount.current.value < 1) {
+            alert('수량을 선택해주세요.')
+          } else {
+            const newData = [{
+              id:1,
+              title:product_info.post.title,
+              count:amount.current.value,
+              price:product_info.post.price,
+            }]
+            console.log(newData);
+            history.push({pathname:"/order", state:{item:newData}})
+                  }
+                }
 
     const ontoggle = () => {
         if(heart === false) {
@@ -70,14 +105,10 @@ function productShow({serverURL,product_info,review}) {
         }
     }
 
-   const modalClose = () => {
-      setModalOpen(!modalOpen);
-      localStorage.setItem('cartState',JSON.stringify(cartState));
-    }
-
-    const modalCloseD = () => {
+    const modalClose = () => {
         setModalOpenD(!modalOpenD);
-      }
+        cart(product_info.post.id,product_info.post.title,product_info.post.price);
+    }
 
     return(
     <div>
@@ -174,18 +205,15 @@ function productShow({serverURL,product_info,review}) {
                         </output>
                     </dd>
                 </dl>
-                <div className="button-group">
-                    <Link to="/cart">
+                <div className="button-group">                            
+                    { modalOpenD && <Modal modalClose={modalClose} /> }
                     <button className="btn-outlined btn-55" type="button" onClick={modalClose} id="firstBtn">
                         장바구니
                     </button>
-                    </Link>
                     <div className="margin-right"></div>
-                    <Link to="/order">
-                    <button className="btn-primary btn-55" type="button">
+                    <button className="btn-primary btn-55" type="button" onClick={modalClick}>
                         바로구매
                     </button>
-                    </Link>
                 </div>
         </form>
         </div>

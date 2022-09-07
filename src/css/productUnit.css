@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  overflow: visible;
 }
 
 .wrap-css2 {
@@ -11,7 +12,6 @@
 
 .productUnit-frame {
     position: block;
-    z-index:999;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -73,6 +73,8 @@
  }
 
 .productUnit-frame:hover {
+  position: absolute;
+  top:-5px;
   border: 4px solid gray;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
 }

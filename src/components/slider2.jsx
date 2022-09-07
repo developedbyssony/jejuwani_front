@@ -11,7 +11,7 @@ import NextArrow from './slider/nextArrow';
 const StyledSlider = styled(Slider)`
 width:100%;
 height:500px;
-overflow:hidden;
+overflow: visible;
 margin-bottom:30px;
 `;
 

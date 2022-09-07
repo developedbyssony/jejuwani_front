@@ -26,7 +26,8 @@ export default class SimpleSlider extends Component {
       dots: true,
       infinite: true, // 무한 반복
       centerMode: true,
-      speed:500, // 넘어가는 속도
+      autoplay: true,
+      speed:2000, // 넘어가는 속도
       slidesToShow: 1, // 1장씩 보이게
       slidesToScroll: 1, // 1장씩 뒤로 넘어가게
       centerPadding: '0px', // 0px하면 슬라이드 끝 쪽 이미지가 안 잘림
