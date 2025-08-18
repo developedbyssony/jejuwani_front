@@ -1,0 +1,45 @@
+.like-list-item {
+    position: relative;
+    width: 100%;
+    padding:38px 29px;
+    margin-bottom: 29px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    height: 172px;
+    margin-bottom: 30px;
+}
+
+.tag {
+    margin-bottom: 10px;
+}
+
+.info-review {
+    margin-top: 5px;
+}
+
+.like-list-item-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+.like-list-item-ic-delete {
+    float: right;
+    background: url('assets/css_sprites_sub.png') no-repeat -801px -389px;
+    width: 14px;
+    height: 15px;
+    transform: scale(0.7);
+  }
+
+  .like-card-price {
+    position: relative;
+    z-index: 999;
+    margin-top: 40px;
+    margin-right: 300px;
+  }
+
+#like-card-delete-restaurant {
+    position: absolute;
+    top:20%;
+    right: 30px;
+}

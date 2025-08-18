@@ -1,0 +1,32 @@
+.product-info-bottom {
+    position: relative;
+    margin-top: 43px;
+}
+
+.product-img-detail-restaurant {
+    position: relative;
+    top:34px;
+    left: 20px;
+    width: 670px;
+    height: 670px;
+  }
+
+  #img-restaurant {
+    border-radius: 30px;
+    position: relative;
+
+  }
+
+  .product-img-detail-activity {
+        position: relative;
+        top:34px;
+        left: 60px;
+        width: 670px;
+        height: 670px;
+        border-radius: 30px;
+      }
+    
+      #img-activity  {
+        border-radius: 30px;
+        position: relative;
+      }

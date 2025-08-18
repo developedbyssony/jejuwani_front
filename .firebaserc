@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "jejuwn-front",
+    "staging": "jejuwn-front"
+  },
+  "targets": {}
+}

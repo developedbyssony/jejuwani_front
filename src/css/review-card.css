@@ -1,0 +1,40 @@
+.username {
+    color: #3F4150;
+}
+.detail {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+}
+
+.review-contents {
+    white-space: normal;
+    font-size: 12px;
+    color: #3F4150;
+}
+
+#comment-contents {
+    height: 60px;
+}
+
+.info {
+    padding-top: 20px;
+  }
+
+.comment-time {
+    display: flex;
+    align-items: baseline;
+    font-size: 12px;
+    line-height: 16px;
+    color: #8C8D96;
+}
+
+#comment-index {
+    color: #4e6a75;
+    border: 1px solid #4e6a75;
+    position: relative;
+    left: -3px;
+    text-align: center;
+    vertical-align: baseline;
+    margin-right: 0;
+}

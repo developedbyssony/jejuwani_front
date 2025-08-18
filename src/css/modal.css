@@ -1,0 +1,210 @@
+/* activity - reservation modal */
+.moal-wrapper {
+  overflow: auto; height: 100%;
+}
+
+.modal-bgc {
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.modal-ticket {
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/sub/ticket.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  overflow: hidden;
+}
+.modal-ticket-box {
+  position: relative;
+  margin: 0 auto;
+  top:25%;
+  left: 2%;
+  width: 500px;
+  height: 623px;
+  z-index: 999;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: flex;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 738px;
+  height: 523px;
+  padding: 40px;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top:16%;
+  left: 28%;
+  width: 290px;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  border: none;
+}
+
+#modal-order-form-reservation {
+  position: relative;
+  z-index: 999;
+  margin: 0 auto;
+  height: 70%;
+  transform: scale(0.5);
+}
+
+.modal-header p{
+ margin-bottom: 26px;
+}
+
+
+.datepickers {
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  width: 100%;
+  top:52%;
+  left: 26%;
+}
+
+.datepickers::after{
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  height: 1px;
+  width: 430px;
+  left: -100px;
+  background: #ddd;
+}
+
+#modal-order-form {
+  position: relative;
+  left: 50%;
+  top:67%;
+  transform: scale(0.6);
+}
+
+.date-picker-end {
+  margin-top: 30px;
+}
+
+.modal-ic-close {
+  position: absolute;
+  z-index: 999;
+  top:0;
+  left: 80%;
+	width: 100px;
+	height: 100px;
+  cursor: pointer;
+}
+
+.btn-group {
+  position: absolute;
+  z-index: 999;
+  top:110%;
+  left: 85%;
+}
+
+.order-inputs {
+  position: absolute;
+  margin: 0 auto;
+  top:880px;
+  left: 40px;
+}
+
+.btn-group button {
+  background-color: #5c7a89;
+  color: #fff;
+  font-weight: 800;
+  height: 80px;
+  left: -29vh;
+  margin: 10px;
+  position: absolute;
+  top: -157px;
+  width: 400px;
+}
+
+/* cart-modal */
+.cart-modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  padding: 32px;
+  max-width:360px;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: scale(2);
+  z-index: 500;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+}
+
+.cart-tit {
+  color:#000;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing:-0.02em; 
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.btn-group-cart {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.btn-group-cart a{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn-group-cart div{
+  width: 100%;
+}
+
+#modal-header-top {
+  position: absolute;
+  display: flex;
+}
+
+.reservation-date {
+  position: absolute;
+  top:66px;
+}
+
+.reservation-data1 {
+  position: relative;
+  left: 0px;
+  text-align: left;
+  white-space: normal;
+}
+
+
+#modal-header1 {
+  position: block;
+  display: flex;
+  flex-flow: flex-start;
+  margin-top: 250px;
+}

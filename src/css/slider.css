@@ -1,0 +1,129 @@
+.slider-container1 {
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/main/main-banner3.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center top;
+}
+
+.slider-container2 {
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/main/main-banner1.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center top;
+}
+
+.slider-container3 {
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/main/main-banner2.png');
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center top;
+}
+
+.bottom-slider-container {
+    height: 588px;
+}
+
+.blog-slider-container {
+    width: 511px;
+    height: 412px;
+}
+
+.arrow-next, .arrow-prev {
+   cursor:pointer;
+   position: absolute;
+   top:20%;
+   border: 1px solid black;
+   background-color: white;
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   z-index: 999;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.arrow-prev {
+    position: absolute;
+    left: 100px;
+ }
+
+ .arrow-next {
+    position: absolute;
+    right: 10px;
+ }
+
+ .ic-prev {
+    position: relative;
+    top:28%;
+    left:30%;
+    background: url('assets/css_sprites_clo.png') no-repeat -211px -549px;
+	width: 21px;
+	height: 38px;
+    transform: rotate(180deg);
+ }
+
+ .ic-next {
+    position: relative;
+    top:5%;
+    left:28%;
+    background: url('assets/css_sprites_clo.png') no-repeat -211px -549px;
+	width: 21px;
+	height: 38px;
+    transform: scale(0.5);
+ }
+
+ .arrow-prev-main, .arrow-next-main {
+    cursor:pointer;
+    position: absolute;
+    top:40%;
+    background-color: #ddd;
+    border-radius: 50%;
+    border:none;
+    width: 50px;
+    height: 50px;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .arrow-prev-main {
+    position: absolute;
+    left: 30px;
+ }
+
+ .arrow-next-main {
+    position: absolute;
+    right: 30px;
+ }
+
+ .ic-prev-main {
+    position: relative;
+    top:15%;
+    left:25%;
+    background: url('assets/css_sprites_clo.png') no-repeat -211px -549px;
+	width: 21px;
+	height: 38px;
+    transform: scale(0.5) rotate(180deg);
+ }
+
+ .arrow-prev-main:hover {
+    background-color: gray;
+ }
+
+ .arrow-next-main:hover {
+    background-color: gray;
+ }
+
+ .ic-next-main {
+    position: relative;
+    top:15%;
+    left:35%;
+    background: url('assets/css_sprites_clo.png') no-repeat -211px -549px;
+	width: 21px;
+	height: 38px;
+    transform: scale(0.5);
+ }

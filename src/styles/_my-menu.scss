@@ -1,0 +1,50 @@
+.my-menu {
+    $tooltip-size: 12px;
+
+    background: #000;
+    position: relative;
+    &-content {
+        @include pos-center-x;
+        border-radius: 4px;
+        box-shadow: $dropdown-shadow;
+
+        &::before, &::after {
+            @include pos-center-x;
+            top:-#{$tooltip-size * 2};
+            display: block;
+            content: '';
+            height: 0;
+            width: 0;
+            border-top: $tooltip-size solid transparent;
+            border-right:5px solid transparent;
+            border-left:5px solid transparent;
+            border-bottom:$tooltip-size solid $gray-tertiary;
+    }
+
+    &::after {
+        border-bottom-color: $white;
+        top: -#{$tooltip-size * 2 - 2px};
+    }
+    }
+    &-list {
+        width: 200px;
+        padding: 8px;
+        background-color:$white;
+        border-radius: 4px;
+        border: 1px solid $gray-tertiary;
+    }
+    &-item {
+        a,
+        button {
+            @include flexbox(start);
+            height: 44px;
+            padding: 0 8px;
+            width: 100%;
+
+            &:hover {
+                background-color: $gray-bgc;
+                border-radius: 2px;
+            }
+        }
+    }
+}

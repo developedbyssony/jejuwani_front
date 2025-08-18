@@ -1,0 +1,24 @@
+.inputBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#input-group {
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form-group strong {
+    float: left;
+}
+
+.inputTitle {
+    display: flex;
+    flex-direction: flex-start;
+}

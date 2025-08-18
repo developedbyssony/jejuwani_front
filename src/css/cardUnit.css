@@ -1,0 +1,93 @@
+* {
+    color: black;
+}
+#product-card {
+    padding: 20px;
+    border: 1px solid #4e6a75;
+    width: 100%;
+    height: 120px;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+    margin-bottom: 20px;
+}
+.price-sumcount {
+    display: flex;
+    justify-content: center;
+}
+.price-13 {
+    color: #4e6a75;
+    margin-top: -15px;
+    margin-left: 1rem;
+}
+.amount {
+    display: flex;
+    flex-direction: row;
+}
+
+.currency {
+    display: block;
+    z-index: 999;
+    width: 100px;
+    height: auto;
+    background-color: white;
+    margin-left: -9px;
+}
+.font-medium {
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-gray {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.items-end {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.remove-btn {
+    color: #4e6a75;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 14px;
+}
+
+.buyBtn-section {
+    display: flex;
+    justify-content: center;
+}
+
+#buyBtn {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+#delete {
+    position: relative;
+    right: -10px;
+    transform: scale(0.8);
+}
+
+.sumcount {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #4e6a75;
+    border-bottom: 1px solid #4e6a75;
+}
+
+#price-sum {
+    margin: 0 auto;
+    color: #4e6a75;
+}
+
+#price-sum .currency{
+   margin-right: 10px;
+}

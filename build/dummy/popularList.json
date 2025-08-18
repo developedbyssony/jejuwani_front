@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "title": "제주국제공항",
+    "address": "제주 제주시 공항로 2-0",
+    "category": "교통시설",
+    "searchNum": 806464
+  },
+  {
+    "id": 2,
+    "title": "동문재래시장",
+    "address": "제주 제주시 관덕로14길 20-0",
+    "category": "시장",
+    "searchNum": 318405
+  },
+  {
+    "id": 3,
+    "title": "서귀포매일올레시장",
+    "address": "제주 서귀포시 중앙로62번길 18-0",
+    "category": "시장",
+    "searchNum": 282374
+  },
+  {
+    "id": 4,
+    "title": "함덕해수욕장",
+    "address": "제주 제주시 조함해안로 525-0",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 201773
+  },
+  {
+    "id": 5,
+    "title": "협재해수욕장",
+    "address": "제주 제주시",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 200126
+  },
+  {
+    "id": 6,
+    "title": "성산일출봉",
+    "address": "제주 서귀포시 일출로 284-12",
+    "category": "자연경관(산)",
+    "searchNum": 197347
+  },
+  {
+    "id": 7,
+    "title": "이호테우해변",
+    "address": "제주 제주시",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 131887
+  },
+  {
+    "id": 8,
+    "title": "아르떼뮤지엄제주",
+    "address": "제주 제주시 어림비로 478-0",
+    "category": "전시시설",
+    "searchNum": 128854
+  },
+  {
+    "id": 9,
+    "title": "섭지코지",
+    "address": "제주 서귀포시 섭지코지로 107-0",
+    "category": "기타관광",
+    "searchNum": 123896
+  },
+  {
+    "id": 10,
+    "title": "오설록티뮤지엄",
+    "address": "제주 서귀포시 신화역사로 15-0",
+    "category": "전시시설",
+    "searchNum": 119490
+  },
+  {
+    "id": 11,
+    "title": "곽지해수욕장",
+    "address": "제주 제주시",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 116054
+  },
+  {
+    "id": 12,
+    "title": "한라산둘레길사려니숲길",
+    "address": "제주 제주시",
+    "category": "기타레저스포츠",
+    "searchNum": 111642
+  },
+  {
+    "id": 13,
+    "title": "아쿠아플라넷제주",
+    "address": "제주 서귀포시 섭지코지로 93-15",
+    "category": "테마공원",
+    "searchNum": 98660
+  },
+  {
+    "id": 14,
+    "title": "비자림",
+    "address": "제주 제주시 비자숲길 55-0",
+    "category": "자연공원",
+    "searchNum": 97347
+  },
+  {
+    "id": 15,
+    "title": "그랜드하얏트제주",
+    "address": "제주 제주시 노연로 12-0",
+    "category": "호텔",
+    "searchNum": 92610
+  },
+  {
+    "id": 16,
+    "title": "스누피가든",
+    "address": "제주 제주시 금백조로 930-0",
+    "category": "기타관광",
+    "searchNum": 91591
+  },
+  {
+    "id": 17,
+    "title": "새별오름",
+    "address": "제주 제주시",
+    "category": "자연경관(산)",
+    "searchNum": 89021
+  },
+  {
+    "id": 18,
+    "title": "카멜리아힐",
+    "address": "제주 서귀포시 병악로 166-0",
+    "category": "테마공원",
+    "searchNum": 87587
+  },
+  {
+    "id": 19,
+    "title": "주상절리대",
+    "address": "제주 서귀포시 이어도로 36-30",
+    "category": "기타관광",
+    "searchNum": 86003
+  },
+  {
+    "id": 20,
+    "title": "신창풍차해안도로",
+    "address": "제주 제주시",
+    "category": "데이트코스",
+    "searchNum": 85178
+  },
+  {
+    "id": 21,
+    "title": "용머리해안",
+    "address": "제주 서귀포시 사계남로216번길 24-32",
+    "category": "기타관광",
+    "searchNum": 82620
+  },
+  {
+    "id": 22,
+    "title": "성산포종합여객터미널",
+    "address": "제주 서귀포시 성산등용로 130-21",
+    "category": "교통시설",
+    "searchNum": 82577
+  },
+  {
+    "id": 23,
+    "title": "금능해수욕장",
+    "address": "제주 제주시 금능길 119-10",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 81705
+  },
+  {
+    "id": 24,
+    "title": "김녕해수욕장",
+    "address": "제주 제주시 해맞이해안로 7-6",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 79642
+  },
+  {
+    "id": 25,
+    "title": "금오름",
+    "address": "제주 제주시",
+    "category": "자연경관(산)",
+    "searchNum": 76450
+  },
+  {
+    "id": 26,
+    "title": "쇠소깍",
+    "address": "제주 서귀포시 쇠소깍로 128-0",
+    "category": "기타관광",
+    "searchNum": 76178
+  },
+  {
+    "id": 27,
+    "title": "천지연폭포",
+    "address": "제주 서귀포시 서문서로 1-1",
+    "category": "자연경관(산)",
+    "searchNum": 74410
+  },
+  {
+    "id": 28,
+    "title": "신라호텔제주",
+    "address": "제주 서귀포시 중문관광로72번길 75-0",
+    "category": "호텔",
+    "searchNum": 71860
+  },
+  {
+    "id": 29,
+    "title": "제주신화월드랜딩리조트관",
+    "address": "제주 서귀포시 신화역사로304번길 38-0",
+    "category": "콘도미니엄",
+    "searchNum": 71288
+  },
+  {
+    "id": 30,
+    "title": "용두암",
+    "address": "제주 제주시 용두암길 15-0",
+    "category": "기타관광",
+    "searchNum": 70209
+  },
+  {
+    "id": 31,
+    "title": "소노캄제주",
+    "address": "제주 서귀포시 일주동로 6347-17",
+    "category": "콘도미니엄",
+    "searchNum": 64077
+  },
+  {
+    "id": 32,
+    "title": "월정리해변",
+    "address": "제주 제주시",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 63993
+  },
+  {
+    "id": 33,
+    "title": "중문색달해변",
+    "address": "제주 서귀포시 중문관광로72번길 0-0",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 63649
+  },
+  {
+    "id": 34,
+    "title": "정방폭포",
+    "address": "제주 서귀포시",
+    "category": "자연경관(산)",
+    "searchNum": 62096
+  },
+  {
+    "id": 35,
+    "title": "제주항연안여객터미널",
+    "address": "제주 제주시 임항로 111-0",
+    "category": "교통시설",
+    "searchNum": 61216
+  },
+  {
+    "id": 36,
+    "title": "하귀애월해안도로",
+    "address": "제주 제주시",
+    "category": "데이트코스",
+    "searchNum": 59561
+  },
+  {
+    "id": 37,
+    "title": "휘닉스제주",
+    "address": "제주 서귀포시 섭지코지로 107-0",
+    "category": "콘도미니엄",
+    "searchNum": 59237
+  },
+  {
+    "id": 38,
+    "title": "9.81파크",
+    "address": "제주 제주시 천덕로 880-24",
+    "category": "테마공원",
+    "searchNum": 59173
+  },
+  {
+    "id": 39,
+    "title": "표선해수욕장",
+    "address": "제주 서귀포시",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 58802
+  },
+  {
+    "id": 40,
+    "title": "에코랜드테마파크",
+    "address": "제주 제주시 번영로 1278-169",
+    "category": "테마공원",
+    "searchNum": 58375
+  },
+  {
+    "id": 41,
+    "title": "제주관광공사면세점",
+    "address": "제주 서귀포시 중문관광로 224-0",
+    "category": "면세점",
+    "searchNum": 58057
+  },
+  {
+    "id": 42,
+    "title": "롯데호텔제주점",
+    "address": "제주 서귀포시 중문관광로72번길 35-0",
+    "category": "호텔",
+    "searchNum": 57207
+  },
+  {
+    "id": 43,
+    "title": "소노벨제주",
+    "address": "제주 제주시 신북로 577-0",
+    "category": "콘도미니엄",
+    "searchNum": 55997
+  },
+  {
+    "id": 44,
+    "title": "광치기해변",
+    "address": "제주 서귀포시",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 54640
+  },
+  {
+    "id": 45,
+    "title": "제주신화월드메리어트리조트관",
+    "address": "제주 서귀포시 신화역사로304번길 38-0",
+    "category": "콘도미니엄",
+    "searchNum": 54610
+  },
+  {
+    "id": 46,
+    "title": "성산항",
+    "address": "제주 서귀포시",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 52798
+  },
+  {
+    "id": 47,
+    "title": "우도도항선선착장",
+    "address": "제주 서귀포시 성산등용로 130-21",
+    "category": "교통시설",
+    "searchNum": 52701
+  },
+  {
+    "id": 48,
+    "title": "사계해수욕장",
+    "address": "제주 서귀포시",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 51908
+  },
+  {
+    "id": 49,
+    "title": "해비치호텔",
+    "address": "제주 서귀포시 민속해안로 537-0",
+    "category": "호텔",
+    "searchNum": 51813
+  },
+  {
+    "id": 50,
+    "title": "제주신화월드신화리조트관",
+    "address": "제주 서귀포시 서광동로34번길 14-19",
+    "category": "콘도미니엄",
+    "searchNum": 51631
+  },
+  {
+    "id": 51,
+    "title": "도두동무지개해안도로",
+    "address": "제주 제주시",
+    "category": "데이트코스",
+    "searchNum": 50961
+  },
+  {
+    "id": 52,
+    "title": "메종글래드제주호텔",
+    "address": "제주 제주시 노연로 80-0",
+    "category": "호텔",
+    "searchNum": 49134
+  },
+  {
+    "id": 53,
+    "title": "만장굴",
+    "address": "제주 제주시 만장굴길 182-0",
+    "category": "자연생태",
+    "searchNum": 48654
+  },
+  {
+    "id": 54,
+    "title": "산방산",
+    "address": "제주 서귀포시 산방로 218-10",
+    "category": "자연경관(산)",
+    "searchNum": 48111
+  },
+  {
+    "id": 55,
+    "title": "금호리조트제주",
+    "address": "제주 서귀포시 태위로 522-12",
+    "category": "콘도미니엄",
+    "searchNum": 47961
+  },
+  {
+    "id": 56,
+    "title": "한화리조트제주",
+    "address": "제주 제주시 명림로 575-107",
+    "category": "콘도미니엄",
+    "searchNum": 47935
+  },
+  {
+    "id": 57,
+    "title": "빛의벙커",
+    "address": "제주 서귀포시",
+    "category": "전시시설",
+    "searchNum": 46691
+  },
+  {
+    "id": 58,
+    "title": "제주신화월드",
+    "address": "제주 서귀포시 신화역사로304번길 139-0",
+    "category": "복합관광시설",
+    "searchNum": 46323
+  },
+  {
+    "id": 59,
+    "title": "뽀로로&타요테마파크제주",
+    "address": "제주 서귀포시 병악로 269-0",
+    "category": "테마공원",
+    "searchNum": 45696
+  },
+  {
+    "id": 60,
+    "title": "그랜드조선제주",
+    "address": "제주 서귀포시 중문관광로72번길 60-0",
+    "category": "호텔",
+    "searchNum": 44907
+  },
+  {
+    "id": 61,
+    "title": "노형수퍼마?",
+    "address": "제주 제주시 노형로 89-0",
+    "category": "기타문화관광지",
+    "searchNum": 42240
+  },
+  {
+    "id": 62,
+    "title": "산굼부리",
+    "address": "제주 제주시",
+    "category": "복합관광시설",
+    "searchNum": 42050
+  },
+  {
+    "id": 63,
+    "title": "제주신화월드서머셋",
+    "address": "제주 서귀포시 신화역사로304번길 89-0",
+    "category": "콘도미니엄",
+    "searchNum": 41898
+  },
+  {
+    "id": 64,
+    "title": "한담해안산책로",
+    "address": "제주 제주시 애월로 0-0",
+    "category": "기타레저스포츠",
+    "searchNum": 41771
+  },
+  {
+    "id": 65,
+    "title": "라마다프라자제주호텔",
+    "address": "제주 제주시 탑동로 66-0",
+    "category": "호텔",
+    "searchNum": 40902
+  },
+  {
+    "id": 66,
+    "title": "윈드1947카트테마파크",
+    "address": "제주 서귀포시 토평공단로 78-27",
+    "category": "기타레저스포츠",
+    "searchNum": 40306
+  },
+  {
+    "id": 67,
+    "title": "제주부영호텔&리조트",
+    "address": "제주 서귀포시 중문관광로 222-0",
+    "category": "호텔",
+    "searchNum": 40169
+  },
+  {
+    "id": 68,
+    "title": "휴애리자연생활공원",
+    "address": "제주 서귀포시 신례동로 256-0",
+    "category": "도시공원",
+    "searchNum": 38941
+  },
+  {
+    "id": 69,
+    "title": "비밀의숲",
+    "address": "제주 제주시",
+    "category": "기타레저스포츠",
+    "searchNum": 38861
+  },
+  {
+    "id": 70,
+    "title": "호텔더본제주",
+    "address": "제주 서귀포시 색달로 18-0",
+    "category": "호텔",
+    "searchNum": 38297
+  },
+  {
+    "id": 71,
+    "title": "세화해수욕장",
+    "address": "제주 제주시 충렬로 141-1",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 37873
+  },
+  {
+    "id": 72,
+    "title": "천제연폭포",
+    "address": "제주 서귀포시 천제연로 132-0",
+    "category": "자연경관(산)",
+    "searchNum": 37872
+  },
+  {
+    "id": 73,
+    "title": "제주절물자연휴양림",
+    "address": "제주 제주시 명림로 584-0",
+    "category": "자연공원",
+    "searchNum": 37004
+  },
+  {
+    "id": 74,
+    "title": "제주민속오일시장",
+    "address": "제주 제주시 오일장서길 26-0",
+    "category": "시장",
+    "searchNum": 35935
+  },
+  {
+    "id": 75,
+    "title": "히든클리프호텔앤네이쳐",
+    "address": "제주 서귀포시 예래해안로 542-0",
+    "category": "호텔",
+    "searchNum": 35315
+  },
+  {
+    "id": 76,
+    "title": "산방산탄산온천",
+    "address": "제주 서귀포시 사계북로41번길 192-0",
+    "category": "웰니스관광",
+    "searchNum": 34740
+  },
+  {
+    "id": 77,
+    "title": "제주항공우주박물관",
+    "address": "제주 서귀포시 녹차분재로 218-0",
+    "category": "전시시설",
+    "searchNum": 34387
+  },
+  {
+    "id": 78,
+    "title": "모슬포항",
+    "address": "제주 서귀포시 하모항구로 30-0",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 32341
+  },
+  {
+    "id": 79,
+    "title": "신라스테이제주",
+    "address": "제주 제주시 노연로 100-0",
+    "category": "호텔",
+    "searchNum": 31935
+  },
+  {
+    "id": 80,
+    "title": "송악산둘레길",
+    "address": "제주 서귀포시",
+    "category": "기타레저스포츠",
+    "searchNum": 30988
+  },
+  {
+    "id": 81,
+    "title": "한림공원",
+    "address": "제주 제주시 한림로 300-0",
+    "category": "도시공원",
+    "searchNum": 30822
+  },
+  {
+    "id": 82,
+    "title": "운진항",
+    "address": "제주 서귀포시 최남단해안로 0-0",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 30636
+  },
+  {
+    "id": 83,
+    "title": "판포포구",
+    "address": "제주 제주시",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 30551
+  },
+  {
+    "id": 84,
+    "title": "보롬왓",
+    "address": "제주 서귀포시 번영로 2350-104",
+    "category": "기타관광",
+    "searchNum": 30148
+  },
+  {
+    "id": 85,
+    "title": "서귀포칼호텔",
+    "address": "제주 서귀포시 칠십리로 242-0",
+    "category": "호텔",
+    "searchNum": 30090
+  },
+  {
+    "id": 86,
+    "title": "수목원길야시장",
+    "address": "제주 제주시",
+    "category": "시장",
+    "searchNum": 29413
+  },
+  {
+    "id": 87,
+    "title": "롯데시티호텔제주",
+    "address": "제주 제주시 도령로 83-0",
+    "category": "호텔",
+    "searchNum": 29368
+  },
+  {
+    "id": 88,
+    "title": "한라수목원",
+    "address": "제주 제주시 수목원길 72-0",
+    "category": "자연공원",
+    "searchNum": 29330
+  },
+  {
+    "id": 89,
+    "title": "호텔리젠트마린",
+    "address": "제주 제주시 서부두2길 20-0",
+    "category": "호텔",
+    "searchNum": 29232
+  },
+  {
+    "id": 90,
+    "title": "삼양해수욕장",
+    "address": "제주 제주시",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 28409
+  },
+  {
+    "id": 91,
+    "title": "베스트웨스턴제주호텔",
+    "address": "제주 제주시 도령로 27-0",
+    "category": "호텔",
+    "searchNum": 27648
+  },
+  {
+    "id": 92,
+    "title": "호텔휘슬락",
+    "address": "제주 제주시 서부두2길 26-0",
+    "category": "호텔",
+    "searchNum": 27495
+  },
+  {
+    "id": 93,
+    "title": "제주항제6부두",
+    "address": "제주 제주시 임항로 191-0",
+    "category": "자연경관(하천/해양)",
+    "searchNum": 27392
+  },
+  {
+    "id": 94,
+    "title": "헬로키티아일랜드",
+    "address": "제주 서귀포시 한창로 340-0",
+    "category": "기타관광",
+    "searchNum": 27366
+  },
+  {
+    "id": 95,
+    "title": "라마다제주시티홀호텔",
+    "address": "제주 제주시 중앙로 304-0",
+    "category": "호텔",
+    "searchNum": 27272
+  },
+  {
+    "id": 96,
+    "title": "약천사",
+    "address": "제주 서귀포시 이어도로 293-28",
+    "category": "종교성지",
+    "searchNum": 26112
+  },
+  {
+    "id": 97,
+    "title": "제주민속촌",
+    "address": "제주 서귀포시 민속해안로 631-34",
+    "category": "역사유적지",
+    "searchNum": 25888
+  },
+  {
+    "id": 98,
+    "title": "동백포레스트",
+    "address": "제주 서귀포시 생기악로 53-38",
+    "category": "농/산/어촌체험",
+    "searchNum": 25677
+  },
+  {
+    "id": 99,
+    "title": "호텔난타",
+    "address": "제주 제주시 선돌목동길 56-26",
+    "category": "호텔",
+    "searchNum": 25552
+  },
+  {
+    "id": 100,
+    "title": "이랜드파크켄싱턴리조트서귀포점",
+    "address": "제주 서귀포시 이어도로 684-0",
+    "category": "콘도미니엄",
+    "searchNum": 25234
+  }
+]
